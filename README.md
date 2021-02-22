@@ -16,7 +16,7 @@
 
 Nota: Omite este paso si tu salida a internet no esta limitada mediante un proxy
 	
-	Ruta: E:\Users\usuario\.npmrc
+	Ruta: E:\Users\usuario\miUsuario\.npmrc
 	Si no existe el archivo se debe crear
 
 	npm config set strict-ssl=false
