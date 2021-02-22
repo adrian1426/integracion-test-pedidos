@@ -1,0 +1,9 @@
+{
+    "codigo": "400.credenciales-api.1000",
+    "mensaje": "Parametros no validos por favor valide su informacion.",
+    "folio": "22920190117134747236",
+    "info": "https://baz-developer.bancoazteca.com.mx/errors#400.credenciales-api.1000",
+    "detalles": [
+      "faltan argumentos"
+    ]
+  }

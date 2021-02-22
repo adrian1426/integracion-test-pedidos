@@ -1,0 +1,10 @@
+{
+  "codigo": "201.Elektra-comercio-Pedidos.107201",
+  "mensaje": "Operación exitosa.",
+  "folio": "107-202105041545559500",
+  "resultado": {
+    "numeroTransaccion": 44902903,
+    "permitirSurtimiento": true,
+    "detalleOperacion": ""
+  }
+}

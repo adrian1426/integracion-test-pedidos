@@ -1,0 +1,230 @@
+{
+  "mockDirectory": "../node/mock",
+  "quiet": false,
+  "port": "9002",
+  "latency": 50,
+  "logRequestHeaders": false,
+  "webServices": {
+    "v1/organizations/:apigeeOrg/developers/:apigeeDeveloper/apps/:apigeeApp": {
+      "latency": 10,
+      "verbs": [
+        "get"
+      ],
+      "switch": [
+        "apigeeOrg",
+        "apigeeDeveloper",
+        "apigeeApp"
+      ],
+      "responses": {
+        "get": {
+          "httpStatus": 400,
+          "mockFile": "seguridad/credenciales_400.json"
+        }
+      },
+      "switchResponses": {
+        "apigeeOrgorgeTestapigeeDeveloperejemploDeveloperapigeeAppejemploApp": {
+          "httpStatus": 200,
+          "mockFile": "seguridad/credenciales_200.json"
+        }
+      }
+    },
+    "oauth2/v1/token": {
+      "latency": 10,
+      "contentType": "application/x-www-form-urlencoded",
+      "headers": {
+        "Authorization": "Basic MXJ0N2J0cEJJcG5aVWdzNVlFTWgyN1A5R0wyWTFSdDg6MTVGTDRtenJXVHFHMnlISg=="
+      },
+      "verbs": [
+        "post"
+      ],
+      "switch": [
+        "grant_type"
+      ],
+      "responses": {
+        "get": {
+          "httpStatus": 400,
+          "mockFile": "seguridad/autorizacion_400.json"
+        }
+      },
+      "switchResponses": {
+        "grant_typeclient_credentials": {
+          "httpStatus": 200,
+          "mockFile": "seguridad/autorizacion_200.json"
+        }
+      }
+    },
+    "elektra/comercio/pedidos-productos/v1/pedidos": {
+      "latency": 25,
+      "headers": {
+        "x-idPais": 1,
+        "x-idCanal": 1,
+        "x-idTienda": 100
+      },
+      "verbs": [
+        "post",
+        "get",
+        "put"
+      ],
+      "switch": [
+        "x-idPais",
+        "x-idCanal",
+        "x-idTienda",
+        "idPedido",
+        "idOrden",
+        "estadoPedido",
+        "$.folioPresupuesto",
+        "$.referencia",
+        "$.caja[*].importe",
+        "$.caja[*].idTipoPago",
+        "$.caja[*].idReferencia",
+        "$.elektraComercio.detalleOrden.estacionTrabajo",
+        "$.elektraComercio.detalleOrden.idUsuario",
+        "$.elektraComercio.detalleOrden.informacionVenta[*].idProveedor",
+        "$.elektraComercio.detalleOrden.informacionVenta[*].cantidad",
+        "$.elektraComercio.detalleOrden.informacionVenta[*].costoProducto",
+        "$.elektraComercio.detalleOrden.informacionVenta[*].descuento",
+        "$.elektraComercio.detalleOrden.informacionVenta[*].listaMilenias[*].sku",
+        "$.elektraComercio.detalleOrden.informacionVenta[*].listaMilenias[*].sobrePrecio",
+        "$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].cantidad",
+        "$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].idPromocion",
+        "$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].idRegalo",
+        "$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].monto",
+        "$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].subTipoPromocion",
+        "$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].tipoPromocion",
+        "$.elektraComercio.detalleOrden.informacionVenta[*].mecanica",
+        "$.elektraComercio.detalleOrden.informacionVenta[*].precio",
+        "$.elektraComercio.detalleOrden.informacionVenta[*].sku",
+        "$.elektraComercio.detalleOrden.informacionVenta[*].sobrePrecio",
+        "$.elektraComercio.detalleOrden.informacionVenta[*].descuentoEspecial",
+        "$.elektraComercio.detalleOrden.referenciaEktCom",
+        "$.elektraComercio.detalleOrden.tipoVenta",
+        "$.elektraComercio.detalleOrden.totalVenta",
+        "$.elektraComercio.detalleOrden.informacionPago.tipoPago",
+        "$.elektraComercio.detalleOrden.informacionPago.plazoMsi",
+        "$.elektraComercio.detalleOrden.informacionPago.idBanco",
+        "$.elektraComercio.detalleOrden.informacionPago.numeroTarjeta",
+        "$.elektraComercio.detalleOrden.informacionPago.referenciaPago",
+        "$.elektraComercio.detalleOrden.informacionPago.monto",
+        "$.elektraComercio.detalleOrden.informacionPago.canal",
+        "$.elektraComercio.detalleOrden.informacionPago.numeroPagos",
+        "$.elektraComercio.detalleOrden.consecutivoPedido",
+        "$.elektraComercio.detalleOrden.costoEstimado",
+        "$.elektraComercio.detalleOrden.tipoEntrega",
+        "$.elektraComercio.detalleOrden.proveedorEnvio",
+        "$.elektraComercio.detalleOrden.omnicanalId",
+        "$.elektraComercio.detalleOrden.totalPedidos",
+        "$.elektraComercio.detalleOrden.afectaContabilidad",
+        "$.elektraComercio.detalleOrden.idMercado",
+        "$.elektraComercio.detalleOrden.montoVentaMP",
+        "$.elektraComercio.detalleOrden.montoComision",
+        "$.elektraComercio.detalleOrden.idPenalizacion",
+        "$.elektraComercio.detalleOrden.montoPenalizacion",
+        "$.elektraComercio.detalleOrden.idOrigenEnvio",
+        "$.elektraComercio.detalleOrden.pedidoOtorgaRegalo",
+        "$.elektraComercio.detalleOrden.skuOtorgaRegalo",
+        "$.elektraComercio.detalleOrden.evitarSuministro",
+        "$.elektraComercio.detalleOrden.idNegocio",
+        "$.elektraComercio.detalleOrden.idPaqueteria",
+        "$.elektraComercio.detalleOrden.tiendaSurte",
+        "$.elektraComercio.detalleOrden.proveedor",
+        "$.elektraComercio.detalleOrden.dsv",
+        "$.elektraComercio.detalleOrden.ordenDistribucion",
+        "$.elektraComercio.detalleOrden.notaCargo",
+        "$.elektraComercio.detalleOrden.numeroFactura",
+        "$.elektraComercio.detalleOrden.idOrden",
+        "$.elektraComercio.detalleOrden.fechaSuministro",
+        "$.elektraComercio.detalleOrden.urlRastreo",
+        "$.elektraComercio.detalleOrden.idCodigoSurtimiento",
+        "$.elektraComercio.detalleOrden.gastosAdicionales[*].monto",
+        "$.elektraComercio.detalleOrden.gastosAdicionales[*].idGasto",
+        "$.elektraComercio.detalleOrden.guia",
+        "$.elektraComercio.detalleOrden.paqueteria",
+        "$.elektraComercio.detalleOrden.pedidoADNTdaOrigen",
+        "$.elektraComercio.detalleOrden.informacionNotaDebito[*].idNotaDebito",
+        "$.elektraComercio.detalleOrden.informacionNotaDebito[*].personaQueRecibe",
+        "$.elektraComercio.detalleOrden.informacionNotaDebito[*].numeroRastreo",
+        "$.elektraComercio.detalleOrden.informacionNotaDebito[*].idAlmacen",
+        "$.elektraComercio.informacionCliente.apellidoMaterno",
+        "$.elektraComercio.informacionCliente.apellidoPaterno",
+        "$.elektraComercio.informacionCliente.correoElectronico",
+        "$.elektraComercio.informacionCliente.nombre",
+        "$.elektraComercio.informacionCliente.direccion.tipoDireccion",
+        "$.elektraComercio.informacionCliente.direccion.nombreDestinatario",
+        "$.elektraComercio.informacionCliente.direccion.idDireccion",
+        "$.elektraComercio.informacionCliente.direccion.codigoPostal",
+        "$.elektraComercio.informacionCliente.direccion.ciudad",
+        "$.elektraComercio.informacionCliente.direccion.estado",
+        "$.elektraComercio.informacionCliente.direccion.pais",
+        "$.elektraComercio.informacionCliente.direccion.calle",
+        "$.elektraComercio.informacionCliente.direccion.numero",
+        "$.elektraComercio.informacionCliente.direccion.delegacion",
+        "$.elektraComercio.informacionCliente.direccion.complemento",
+        "$.elektraComercio.informacionCliente.direccion.referencia"
+      ],
+      "responses": {
+        "post": {
+          "httpStatus": 400,
+          "mockFile": "pedidos-POST/bad_request.json"
+        },
+        "get": {
+          "httpStatus": 400,
+          "mockFile": "pedidos-GET/bad_request.json"
+        },
+        "put": {
+          "httpStatus": 400,
+          "mockFile": "pedidos-PUT/bad_request.json"
+        }
+      },
+      "switchResponses": {
+        "$.folioPresupuesto863167$.referenciaVentaServicioWeb$.caja[*].importe8771$.caja[*].idTipoPago1$.caja[*].idReferencia1$.elektraComercio.detalleOrden.estacionTrabajoGERENTE$.elektraComercio.detalleOrden.idUsuarioT146363$.elektraComercio.detalleOrden.informacionVenta[*].idProveedorv-25$.elektraComercio.detalleOrden.informacionVenta[*].cantidad1$.elektraComercio.detalleOrden.informacionVenta[*].costoProducto100$.elektraComercio.detalleOrden.informacionVenta[*].descuento0$.elektraComercio.detalleOrden.informacionVenta[*].listaMilenias[*].sku1002522$.elektraComercio.detalleOrden.informacionVenta[*].listaMilenias[*].sobrePrecio5$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].cantidad1$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].idPromocion5555$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].idRegalo12$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].monto5$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].subTipoPromocion20$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].tipoPromocion10$.elektraComercio.detalleOrden.informacionVenta[*].mecanica0$.elektraComercio.detalleOrden.informacionVenta[*].precio112$.elektraComercio.detalleOrden.informacionVenta[*].sku1002520$.elektraComercio.detalleOrden.informacionVenta[*].sobrePrecio0$.elektraComercio.detalleOrden.informacionVenta[*].descuentoEspecial0$.elektraComercio.detalleOrden.referenciaEktComv26864600ekt-V$.elektraComercio.detalleOrden.tipoVenta1$.elektraComercio.detalleOrden.totalVenta31999$.elektraComercio.detalleOrden.informacionPago.tipoPago2$.elektraComercio.detalleOrden.informacionPago.plazoMsi12$.elektraComercio.detalleOrden.informacionPago.idBanco14$.elektraComercio.detalleOrden.informacionPago.numeroTarjetaC4772143013277427$.elektraComercio.detalleOrden.informacionPago.referenciaPago124520$.elektraComercio.detalleOrden.informacionPago.monto110$.elektraComercio.detalleOrden.informacionPago.canal1$.elektraComercio.detalleOrden.informacionPago.numeroPagos12$.elektraComercio.detalleOrden.consecutivoPedido1$.elektraComercio.detalleOrden.costoEstimado0$.elektraComercio.detalleOrden.tipoEntrega1$.elektraComercio.detalleOrden.proveedorEnvioMarketplaceGenerico$.elektraComercio.detalleOrden.omnicanalId3$.elektraComercio.detalleOrden.totalPedidos2$.elektraComercio.detalleOrden.afectaContabilidad0$.elektraComercio.detalleOrden.idMercado1$.elektraComercio.detalleOrden.montoVentaMP0$.elektraComercio.detalleOrden.montoComision0$.elektraComercio.detalleOrden.idPenalizacion0$.elektraComercio.detalleOrden.montoPenalizacion0$.elektraComercio.detalleOrden.idOrigenEnvio22$.elektraComercio.detalleOrden.pedidoOtorgaRegalo0$.elektraComercio.detalleOrden.skuOtorgaRegalo1002510$.elektraComercio.detalleOrden.evitarSuministronull$.elektraComercio.detalleOrden.idNegocio12$.elektraComercio.detalleOrden.idPaqueteria22$.elektraComercio.detalleOrden.tiendaSurte4624$.elektraComercio.detalleOrden.proveedor999999$.elektraComercio.detalleOrden.dsvfalse$.elektraComercio.detalleOrden.ordenDistribucion292907$.elektraComercio.detalleOrden.notaCargo4860246$.elektraComercio.detalleOrden.numeroFacturanull$.elektraComercio.detalleOrden.idOrdennull$.elektraComercio.detalleOrden.fechaSuministro2021-01-07T09%3A00%3A00$.elektraComercio.detalleOrden.urlRastreohttps%3A%2F%2Fwww.dhl.com%2Fmx-es%2Fhome%2Frastreo.html$.elektraComercio.detalleOrden.idCodigoSurtimiento139$.elektraComercio.detalleOrden.gastosAdicionales[*].monto0$.elektraComercio.detalleOrden.gastosAdicionales[*].idGasto1$.elektraComercio.detalleOrden.guiaEKT000000000041502$.elektraComercio.detalleOrden.paqueteriaektnvia$.elektraComercio.detalleOrden.pedidoADNTdaOrigen0$.elektraComercio.detalleOrden.informacionNotaDebito[*].idNotaDebito775049$.elektraComercio.detalleOrden.informacionNotaDebito[*].personaQueRecibeMiguel%20Ruiz$.elektraComercio.detalleOrden.informacionNotaDebito[*].numeroRastreo000000000588270$.elektraComercio.detalleOrden.informacionNotaDebito[*].idAlmacen139$.elektraComercio.informacionCliente.apellidoMaternoCastellanos$.elektraComercio.informacionCliente.apellidoPaternoMontesinos$.elektraComercio.informacionCliente.correoElectronicocmontesinos%40mail.com$.elektraComercio.informacionCliente.nombrePaola$.elektraComercio.informacionCliente.direccion.tipoDireccionresidential$.elektraComercio.informacionCliente.direccion.nombreDestinatarioClaudia%20P%C3%A9rez$.elektraComercio.informacionCliente.direccion.idDireccion38c8395027e140909bd23fcdcdf831ba$.elektraComercio.informacionCliente.direccion.codigoPostal09704$.elektraComercio.informacionCliente.direccion.ciudadIztapalapa$.elektraComercio.informacionCliente.direccion.estadoDISTRITO%20FEDERAL$.elektraComercio.informacionCliente.direccion.paisMEX$.elektraComercio.informacionCliente.direccion.calleJos%C3%A9%20Clemente%20Orozco$.elektraComercio.informacionCliente.direccion.numero48$.elektraComercio.informacionCliente.direccion.delegacionDegollado$.elektraComercio.informacionCliente.direccion.complemento2$.elektraComercio.informacionCliente.direccion.referencianull": {
+          "httpStatus": 201,
+          "mockFile": "pedidos-POST/created.json"
+        },
+        "$.folioPresupuestonull$.referenciaVentaServicioWeb$.caja[*].importe8771$.caja[*].idTipoPago1$.caja[*].idReferencia1$.elektraComercio.detalleOrden.estacionTrabajoGERENTE$.elektraComercio.detalleOrden.idUsuarioT146363$.elektraComercio.detalleOrden.informacionVenta[*].idProveedorv-25$.elektraComercio.detalleOrden.informacionVenta[*].cantidad1$.elektraComercio.detalleOrden.informacionVenta[*].costoProducto100$.elektraComercio.detalleOrden.informacionVenta[*].descuento0$.elektraComercio.detalleOrden.informacionVenta[*].listaMilenias[*].sku1002522$.elektraComercio.detalleOrden.informacionVenta[*].listaMilenias[*].sobrePrecio5$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].cantidad1$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].idPromocion5555$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].idRegalo12$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].monto5$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].subTipoPromocion20$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].tipoPromocion10$.elektraComercio.detalleOrden.informacionVenta[*].mecanica0$.elektraComercio.detalleOrden.informacionVenta[*].precio112$.elektraComercio.detalleOrden.informacionVenta[*].sku1002520$.elektraComercio.detalleOrden.informacionVenta[*].sobrePrecio0$.elektraComercio.detalleOrden.informacionVenta[*].descuentoEspecial0$.elektraComercio.detalleOrden.referenciaEktComv26864600ekt-V$.elektraComercio.detalleOrden.tipoVenta1$.elektraComercio.detalleOrden.totalVenta31999$.elektraComercio.detalleOrden.informacionPago.tipoPago2$.elektraComercio.detalleOrden.informacionPago.plazoMsi12$.elektraComercio.detalleOrden.informacionPago.idBanco14$.elektraComercio.detalleOrden.informacionPago.numeroTarjetaC4772143013277427$.elektraComercio.detalleOrden.informacionPago.referenciaPago124520$.elektraComercio.detalleOrden.informacionPago.monto110$.elektraComercio.detalleOrden.informacionPago.canal1$.elektraComercio.detalleOrden.informacionPago.numeroPagos12$.elektraComercio.detalleOrden.consecutivoPedido1$.elektraComercio.detalleOrden.costoEstimado0$.elektraComercio.detalleOrden.tipoEntrega1$.elektraComercio.detalleOrden.proveedorEnvioMarketplaceGenerico$.elektraComercio.detalleOrden.omnicanalId3$.elektraComercio.detalleOrden.totalPedidos2$.elektraComercio.detalleOrden.afectaContabilidad0$.elektraComercio.detalleOrden.idMercado1$.elektraComercio.detalleOrden.montoVentaMP0$.elektraComercio.detalleOrden.montoComision0$.elektraComercio.detalleOrden.idPenalizacion0$.elektraComercio.detalleOrden.montoPenalizacion0$.elektraComercio.detalleOrden.idOrigenEnvio22$.elektraComercio.detalleOrden.pedidoOtorgaRegalo0$.elektraComercio.detalleOrden.skuOtorgaRegalo1002510$.elektraComercio.detalleOrden.evitarSuministronull$.elektraComercio.detalleOrden.idNegocio12$.elektraComercio.detalleOrden.idPaqueteria22$.elektraComercio.detalleOrden.tiendaSurte4624$.elektraComercio.detalleOrden.proveedor999999$.elektraComercio.detalleOrden.dsvfalse$.elektraComercio.detalleOrden.ordenDistribucion292907$.elektraComercio.detalleOrden.notaCargo4860246$.elektraComercio.detalleOrden.numeroFacturanull$.elektraComercio.detalleOrden.idOrdennull$.elektraComercio.detalleOrden.fechaSuministro2021-01-07T09%3A00%3A00$.elektraComercio.detalleOrden.urlRastreohttps%3A%2F%2Fwww.dhl.com%2Fmx-es%2Fhome%2Frastreo.html$.elektraComercio.detalleOrden.idCodigoSurtimiento139$.elektraComercio.detalleOrden.gastosAdicionales[*].monto0$.elektraComercio.detalleOrden.gastosAdicionales[*].idGasto1$.elektraComercio.detalleOrden.guiaEKT000000000041502$.elektraComercio.detalleOrden.paqueteriaektnvia$.elektraComercio.detalleOrden.pedidoADNTdaOrigen0$.elektraComercio.detalleOrden.informacionNotaDebito[*].idNotaDebito775049$.elektraComercio.detalleOrden.informacionNotaDebito[*].personaQueRecibeMiguel%20Ruiz$.elektraComercio.detalleOrden.informacionNotaDebito[*].numeroRastreo000000000588270$.elektraComercio.detalleOrden.informacionNotaDebito[*].idAlmacen139$.elektraComercio.informacionCliente.apellidoMaternoCastellanos$.elektraComercio.informacionCliente.apellidoPaternoMontesinos$.elektraComercio.informacionCliente.correoElectronicocmontesinos%40mail.com$.elektraComercio.informacionCliente.nombrePaola$.elektraComercio.informacionCliente.direccion.tipoDireccionresidential$.elektraComercio.informacionCliente.direccion.nombreDestinatarioClaudia%20P%C3%A9rez$.elektraComercio.informacionCliente.direccion.idDireccion38c8395027e140909bd23fcdcdf831ba$.elektraComercio.informacionCliente.direccion.codigoPostal09704$.elektraComercio.informacionCliente.direccion.ciudadIztapalapa$.elektraComercio.informacionCliente.direccion.estadoDISTRITO%20FEDERAL$.elektraComercio.informacionCliente.direccion.paisMEX$.elektraComercio.informacionCliente.direccion.calleJos%C3%A9%20Clemente%20Orozco$.elektraComercio.informacionCliente.direccion.numero48$.elektraComercio.informacionCliente.direccion.delegacionDegollado$.elektraComercio.informacionCliente.direccion.complemento2$.elektraComercio.informacionCliente.direccion.referencianull": {
+          "httpStatus": 400,
+          "mockFile": "pedidos-POST/bad_request.json"
+        },
+        "$.folioPresupuestonull$.referencianull$.caja[*].importe8771$.caja[*].idTipoPago1$.caja[*].idReferencia1$.elektraComercio.detalleOrden.estacionTrabajoGERENTE$.elektraComercio.detalleOrden.idUsuarioT146363$.elektraComercio.detalleOrden.informacionVenta[*].idProveedorv-25$.elektraComercio.detalleOrden.informacionVenta[*].cantidad1$.elektraComercio.detalleOrden.informacionVenta[*].costoProducto100$.elektraComercio.detalleOrden.informacionVenta[*].descuento0$.elektraComercio.detalleOrden.informacionVenta[*].listaMilenias[*].sku1002522$.elektraComercio.detalleOrden.informacionVenta[*].listaMilenias[*].sobrePrecio5$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].cantidad1$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].idPromocion5555$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].idRegalo12$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].monto5$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].subTipoPromocion20$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].tipoPromocion10$.elektraComercio.detalleOrden.informacionVenta[*].mecanica0$.elektraComercio.detalleOrden.informacionVenta[*].precio112$.elektraComercio.detalleOrden.informacionVenta[*].sku1002520$.elektraComercio.detalleOrden.informacionVenta[*].sobrePrecio0$.elektraComercio.detalleOrden.informacionVenta[*].descuentoEspecial0$.elektraComercio.detalleOrden.referenciaEktComv26864600ekt-V$.elektraComercio.detalleOrden.tipoVenta1$.elektraComercio.detalleOrden.totalVenta31999$.elektraComercio.detalleOrden.informacionPago.tipoPago2$.elektraComercio.detalleOrden.informacionPago.plazoMsi12$.elektraComercio.detalleOrden.informacionPago.idBanco14$.elektraComercio.detalleOrden.informacionPago.numeroTarjetaC4772143013277427$.elektraComercio.detalleOrden.informacionPago.referenciaPago124520$.elektraComercio.detalleOrden.informacionPago.monto110$.elektraComercio.detalleOrden.informacionPago.canal1$.elektraComercio.detalleOrden.informacionPago.numeroPagos12$.elektraComercio.detalleOrden.consecutivoPedido1$.elektraComercio.detalleOrden.costoEstimado0$.elektraComercio.detalleOrden.tipoEntrega1$.elektraComercio.detalleOrden.proveedorEnvioMarketplaceGenerico$.elektraComercio.detalleOrden.omnicanalId3$.elektraComercio.detalleOrden.totalPedidos2$.elektraComercio.detalleOrden.afectaContabilidad0$.elektraComercio.detalleOrden.idMercado1$.elektraComercio.detalleOrden.montoVentaMP0$.elektraComercio.detalleOrden.montoComision0$.elektraComercio.detalleOrden.idPenalizacion0$.elektraComercio.detalleOrden.montoPenalizacion0$.elektraComercio.detalleOrden.idOrigenEnvio22$.elektraComercio.detalleOrden.pedidoOtorgaRegalo0$.elektraComercio.detalleOrden.skuOtorgaRegalo1002510$.elektraComercio.detalleOrden.evitarSuministronull$.elektraComercio.detalleOrden.idNegocio12$.elektraComercio.detalleOrden.idPaqueteria22$.elektraComercio.detalleOrden.tiendaSurte4624$.elektraComercio.detalleOrden.proveedor999999$.elektraComercio.detalleOrden.dsvfalse$.elektraComercio.detalleOrden.ordenDistribucion292907$.elektraComercio.detalleOrden.notaCargo4860246$.elektraComercio.detalleOrden.numeroFacturanull$.elektraComercio.detalleOrden.idOrdennull$.elektraComercio.detalleOrden.fechaSuministro2021-01-07T09%3A00%3A00$.elektraComercio.detalleOrden.urlRastreohttps%3A%2F%2Fwww.dhl.com%2Fmx-es%2Fhome%2Frastreo.html$.elektraComercio.detalleOrden.idCodigoSurtimiento139$.elektraComercio.detalleOrden.gastosAdicionales[*].monto0$.elektraComercio.detalleOrden.gastosAdicionales[*].idGasto1$.elektraComercio.detalleOrden.guiaEKT000000000041502$.elektraComercio.detalleOrden.paqueteriaektnvia$.elektraComercio.detalleOrden.pedidoADNTdaOrigen0$.elektraComercio.detalleOrden.informacionNotaDebito[*].idNotaDebito775049$.elektraComercio.detalleOrden.informacionNotaDebito[*].personaQueRecibeMiguel%20Ruiz$.elektraComercio.detalleOrden.informacionNotaDebito[*].numeroRastreo000000000588270$.elektraComercio.detalleOrden.informacionNotaDebito[*].idAlmacen139$.elektraComercio.informacionCliente.apellidoMaternoCastellanos$.elektraComercio.informacionCliente.apellidoPaternoMontesinos$.elektraComercio.informacionCliente.correoElectronicocmontesinos%40mail.com$.elektraComercio.informacionCliente.nombrePaola$.elektraComercio.informacionCliente.direccion.tipoDireccionresidential$.elektraComercio.informacionCliente.direccion.nombreDestinatarioClaudia%20P%C3%A9rez$.elektraComercio.informacionCliente.direccion.idDireccion38c8395027e140909bd23fcdcdf831ba$.elektraComercio.informacionCliente.direccion.codigoPostal09704$.elektraComercio.informacionCliente.direccion.ciudadIztapalapa$.elektraComercio.informacionCliente.direccion.estadoDISTRITO%20FEDERAL$.elektraComercio.informacionCliente.direccion.paisMEX$.elektraComercio.informacionCliente.direccion.calleJos%C3%A9%20Clemente%20Orozco$.elektraComercio.informacionCliente.direccion.numero48$.elektraComercio.informacionCliente.direccion.delegacionDegollado$.elektraComercio.informacionCliente.direccion.complemento2$.elektraComercio.informacionCliente.direccion.referencianull": {
+          "httpStatus": 500,
+          "mockFile": "pedidos-POST/internal_server_error.json"
+        },
+        "x-idPais1x-idCanal1x-idTienda100idPedido103265": {
+          "httpStatus": 200,
+          "mockFile": "pedidos-GET/pedidosIdPedido_200.json"
+        },
+        "x-idPais1x-idCanal1x-idTienda100idOrdenv31482547ekt-01": {
+          "httpStatus": 200,
+          "mockFile": "pedidos-GET/pedidosIdOrdenComTienda_200.json"
+        },
+        "x-idPais1x-idCanal1x-idTienda100idOrdenv31490935ekt-01": {
+          "httpStatus": 200,
+          "mockFile": "pedidos-GET/pedidosIdOrdenCom_200.json"
+        },
+        "idPedidonullidOrdenV2312303": {
+          "httpStatus": 400,
+          "mockFile": "pedidos-GET/bad_request.json"
+        },
+        "idPedido111111idOrdenV2312303": {
+          "httpStatus": 404,
+          "mockFile": "pedidos-GET/not_found.json"
+        },
+        "idPedidonullidOrdennull": {
+          "httpStatus": 500,
+          "mockFile": "pedidos-GET/internal_server_error.json"
+        },
+        "idPedido0idOrden0estadoPedido0$.folio863167$.numeroEmpleado146363$.referenciaVentaServicioWeb$.caja[*].importe8771$.caja[*].idTipoPago1$.caja[*].idReferencia1$.elektraComercio.detalleOrden.estacionTrabajoGERENTE$.elektraComercio.detalleOrden.idUsuarioT146363$.elektraComercio.detalleOrden.informacionVenta[*].idProveedorv-25$.elektraComercio.detalleOrden.informacionVenta[*].cantidad1$.elektraComercio.detalleOrden.informacionVenta[*].costoProducto100$.elektraComercio.detalleOrden.informacionVenta[*].descuento0$.elektraComercio.detalleOrden.informacionVenta[*].listaMilenias[*].sku1002522$.elektraComercio.detalleOrden.informacionVenta[*].listaMilenias[*].sobrePrecio5$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].cantidad1$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].idPromocion5555$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].idRegalo12$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].monto5$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].subTipoPromocion20$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].tipoPromocion10$.elektraComercio.detalleOrden.informacionVenta[*].mecanica0$.elektraComercio.detalleOrden.informacionVenta[*].precio112$.elektraComercio.detalleOrden.informacionVenta[*].sku1002520$.elektraComercio.detalleOrden.informacionVenta[*].sobrePrecio0$.elektraComercio.detalleOrden.informacionVenta[*].descuentoEspecial0$.elektraComercio.detalleOrden.referenciaEktComv26864600ekt-V$.elektraComercio.detalleOrden.tipoVenta1$.elektraComercio.detalleOrden.totalVenta31999$.elektraComercio.detalleOrden.informacionPago.tipoPago2$.elektraComercio.detalleOrden.informacionPago.plazoMsi12$.elektraComercio.detalleOrden.informacionPago.idBanco14$.elektraComercio.detalleOrden.informacionPago.numeroTarjetaC4772143013277427$.elektraComercio.detalleOrden.informacionPago.referenciaPago124520$.elektraComercio.detalleOrden.informacionPago.monto110$.elektraComercio.detalleOrden.informacionPago.canal1$.elektraComercio.detalleOrden.informacionPago.numeroPagos12$.elektraComercio.detalleOrden.consecutivoPedido1$.elektraComercio.detalleOrden.costoEstimado0$.elektraComercio.detalleOrden.tipoEntrega1$.elektraComercio.detalleOrden.proveedorEnvioMarketplaceGenerico$.elektraComercio.detalleOrden.omnicanalId3$.elektraComercio.detalleOrden.totalPedidos2$.elektraComercio.detalleOrden.afectaContabilidad0$.elektraComercio.detalleOrden.idMercado1$.elektraComercio.detalleOrden.montoVentaMP0$.elektraComercio.detalleOrden.montoComision0$.elektraComercio.detalleOrden.idPenalizacion0$.elektraComercio.detalleOrden.montoPenalizacion0$.elektraComercio.detalleOrden.idOrigenEnvio22$.elektraComercio.detalleOrden.pedidoOtorgaRegalo0$.elektraComercio.detalleOrden.skuOtorgaRegalo1002510$.elektraComercio.detalleOrden.evitarSuministronull$.elektraComercio.detalleOrden.idNegocio12$.elektraComercio.detalleOrden.idPaqueteria22$.elektraComercio.detalleOrden.tiendaSurte4624$.elektraComercio.detalleOrden.proveedor999999$.elektraComercio.detalleOrden.dsvfalse$.elektraComercio.detalleOrden.ordenDistribucion292907$.elektraComercio.detalleOrden.notaCargo4860246$.elektraComercio.detalleOrden.numeroFacturanull$.elektraComercio.detalleOrden.idOrdennull$.elektraComercio.detalleOrden.fechaSuministro2021-01-07T09%3A00%3A00$.elektraComercio.detalleOrden.urlRastreohttps%3A%2F%2Fwww.dhl.com%2Fmx-es%2Fhome%2Frastreo.html$.elektraComercio.detalleOrden.idCodigoSurtimiento139$.elektraComercio.detalleOrden.gastosAdicionales[*].monto0$.elektraComercio.detalleOrden.gastosAdicionales[*].idGasto1$.elektraComercio.detalleOrden.guiaEKT000000000041502$.elektraComercio.detalleOrden.paqueteriaektnvia$.elektraComercio.detalleOrden.pedidoADNTdaOrigen0$.elektraComercio.detalleOrden.informacionNotaDebito[*].idNotaDebito775049$.elektraComercio.detalleOrden.informacionNotaDebito[*].personaQueRecibeMiguel%20Ruiz$.elektraComercio.detalleOrden.informacionNotaDebito[*].numeroRastreo000000000588270$.elektraComercio.detalleOrden.informacionNotaDebito[*].idAlmacen139$.elektraComercio.informacionCliente.apellidoMaternoCastellanos$.elektraComercio.informacionCliente.apellidoPaternoMontesinos$.elektraComercio.informacionCliente.correoElectronicocmontesinos%40mail.com$.elektraComercio.informacionCliente.nombrePaola$.elektraComercio.informacionCliente.direccion.tipoDireccionresidential$.elektraComercio.informacionCliente.direccion.nombreDestinatarioClaudia%20P%C3%A9rez$.elektraComercio.informacionCliente.direccion.idDireccion38c8395027e140909bd23fcdcdf831ba$.elektraComercio.informacionCliente.direccion.codigoPostal09704$.elektraComercio.informacionCliente.direccion.ciudadIztapalapa$.elektraComercio.informacionCliente.direccion.estadoDISTRITO%20FEDERAL$.elektraComercio.informacionCliente.direccion.paisMEX$.elektraComercio.informacionCliente.direccion.calleJos%C3%A9%20Clemente%20Orozco$.elektraComercio.informacionCliente.direccion.numero48$.elektraComercio.informacionCliente.direccion.delegacionDegollado$.elektraComercio.informacionCliente.direccion.complemento2$.elektraComercio.informacionCliente.direccion.referencianull": {
+          "httpStatus": 201,
+          "mockFile": "pedidos-PUT/created.json"
+        },
+        "idPedido0idOrden0estadoPedido0$.folionull$.numeroEmpleado146363$.referenciaVentaServicioWeb$.caja[*].importe8771$.caja[*].idTipoPago1$.caja[*].idReferencia1$.elektraComercio.detalleOrden.estacionTrabajoGERENTE$.elektraComercio.detalleOrden.idUsuarioT146363$.elektraComercio.detalleOrden.informacionVenta[*].idProveedorv-25$.elektraComercio.detalleOrden.informacionVenta[*].cantidad1$.elektraComercio.detalleOrden.informacionVenta[*].costoProducto100$.elektraComercio.detalleOrden.informacionVenta[*].descuento0$.elektraComercio.detalleOrden.informacionVenta[*].listaMilenias[*].sku1002522$.elektraComercio.detalleOrden.informacionVenta[*].listaMilenias[*].sobrePrecio5$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].cantidad1$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].idPromocion5555$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].idRegalo12$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].monto5$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].subTipoPromocion20$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].tipoPromocion10$.elektraComercio.detalleOrden.informacionVenta[*].mecanica0$.elektraComercio.detalleOrden.informacionVenta[*].precio112$.elektraComercio.detalleOrden.informacionVenta[*].sku1002520$.elektraComercio.detalleOrden.informacionVenta[*].sobrePrecio0$.elektraComercio.detalleOrden.informacionVenta[*].descuentoEspecial0$.elektraComercio.detalleOrden.referenciaEktComv26864600ekt-V$.elektraComercio.detalleOrden.tipoVenta1$.elektraComercio.detalleOrden.totalVenta31999$.elektraComercio.detalleOrden.informacionPago.tipoPago2$.elektraComercio.detalleOrden.informacionPago.plazoMsi12$.elektraComercio.detalleOrden.informacionPago.idBanco14$.elektraComercio.detalleOrden.informacionPago.numeroTarjetaC4772143013277427$.elektraComercio.detalleOrden.informacionPago.referenciaPago124520$.elektraComercio.detalleOrden.informacionPago.monto110$.elektraComercio.detalleOrden.informacionPago.canal1$.elektraComercio.detalleOrden.informacionPago.numeroPagos12$.elektraComercio.detalleOrden.consecutivoPedido1$.elektraComercio.detalleOrden.costoEstimado0$.elektraComercio.detalleOrden.tipoEntrega1$.elektraComercio.detalleOrden.proveedorEnvioMarketplaceGenerico$.elektraComercio.detalleOrden.omnicanalId3$.elektraComercio.detalleOrden.totalPedidos2$.elektraComercio.detalleOrden.afectaContabilidad0$.elektraComercio.detalleOrden.idMercado1$.elektraComercio.detalleOrden.montoVentaMP0$.elektraComercio.detalleOrden.montoComision0$.elektraComercio.detalleOrden.idPenalizacion0$.elektraComercio.detalleOrden.montoPenalizacion0$.elektraComercio.detalleOrden.idOrigenEnvio22$.elektraComercio.detalleOrden.pedidoOtorgaRegalo0$.elektraComercio.detalleOrden.skuOtorgaRegalo1002510$.elektraComercio.detalleOrden.evitarSuministronull$.elektraComercio.detalleOrden.idNegocio12$.elektraComercio.detalleOrden.idPaqueteria22$.elektraComercio.detalleOrden.tiendaSurte4624$.elektraComercio.detalleOrden.proveedor999999$.elektraComercio.detalleOrden.dsvfalse$.elektraComercio.detalleOrden.ordenDistribucion292907$.elektraComercio.detalleOrden.notaCargo4860246$.elektraComercio.detalleOrden.numeroFacturanull$.elektraComercio.detalleOrden.idOrdennull$.elektraComercio.detalleOrden.fechaSuministro2021-01-07T09%3A00%3A00$.elektraComercio.detalleOrden.urlRastreohttps%3A%2F%2Fwww.dhl.com%2Fmx-es%2Fhome%2Frastreo.html$.elektraComercio.detalleOrden.idCodigoSurtimiento139$.elektraComercio.detalleOrden.gastosAdicionales[*].monto0$.elektraComercio.detalleOrden.gastosAdicionales[*].idGasto1$.elektraComercio.detalleOrden.guiaEKT000000000041502$.elektraComercio.detalleOrden.paqueteriaektnvia$.elektraComercio.detalleOrden.pedidoADNTdaOrigen0$.elektraComercio.detalleOrden.informacionNotaDebito[*].idNotaDebito775049$.elektraComercio.detalleOrden.informacionNotaDebito[*].personaQueRecibeMiguel%20Ruiz$.elektraComercio.detalleOrden.informacionNotaDebito[*].numeroRastreo000000000588270$.elektraComercio.detalleOrden.informacionNotaDebito[*].idAlmacen139$.elektraComercio.informacionCliente.apellidoMaternoCastellanos$.elektraComercio.informacionCliente.apellidoPaternoMontesinos$.elektraComercio.informacionCliente.correoElectronicocmontesinos%40mail.com$.elektraComercio.informacionCliente.nombrePaola$.elektraComercio.informacionCliente.direccion.tipoDireccionresidential$.elektraComercio.informacionCliente.direccion.nombreDestinatarioClaudia%20P%C3%A9rez$.elektraComercio.informacionCliente.direccion.idDireccion38c8395027e140909bd23fcdcdf831ba$.elektraComercio.informacionCliente.direccion.codigoPostal09704$.elektraComercio.informacionCliente.direccion.ciudadIztapalapa$.elektraComercio.informacionCliente.direccion.estadoDISTRITO%20FEDERAL$.elektraComercio.informacionCliente.direccion.paisMEX$.elektraComercio.informacionCliente.direccion.calleJos%C3%A9%20Clemente%20Orozco$.elektraComercio.informacionCliente.direccion.numero48$.elektraComercio.informacionCliente.direccion.delegacionDegollado$.elektraComercio.informacionCliente.direccion.complemento2$.elektraComercio.informacionCliente.direccion.referencianull": {
+          "httpStatus": 400,
+          "mockFile": "pedidos-PUT/bad_request.json"
+        },
+        "idPedido0idOrden0estadoPedido0$.folionull$.numeroEmpleadonull$.referenciaVentaServicioWeb$.caja[*].importe8771$.caja[*].idTipoPago1$.caja[*].idReferencia1$.elektraComercio.detalleOrden.estacionTrabajoGERENTE$.elektraComercio.detalleOrden.idUsuarioT146363$.elektraComercio.detalleOrden.informacionVenta[*].idProveedorv-25$.elektraComercio.detalleOrden.informacionVenta[*].cantidad1$.elektraComercio.detalleOrden.informacionVenta[*].costoProducto100$.elektraComercio.detalleOrden.informacionVenta[*].descuento0$.elektraComercio.detalleOrden.informacionVenta[*].listaMilenias[*].sku1002522$.elektraComercio.detalleOrden.informacionVenta[*].listaMilenias[*].sobrePrecio5$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].cantidad1$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].idPromocion5555$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].idRegalo12$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].monto5$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].subTipoPromocion20$.elektraComercio.detalleOrden.informacionVenta[*].promociones[*].tipoPromocion10$.elektraComercio.detalleOrden.informacionVenta[*].mecanica0$.elektraComercio.detalleOrden.informacionVenta[*].precio112$.elektraComercio.detalleOrden.informacionVenta[*].sku1002520$.elektraComercio.detalleOrden.informacionVenta[*].sobrePrecio0$.elektraComercio.detalleOrden.informacionVenta[*].descuentoEspecial0$.elektraComercio.detalleOrden.referenciaEktComv26864600ekt-V$.elektraComercio.detalleOrden.tipoVenta1$.elektraComercio.detalleOrden.totalVenta31999$.elektraComercio.detalleOrden.informacionPago.tipoPago2$.elektraComercio.detalleOrden.informacionPago.plazoMsi12$.elektraComercio.detalleOrden.informacionPago.idBanco14$.elektraComercio.detalleOrden.informacionPago.numeroTarjetaC4772143013277427$.elektraComercio.detalleOrden.informacionPago.referenciaPago124520$.elektraComercio.detalleOrden.informacionPago.monto110$.elektraComercio.detalleOrden.informacionPago.canal1$.elektraComercio.detalleOrden.informacionPago.numeroPagos12$.elektraComercio.detalleOrden.consecutivoPedido1$.elektraComercio.detalleOrden.costoEstimado0$.elektraComercio.detalleOrden.tipoEntrega1$.elektraComercio.detalleOrden.proveedorEnvioMarketplaceGenerico$.elektraComercio.detalleOrden.omnicanalId3$.elektraComercio.detalleOrden.totalPedidos2$.elektraComercio.detalleOrden.afectaContabilidad0$.elektraComercio.detalleOrden.idMercado1$.elektraComercio.detalleOrden.montoVentaMP0$.elektraComercio.detalleOrden.montoComision0$.elektraComercio.detalleOrden.idPenalizacion0$.elektraComercio.detalleOrden.montoPenalizacion0$.elektraComercio.detalleOrden.idOrigenEnvio22$.elektraComercio.detalleOrden.pedidoOtorgaRegalo0$.elektraComercio.detalleOrden.skuOtorgaRegalo1002510$.elektraComercio.detalleOrden.evitarSuministronull$.elektraComercio.detalleOrden.idNegocio12$.elektraComercio.detalleOrden.idPaqueteria22$.elektraComercio.detalleOrden.tiendaSurte4624$.elektraComercio.detalleOrden.proveedor999999$.elektraComercio.detalleOrden.dsvfalse$.elektraComercio.detalleOrden.ordenDistribucion292907$.elektraComercio.detalleOrden.notaCargo4860246$.elektraComercio.detalleOrden.numeroFacturanull$.elektraComercio.detalleOrden.idOrdennull$.elektraComercio.detalleOrden.fechaSuministro2021-01-07T09%3A00%3A00$.elektraComercio.detalleOrden.urlRastreohttps%3A%2F%2Fwww.dhl.com%2Fmx-es%2Fhome%2Frastreo.html$.elektraComercio.detalleOrden.idCodigoSurtimiento139$.elektraComercio.detalleOrden.gastosAdicionales[*].monto0$.elektraComercio.detalleOrden.gastosAdicionales[*].idGasto1$.elektraComercio.detalleOrden.guiaEKT000000000041502$.elektraComercio.detalleOrden.paqueteriaektnvia$.elektraComercio.detalleOrden.pedidoADNTdaOrigen0$.elektraComercio.detalleOrden.informacionNotaDebito[*].idNotaDebito775049$.elektraComercio.detalleOrden.informacionNotaDebito[*].personaQueRecibeMiguel%20Ruiz$.elektraComercio.detalleOrden.informacionNotaDebito[*].numeroRastreo000000000588270$.elektraComercio.detalleOrden.informacionNotaDebito[*].idAlmacen139$.elektraComercio.informacionCliente.apellidoMaternoCastellanos$.elektraComercio.informacionCliente.apellidoPaternoMontesinos$.elektraComercio.informacionCliente.correoElectronicocmontesinos%40mail.com$.elektraComercio.informacionCliente.nombrePaola$.elektraComercio.informacionCliente.direccion.tipoDireccionresidential$.elektraComercio.informacionCliente.direccion.nombreDestinatarioClaudia%20P%C3%A9rez$.elektraComercio.informacionCliente.direccion.idDireccion38c8395027e140909bd23fcdcdf831ba$.elektraComercio.informacionCliente.direccion.codigoPostal09704$.elektraComercio.informacionCliente.direccion.ciudadIztapalapa$.elektraComercio.informacionCliente.direccion.estadoDISTRITO%20FEDERAL$.elektraComercio.informacionCliente.direccion.paisMEX$.elektraComercio.informacionCliente.direccion.calleJos%C3%A9%20Clemente%20Orozco$.elektraComercio.informacionCliente.direccion.numero48$.elektraComercio.informacionCliente.direccion.delegacionDegollado$.elektraComercio.informacionCliente.direccion.complemento2$.elektraComercio.informacionCliente.direccion.referencianull": {
+          "httpStatus": 500,
+          "mockFile": "pedidos-PUT/internal_server_error.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+    "codigo": "500.Elektra-comercio-Pedidos.2000",
+    "mensaje": "Problemas al procesar su solicitud favor de contactar a su administrador",
+    "folio": "cf3e4d0f-f0f7-460a-9ea7-359cec37e863",
+    "info": "https://baz-developer.bancoazteca.com.mx/info#500.Elektra-comercio-Pedidos.2000",
+    "detalles": [
+        "Error interno"
+    ]
+}

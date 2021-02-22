@@ -1,0 +1,2509 @@
+swagger: "2.0"
+info:
+  version: 0.0.1
+  title: API de Pedido.
+  description: |
+    API para el Pedido
+
+host: dev-api.bancoazteca.com.mx:8080
+
+basePath: /elektra/comercio/pedidos-productos/v1
+
+schemes:
+  - https
+
+produces:
+  - application/json
+
+consumes:
+  - application/json
+
+securityDefinitions:
+  Bearer:
+    description: |
+      Para acceder a la API se debe pasar un token válido en todas las consultas. La siguiente sintaxis se debe utilizar en el encabezado 'Authorization' :
+        Bearer: YXBpc3VydGltaWVudG86c3VydGltaWVudG8=
+    type: apiKey
+    name: Authorization
+    in: header
+
+paths:
+  /pedidos:
+    post:
+      tags:
+        - Pedidos
+      summary: Generar pedido
+      description: Realiza el Marcado de la Venta
+      parameters:
+        - name: x-idPais
+          in: header
+          description: Identificador del País
+          required: true
+          type: integer
+          default: 1
+        - name: x-idCanal
+          in: header
+          description: Identificador del Canal
+          required: true
+          type: integer
+          default: 1
+        - name: x-idTienda
+          in: header
+          description: Número de la tienda
+          required: true
+          type: integer
+          default: 100
+
+        - name: x-estacionTrabajo
+          in: header
+          description: Estacion de trabajo donde se realiza el llamado al servicio
+          required: true
+          type: string
+          default: "WS_CAJA"
+        - name: marcarVenta
+          in: body
+          description: Informacion requerida para marcar la venta del presupuesto
+          required: false
+          schema:
+            $ref: "#/definitions/marcarVenta"
+
+      responses:
+        201:
+          description: OK
+          schema:
+            $ref: "#/definitions/respuestaMarcarVentaResult"
+          examples:
+            application/json: |-
+              {
+                "codigo": "201.Elektra-Comercio-Pedidos-Productos.107201",
+                "mensaje": "Operación exitosa.",
+                "folio": "107-202105041545559500",
+                "resultado": 
+                {
+                  "idPedidoAdn": 121245,
+                  "numeroPresupuesto": 1002536,
+                  "numeroTransaccion": 153654648,
+                  "permiteSurtimiento": true,
+                  "detalleOperacion": "Se genero el pedido 121245"
+               }
+              }
+        400:
+          description: Entrada Incorrecta
+          schema:
+            $ref: "#/definitions/respuestaError400"
+          examples:
+            application/json: |-
+              {
+                
+                  "codigo" : "400.Elektra-Comercio-Pedidos-Productos.1000",
+                  "mensaje": "Datos de entrada incorrectos, favor de validar su información",
+                  "folio": "cf3e4d0f-f0f7-460a-9ea7-359cec37e863",
+                  "info": "https://baz-developer.bancoazteca.com.mx/info#400.Elektra-Comercio-Pedidos-Productos.2000",
+                  "detalles": [
+                    "Los datos proporcionados no coinciden con los registros"
+                  ]
+                
+              }
+
+        500:
+          description: Operacion Inesperada
+          schema:
+            $ref: "#/definitions/respuestaError500"
+          examples:
+            application/json: |-
+              {               
+                  "codigo" : "500.Elektra-Comercio-Pedidos-Productos.107500",
+                  "mensaje": " Error en el servidor al procesar la petición.",
+                  "folio": "107-202105041545559500",
+                  "info": "https://baz-developer.bancoazteca.com.mx/info#500.Elektra-Comercio-Pedidos-Productos.5000",
+                  "detalles": [
+                        "El recurso solicitado no se encuentra disponible"
+                  ]             
+              }
+      security:
+        - Bearer: []
+
+    get:
+      tags:
+        - Pedidos
+      summary: Consulta del Pedido
+      description: Consulta detalles del pedido por idOrden o por idPedido
+      parameters:
+        - name: x-idPais
+          in: header
+          description: Identificador del País
+          required: true
+          type: integer
+          default: 1
+        - name: x-idCanal
+          in: header
+          description: Identificador del Canal
+          required: true
+          type: integer
+          default: 1
+        - name: x-idTienda
+          in: header
+          description: Identificador de la tienda
+          required: true
+          type: integer
+          default: 100
+        - name: idPedido
+          in: query
+          description: Pedido para obtener detalle
+          required: false
+          type: integer
+          default: 146625
+        - name: idOrden
+          in: query
+          description: Orden de elektra .com
+          required: false
+          type: string
+          default: "v31485575ekt-01"
+
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: "#/definitions/respuestaPedido"
+          examples:
+            application/json: |-
+              {
+                "codigo": "200.Elektra-Comercio-Pedidos-Productos.107201",
+                "mensaje": "Operación exitosa.",
+                "folio": "107-202105041545559500",
+                "resultado": {
+                  "pedidos": {
+                    "idTipoVenta": 1,
+                    "tienda": {
+                      "idPedido": 146625,
+                      "idTipoPedido": 1,
+                      "idTipoMilenia": 1,
+                      "idEstatus": 0,
+                      "descripcionEstatus": "creada",
+                      "numeroVentaEmpleado": 100300,
+                      "idNegocioEmpleado": 1,
+                      "clienteUnico": {
+                        "idFolio": 15621,
+                        "idPais": 1,
+                        "idCanal": 1,
+                        "idTienda": 100
+                      },
+                      "clienteElektra": {
+                        "id": 46546,
+                        "idNegocio": 1,
+                        "idTienda": 100,
+                        "digitoVerificador": 1
+                      },
+                      "seguros": false,
+                      "detalles": [
+                        {
+                          "sku": 1234567787,
+                          "idClase": 1,
+                          "idDepartamento": 1,
+                          "idSubDepartamento": 2,
+                          "cantidad": 1,
+                          "milenias": [
+                            {
+                              "sku": 1002522,
+                              "sobrePrecio": 5.00
+                            }
+                          ],
+                          "promociones": [
+                            {
+                              "id": 5555,
+                              "idtipo": 10,
+                              "idSubTipo": 20,
+                              "idRegalo": 12,
+                              "cantidad": 1,
+                              "monto": 5.00
+                            }
+                          ],
+                          "inventariable": false,
+                          "serie": "SDKS12123123"
+                        }
+                      ]
+                    },
+                    "elektraCom": [
+                      {
+                        "idOrden": "v31485575ekt-01",
+                        "idUnico": "1b213b4e-c25b-40cd-8d82-ebbc9c9a7148",
+                        "idEstatus": 0,
+                        "descripcionEstatus": "creada",
+                        "descripcionEstatusPlataformaEnLinea": "order-created",
+                        "ordenReemplazo": false,
+                        "tieneContraCargo": false,
+                        "idOrigenSolicitud": 1,
+                        "idTipoPago": 1,
+                        "descripcionTipoPago": "mastercard",
+                        "idPaisVenta": 1,
+                        "idTipoEnvio": 1,
+                        "idTipoEntrega": 1,
+                        "descripcionTipoEntrega": "Envío domicilio",
+                        "numeroSecuencia": 30915737,
+                        "numeroSecuenciaOriginal": 30915737,
+                        "totalPedidos": 1,
+                        "totalCostoEnvio": 200.00,
+                        "totalDescuento": 0.00,
+                        "totalImpuestos": 1499.07,
+                        "totalPago": 9369.20,
+                        "fechaHoraRegistro": "2020-06-24 14:22:12",
+                        "fechaHoraUltimoCambio": "2020-11-12 17:22:11",
+                        "descripcionTransaccionOrden": "Venta de Vtex",
+                        "ventaMercado": false,
+                        "vendedor": {
+                          "id": 1,
+                          "nombre": "DISTRIBUIDOR KARCHER",
+                          "descriptionTipo": "MARKETPLACE"
+                        },
+                        "comprador": {
+                          "idUnico": "1b213b4e-c25b-40cd-8d82-ebbc9c9a7148",
+                          "correoElectronico": "cmontesinos@mail.com",
+                          "nombre": "Paola",
+                          "apellidos": "Montesinos Velazquez",
+                          "numeroTelefono": "3311087206",
+                          "socioCorporativo": true,
+                          "correoElectronicoSocio": "100300@elektra.com.mx",
+                          "domicilioEnvio": {
+                            "idUnicoEnvio": "f974f250242547fcb640757798f128dc",
+                            "idTipoDomicilio": 1,
+                            "pais": "MEX",
+                            "codigoPostal": 45430,
+                            "estado": "JALISCO",
+                            "ciudad": "Zapotlanejo",
+                            "colonia": "Zapotlanejo",
+                            "calle": "francisco medina",
+                            "numeroExterior": "57",
+                            "numeroInterior": "21A",
+                            "referenciaDomicilio": "A dos cuadras de la unidad deportiva",
+                            "personaRecibeEnvio": "David Aguirre Velazquez",
+                            "idEstadoAlmacen": 14,
+                            "estadoAlmacen": "JALISCO",
+                            "idEstadoProveedorEnvioDirectoItalika": "JAL"
+                          },
+                          "domicilioFacturacion": {
+                            "pais": "MEX",
+                            "codigoPostal": 45430,
+                            "estado": "JALISCO",
+                            "ciudad": "Zapotlanejo",
+                            "colonia": "Zapotlanejo",
+                            "calle": "francisco medina",
+                            "numeroExterior": "57",
+                            "numeroInterior": "21A",
+                            "personaRecibeEnvio": "David Aguirre Velazquez"
+                          }
+                        },
+                        "pedidosAdn": [
+                          {
+                            "id": 1,
+                            "numeroPedido": 3091573,
+                            "idTipoOperacion": 2,
+                            "idEstatusAlmacen": 0,
+                            "descripcionEstatusAlmacen": "sin estado",
+                            "fechaHoraSurtimiento": "2017-12-27 09:00:41",
+                            "idTienda": 9797,
+                            "numeroCliente": 6481248,
+                            "digitoVerificador": 9,
+                            "solicitaHuella": false,
+                            "detallePedido": {
+                              "producto": {
+                                "id": 823434,
+                                "idPlataformaEnLinea": 1500392155,
+                                "idPlataformaEnLineaOriginal": 1500392155,
+                                "idVendedor": 1600184036932,
+                                "descripcion": "K 5 MX HIDROLAVADORA ALTA PRESION 2000 PSI, KARCHER"
+                              },
+                              "idCentroDistribucion": 139,
+                              "idServicioPaqueteriaEnvio": 4,
+                              "servicioPaqueteriaEnvio": "DHL",
+                              "idTipoVendedorMercado": 1,
+                              "numeroConsecutivo": 1,
+                              "cantidad": 1,
+                              "cupon": "italika123",
+                              "fechaHoraEstimadoEntrega": "2020-12-30 12:23:12",
+                              "fechaCalle": "2020-12-30",
+                              "productoDevuelto": false,
+                              "proveedorEnvioDirectoItalika": true,
+                              "tieneGuiaRastreo": false,
+                              "costo": 930.34,
+                              "porcentajeComisionMercado": 0.9,
+                              "montoComisionMercado": 0.02131,
+                              "descuentoEspecial": 200.77,
+                              "relacionEnvio": {
+                                "idSolicitudAdnEnvio": 1,
+                                "idPedidoAdnEnvio": 112322,
+                                "idProductoEnvio": 823434
+                              },
+                              "productoServicio": {
+                                "pedidoProductoServicio": true,
+                                "idProveedor": 626434,
+                                "idSubcategoria": 12,
+                                "subCategoria": "11342342/"
+                              },
+                              "promociones": {
+                                "clave": {
+                                  "id": 977,
+                                  "idTipo": 2,
+                                  "idSubTipo": 30915737
+                                },
+                                "administracionSap": {
+                                  "idTipo": 4,
+                                  "numeroConjunto": 131212,
+                                  "idPedidoAdnInclusivo": 5352523,
+                                  "regalo": false
+                                }
+                              }
+                            },
+                            "detalleVenta": {
+                              "precio": 499.00,
+                              "precioEspecial": 399.00,
+                              "precioListaPlataformaEnLinea": 599.00,
+                              "descuento": 100.00,
+                              "descuentoEspecial": 100.00,
+                              "costo": 499.00,
+                              "comision": 0.00,
+                              "montoImpuestos": 100.00,
+                              "cantidad": 1,
+                              "tipoCategoria": "1371652/127631/127639"
+                            },
+                            "totales": {
+                              "contado": {
+                                "montoParcial": 5599.00,
+                                "montoDescuento": 1119.00,
+                                "montoEnvio": 42.00,
+                                "montoTotal": 4522.00
+                              },
+                              "credito": {
+                                "montoParcial": 5599.20,
+                                "montoDescuento": 100.00,
+                                "montoEnvio": 42.50,
+                                "montoTotal": 5541.70
+                              }
+                            },
+                            "dimensiones": {
+                              "pesoCubico": 1234.00,
+                              "altitud": 10.00,
+                              "longitud": 23.00,
+                              "amplitud": 34.00
+                            },
+                            "cancelacion": {
+                              "id": 4,
+                              "idCausa": 2,
+                              "descripcionCausa": "Rechaza entrega por producto dañado/Recibe artículo dañado",
+                              "idAccion": 2,
+                              "idAreaRaiz": 4,
+                              "idImputabilidad": 1,
+                              "descripcionImputabilidad": "Devolucion",
+                              "idEstatusGuardado": 0,
+                              "idEstatusAutorizacion": 0,
+                              "tipCambiofisico": "label-warning",
+                              "idDevolucion": 1
+                            },
+                            "excepcionEntrega": {
+                              "id": 2,
+                              "descripcion": "No atendio el receptor del paquete",
+                              "fechaHoraRegistro": "2020-05-09 21:18:12"
+                            },
+                            "factura": {
+                              "idUnico": "636438641989553580678175",
+                              "numeroFolio": 158225
+                            }
+                          }
+                        ],
+                        "transaccionesPago": {
+                          "id": "77F94DDFB5484682BA6EFCCCE90271AF",
+                          "idTipoTransaccion": 1,
+                          "total": 30915737.00,
+                          "idOrdenElektra": "0726b85c-e1f8-43c7-b4f9-d9770ce0ed65",
+                          "referenciaPlataformaEnLinea": "30915737",
+                          "idPago": "B19C3B03D62348F9864BDD05BB2929D6",
+                          "idTipoPago": 4,
+                          "costoEnvio": 1312.00,
+                          "impuestos": 234.00,
+                          "direccionIp": "201.164.61.26",
+                          "aprobado": true,
+                          "codigoAutenticacion": 253852,
+                          "numeroFolioBanco": 408409,
+                          "marcaTarjetaCredito": "BANAMEX",
+                          "digitosTarjetaCredito": "549949-4164",
+                          "tarjetaCredito": "5499490538054164",
+                          "mesesSinIntereses": 1,
+                          "codigoRechazo": 855436,
+                          "descripcionRechazo": "Sobregiro",
+                          "fechaHoraPago": "2020-11-12 14:34:23",
+                          "fechaHoraDevolucion": "2021-01-11 21:23:12",
+                          "fechaHoraRegistro": "2020-11-12 14:04:12",
+                          "urlLlamadaDevuelta": "https://elektra.vtexpayments.com.br/api/pvt/payment-provider/transactions/77F94DDFB5484682BA6EFCCCE90271AF/payments/B19C3B03D62348F9864BDD05BB2929D6/callback?accountName=elektra",
+                          "nombreSistemaPago": "Mastercard",
+                          "promocionMesesSinIntereses": {
+                            "liquidaciones": 1,
+                            "idBanco": 3,
+                            "concecionesBancarias": 30915737
+                          }
+                        },
+                        "paypalMercadoPago": {
+                          "idSolicitud": 0,
+                          "idEstado": 0,
+                          "monto": 0.00,
+                          "correoElectronico": "ejemplo@correo.com"
+                        },
+                        "detallesAcertiffy": [
+                          {
+                            "tipoImporte": "post",
+                            "codigoRecomendacion": "Accept",
+                            "codigoResolucion": "Sin código",
+                            "fechaHoraRegistro": "2020-12-21 14:23:12"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+        400:
+          description: Entrada Incorrecta
+          schema:
+            $ref: "#/definitions/respuestaError400"
+          examples:
+            application/json: |-
+              {
+                
+                  "codigo" : "400.Elektra-Comercio-Pedidos-Productos.1000",
+                  "mensaje": "Datos de entrada incorrectos, favor de validar su información",
+                  "folio": "cf3e4d0f-f0f7-460a-9ea7-359cec37e863",
+                  "info": "https://baz-developer.bancoazteca.com.mx/info#400.Elektra-Comercio-Pedidos-Productos.1000",
+                  "detalles": [
+                    "Los datos proporcionados no coinciden con los registros"
+                  ]
+                }
+
+        404:
+          description: No encontrado
+          schema:
+            $ref: "#/definitions/respuestaError404"
+          examples:
+            application/json: |-
+              {
+                
+                  "codigo": "404.Elektra-Comercio-Pedidos-Productos.107404",
+                  "mensaje": "Recurso no encontrado",
+                  "folio": "107-202105041545559500",
+                  "info": "https://baz-developer.bancoazteca.com.mx/info#404.Elektra-Comercio-Pedidos-Productos.107404",
+                  "detalles": [
+                    "Informacion no encontrada"
+                  ]
+                
+              }
+
+        500:
+          description: Operacion Inesperada
+          schema:
+            $ref: "#/definitions/respuestaError500"
+          examples:
+            application/json: |-
+              {
+                
+                  "codigo" : "500.Elektra-Comercio-Pedidos-Productos.107500",
+                  "mensaje": "Error en el servidor al procesar la petición.",
+                  "folio": "107-202105041545559500",
+                  "info": "https://baz-developer.bancoazteca.com.mx/info#500.Elektra-Comercio-Pedidos-Productos.107500",
+                  "detalles": [
+                        "El recurso solicitado no se encuentra disponible"
+                  ]
+                
+              }
+      security:
+        - Bearer: []
+
+    put:
+      tags:
+        - Pedidos
+      summary: Actualizacion del pedido
+      description: Actualizacion del pedido o de la orden Elektra com.
+      parameters:
+        - name: x-idPais
+          in: header
+          description: Identificador del País
+          required: true
+          type: integer
+          default: 1
+        - name: x-idCanal
+          in: header
+          description: Identificador del Canal
+          required: true
+          type: integer
+          default: 1
+        - name: x-idTienda
+          in: header
+          description: Número de la tienda
+          required: true
+          type: integer
+          default: 100
+
+        - name: x-estacionTrabajo
+          in: header
+          description: Estacion de trabajo donde se realiza el llamado al servicio
+          required: true
+          type: string
+          default: "WS_CAJA"
+
+        - name: detallePedidoActualizar
+          in: body
+          description: Informacion requerida para marcar la venta del presupuesto
+          required: false
+          schema:
+            $ref: "#/definitions/detallePedidoActualizar"
+
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: "#/definitions/respuestaActualizacionOrden"
+          examples:
+            application/json: |-
+              {
+                "codigo": "200.Elektra-Comercio-Pedidos-Productos.107201",
+                "mensaje": "Operación exitosa.",
+                "folio": "107-202105041545559500",
+                "resultado": {  
+                   "pedidoValido": true,
+                   "ordenValido" : true        
+                 }
+               }
+        400:
+          description: Entrada Incorrecta
+          schema:
+            $ref: "#/definitions/respuestaError400"
+          examples:
+            application/json: |-
+              {
+                "respuesta": {
+                  "codigo" : "400.Elektra-Comercio-Pedidos-Productos.1000",
+                  "mensaje": "Datos de entrada incorrectos, favor de validar su información",
+                  "folio": "cf3e4d0f-f0f7-460a-9ea7-359cec37e863",
+                  "info": "https://baz-developer.bancoazteca.com.mx/info#400.Elektra-Comercio-Pedidos-Productos.2000",
+                  "detalles": [
+                    "Los datos proporcionados no coinciden con los registros]"
+                  ]
+                }
+              }
+
+        500:
+          description: Operacion Inesperada
+          schema:
+            $ref: "#/definitions/respuestaError500"
+          examples:
+            application/json: |-
+              {
+                
+                  "codigo" : "500.Elektra-Comercio-Pedidos-Productos.107500",
+                  "mensaje": " Error en el servidor al procesar la petición.",
+                  "folio": "cf3e4d0f-f0f7-460a-9ea7-359cec37e863",
+                  "info": "https://baz-developer.bancoazteca.com.mx/info#500.Elektra-Comercio-Pedidos-Productos.5000",
+                  "detalles": [
+                        "El recurso solicitado no se encuentra disponible"
+                  ]
+                
+              }
+
+      security:
+        - Bearer: []
+
+definitions:
+  detallePedidoActualizar:
+    type: object
+    properties:
+      numeroEmpleado:
+        type: integer
+        description: Numero de empleado
+        example: 146363
+      folio:
+        type: integer
+        description: Número de folio de pedido
+        example: 863167
+      folioOrden:
+        type: string
+        description: Folio de orden Elektra com
+        example: "v31482547ekt-01"
+      idTipoFolio:
+        type: integer
+        description: Identificador de tipo de pedido 1.Tienda 2.ElektraCom 3.EntregaTienda 4. DSV
+        example: 1
+        enum: [1, 2, 3, 4]
+      idEstadoPedido:
+        type: integer
+        description: Identficador de estado del pedido
+        example: 0
+      idTipoOperacion:
+        type: integer
+        description: Tipo de operacion
+        format: "int32"
+        example: 6
+      referencia:
+        type: string
+        description: Referencia
+        example: "VentaServicioWeb"
+
+  detalleMarcadoVenta:
+    type: object
+    properties:
+      numeroEmpleado:
+        type: integer
+        description: Numero de empleado
+        example: 146363
+      folioPresupuesto:
+        type: integer
+        description: Folio de numero de presupuesto
+        example: 863167
+      idTipoPedido:
+        type: integer
+        description: Identificador de tipo de pedido a generar 1.Tienda 2.ElektraCom
+        example: 1
+      folioOrden:
+        type: string
+        description: Folio de orden Elektra com
+        example: "V2312303"
+      ventaEmpleado:
+        type: string
+        description: Informacion del Empleado
+        example: "T1002563"
+      idNegocioEmpleado:
+        type: integer
+        description: Nombre del negocio al que pertenece el empleado
+        example: 1
+      referencia:
+        type: string
+        description: Referencia de aplicacion donde se realiza el llamado
+        example: "VentaServicioWeb"
+      cajas:
+        type: array
+        items:
+          $ref: "#/definitions/caja"
+      #elektraComercio:
+      #$ref: "#/definitions/detalleOrden"
+
+  caja:
+    type: object
+    description: Informacion realacionada a pagos de caja
+    properties:
+      importe:
+        type: number
+        description: Cantidad del importe
+        format: double
+
+        example: 8771.00
+      idTipoPago:
+        type: integer
+        description: Tipo de venta efectuado
+        example: 1
+      idReferencia:
+        type: integer
+        description: Catalogo de referencia
+        example: 1
+
+  marcarVenta:
+    $ref: "#/definitions/detalleMarcadoVenta"
+
+  respuestaMarcarVentaResult:
+    type: object
+    description: Resultado de marcar presupuesto
+    properties:
+      codigo:
+        type: string
+        description: Codigo de resultado de operacion
+        example: 201.Elektra-Comercio-Pedidos-Productos.107201
+      mensaje:
+        type: string
+        description: Mensaje de resultado de proceso de operacion
+        example: Operación exitosa.
+      folio:
+        type: string
+        description: Folio generado por operacion realizada
+        example: "107-202105041545559500"
+      resultado:
+        type: object
+        properties:
+          idPedidoAdn:
+            type: integer
+            description: Id de pedido adn generado en sucursal
+            example: 121245
+          numeroPresupuesto:
+            type: integer
+            description: Numero de presupesto ligado a pedido
+            example: 1002536
+          numeroTransaccion:
+            type: integer
+            description: Numero de la transaccion
+            example: 153654648
+          permiteSurtimiento:
+            type: boolean
+            description: Valor para permitir surtimiento
+            example: true
+          detalleOperacion:
+            type: string
+            description: Detalle Operacion
+            example: "Se genero el pedido 121245"
+
+  respuestaError400:
+    properties:
+      codigo:
+        type: string
+        description: Id de código de error para la aplicación cliente
+        example: "400.Elektra-Comercio-Pedidos-Productos.1000"
+      mensaje:
+        type: string
+        description: Mensaje de error para el desarrollador
+        example: "Datos de entrada incorrectos, favor de validar su información"
+      folio:
+        type: string
+        description: |-
+          Identificador de rastreabilidad o identificador global único que se genera automáticamente para cada solicitud que recibe el backend
+        example: "cf3e4d0f-f0f7-460a-9ea7-359cec37e863"
+      info:
+        type: string
+        description: Rutas de ayuda para atender el error
+        example: "https://baz-developer.bancoazteca.com.mx/info#400.Elektra-Comercio-Pedidos-Productos.1000"
+      detalles:
+        type: array
+        items:
+          type: string
+          description: Informacion general sobre el error
+          example: "Los datos proporcionados no coinciden con los registros"
+
+  respuestaError500:
+    type: object
+    properties:
+      codigo:
+        type: string
+        description: Código del error 500
+        example: 500.Elektra-Comercio-Pedidos-Productos.107500
+      mensaje:
+        type: string
+        description: Descripción del error
+        example: "Error en el servidor al procesar la petición."
+      folio:
+        type: string
+        description: Número de folio de la operación
+        example: 107-202105041545559500
+      info:
+        type: string
+        description: Rutas de ayuda para atender el error
+        example: "https://baz-developer.bancoazteca.com.mx/info#500.Elektra-Comercio-Pedidos-Productos.107500"
+      detalles:
+        type: array
+        items:
+          type: string
+          description: Informacion general sobre el error
+          example: "El recurso solicitado no se encuentra disponible"
+
+  respuestaError404:
+    type: object
+    properties:
+      codigo:
+        type: string
+        description: Código del error 404
+        example: 404.Elektra-Comercio-Pedidos-Productos.107404
+      mensaje:
+        type: string
+        description: Descripción del error
+        example: "Recurso no encontrado."
+      folio:
+        type: string
+        description: Número de folio de la operación
+        example: 107-202105041545559500
+      info:
+        type: string
+        description: Rutas de ayuda para atender el error
+        example: "https://baz-developer.bancoazteca.com.mx/info#404.Elektra-Comercio-Pedidos-Productos.107404"
+      detalles:
+        type: array
+        items:
+          type: string
+          description: Informacion general sobre el error
+          example: "Informacion no encontrada"
+
+  respuestaPedido:
+    type: object
+    properties:
+      codigo:
+        type: string
+        description: Codigo de resultado de operación
+        example: 200.Elektra-Comercio-Pedidos-Productos.107201
+      mensaje:
+        type: string
+        description: Mensaje de resultado de proceso de operacion
+        example: Operación exitosa.
+      folio:
+        type: string
+        description: Folio generado por operacion realizada
+        example: "107-202105041545559500"
+      resultado:
+        type: object
+        properties:
+          pedidos:
+            type: object
+            properties:
+              idTipoVenta:
+                type: integer
+                description: Identificador de tipo de venta 1.Contado - 2. Credito
+                example: 1
+                enum: [1, 2]
+              tienda:
+                $ref: "#/definitions/pedido"
+              elektraCom:
+                type: array
+                description: Informacion de la orden para .com entregado por proveedor
+                items:
+                  $ref: "#/definitions/ordenElektraCom"
+
+  #Objetos de consulta de pedido
+  pedido:
+    type: object
+    properties:
+      idPedido:
+        type: integer
+        description: identificador del pedido idPedido
+        example: 146625
+      idTipoPedido:
+        type: integer
+        description: Identificador de pedido  1.Telefonia 2.Motos 3.MotosNuevasMarcas
+        example: 1
+      idTipoMilenia:
+        type: integer
+        description: Identificador de tipo de milenia 1.Ligado 2.Compra
+        example: 1
+        enum: [1, 2]
+      idEstatus:
+        type: integer
+        description: Estatus en el que se encuentra el pedido
+        example: 0
+      descripcionEstatus:
+        type: string
+        description: descripción del estatus del pedido
+        example: "creada"
+      numeroVentaEmpleado:
+        type: integer
+        description: Numero de empleado para venta empleado
+        example: 100300
+      idNegocioEmpleado:
+        type: integer
+        description: Identificador de negocio de empleado
+        example: 1
+      clienteUnico:
+        type: object
+        properties:
+          idFolio:
+            type: integer
+            description: Numero de folio de cliente
+            example: 15621
+          idPais:
+            type: integer
+            description: Identificador de pais 1.Mexico 2.Guatemala 3.Honduras
+            example: 1
+            enum: [1, 2, 3]
+          idCanal:
+            type: integer
+            description: Identificador de canal 1.Elektra 2.Bodegas remates 3. Salinas & Rocha
+            example: 1
+            enum: [1, 2, 3]
+          idTienda:
+            type: integer
+            description: Numero de sucursal de cliente
+            example: 100
+      clienteElektra:
+        type: object
+        properties:
+          id:
+            type: integer
+            description: Id de cliente elektra
+            example: 46546
+          idNegocio:
+            type: integer
+            description: Identificador de negocio ligado al cliente
+            example: 1
+          idTienda:
+            type: integer
+            description: Numero de sucursal donde se genero el pedido
+            example: 100
+          digitoVerificador:
+            type: integer
+            description: Digito verificador de cliente
+            example: 1
+      seguros:
+        type: boolean
+        description: Identificador de pedido si contiene seguros
+        example: false
+      detalles:
+        type: array
+        description: informacion de detalles de pedidos de tienda
+        items:
+          $ref: "#/definitions/detallePedido"
+
+  detallePedido:
+    type: object
+    description: Informacion del producto
+    properties:
+      sku:
+        type: integer
+        description: sku del pedido
+        example: 1234567787
+      idClase:
+        type: integer
+        description: Clase  del articulo
+        example: 1
+      idDepartamento:
+        type: integer
+        description: Departamento  del articulo
+        example: 1
+      idSubDepartamento:
+        type: integer
+        description: Subdepartamento  del articulo
+        example: 2
+      cantidad:
+        type: integer
+        description: Cantidad del articulo
+        example: 1
+      milenias:
+        type: "array"
+        description: Lista de milenias
+        items:
+          $ref: "#/definitions/milenias"
+      promociones:
+        type: "array"
+        description: Lista de promociones
+        items:
+          $ref: "#/definitions/promociones"
+      inventariable:
+        type: boolean
+        description: Es inventariable
+        example: false
+      serie:
+        type: string
+        description: Series de los skus
+        example: "SDKS12123123"
+
+      factura:
+        type: object
+        description: Informacion Factura
+        properties:
+          requiereFactura:
+            type: boolean
+            description: Requiere factura
+            example: true
+          registroFederalContribuyente:
+            type: string
+            description: Registro Federal de Contribuyente
+            example: "XAXX010101000"
+          nombreCliente:
+            type: string
+            description: Nombre de cliente
+            example: "Elvia"
+          apellidoPaterno:
+            type: string
+            description: Apellido paterno de cliente
+            example: "Morales"
+          apellidoMaterno:
+            type: string
+            description: Apellido materno de cliente
+            example: "Garcia"
+          domicilio:
+            $ref: "#/definitions/domicilioFactura"
+          telefono:
+            type: string
+            description: Telefono
+            example: "3323670854"
+
+      beneficiarios:
+        type: array
+        items:
+          $ref: "#/definitions/beneficiarios"
+      solicitaHuella:
+        type: boolean
+        description: Identificador para solicitar Huella
+        example: false
+      tarjetaCompra:
+        type: object
+        description: Lista Tarjeta TD Compra
+        properties:
+          idOrden:
+            type: string
+            description: Numero Pedido
+            example: "v29908800ekt-01"
+          fecha:
+            type: string
+            description: Fecha
+            example: "05-11-2020"
+          hora:
+            type: string
+            description: Hora
+            example: "14:10:25"
+          nombreTarjetaHabiente:
+            type: string
+            description: Nombre Tarjeta Habiente
+            example: "Elvia Morales"
+          numeroTarjeta:
+            type: string
+            description: Numero TDC
+            example: "**** **** **** 0000"
+          numeroFolioAutorizacion:
+            type: integer
+            description: número de Folio Autorizacion
+            example: 804537571
+          importePedido:
+            type: number
+            format: double
+            description: Importe Pedido
+            example: 829.0000
+          numeroAfiliacion:
+            type: integer
+            description: Numero Afiliacion
+            example: 2565401
+          bancoAdquirente:
+            type: string
+            description: Banco Adquirente
+            example: "Venta en Linea Elektra.com"
+          terminosCondiciones:
+            type: array
+            items:
+              $ref: "#/definitions/terminosCondiciones"
+      imprimeVoucher:
+        type: boolean
+        description: Parametro para imprimir voucher orden
+        example: true
+      ordenVoucher:
+        type: object
+        description: Orden Voucher Informacion
+        properties:
+          idTienda:
+            type: integer
+            description: Numero de Tienda
+            example: 4624
+          numeroDeSocio:
+            type: integer
+            description: Numero de Socio
+            example: 0
+          tipoAdquiridor:
+            type: string
+            description: Adquiridor
+            example: "ekt"
+          tarjetaTransaccion:
+            $ref: "#/definitions/tarjetaTransaccion"
+          codigoECI:
+            type: string
+            description: Codigo ECI
+            example: "c5446"
+          codigoISO:
+            type: string
+            description: Codigo ISO
+            example: "16516"
+          respuestaAzteca:
+            type: object
+            description: Código de respuesta de Pago Azteca
+            properties:
+              idLlave:
+                type: integer
+                description: Llave
+                example: 0
+              descripcion:
+                type: string
+                description: Valor
+                example: "Aprobada"
+              numeroAutorizacion:
+                type: integer
+                description: Número de autorización Pago Azteca
+                example: 804537571
+              numeroReferencia:
+                type: integer
+                description: Número de referencia Pago Azteca
+                example: 213654
+      estacionTrabajo:
+        type: string
+        description: Estacion de trabajo
+        example: "WS_CAJA"
+      tipoUsuario:
+        type: string
+        description: Id de Usuario
+        example: "T146363"
+      ventas:
+        type: "array"
+        description: Detalle de venta
+        items:
+          $ref: "#/definitions/informacionVenta"
+      referenciaOrden:
+        type: string
+        description: Folio de ventas generadas a traves de  Elektra.com
+        example: "v26864600ekt-V"
+      idTipoVenta:
+        type: integer
+        description: Tipo de venta
+        format: "int32"
+        example: 1
+      totalVenta:
+        type: number
+        description: Total de Venta del Pedido
+        format: double
+        example: 31999.00
+      pago:
+        $ref: "#/definitions/informacionPago"
+      numeroConsecutivoPedido:
+        type: integer
+        description: Consecutivo de presupuesto de la venta Elektra.com
+        format: "int32"
+        example: 1
+      costoEstimado:
+        type: number
+        description: Costo estimado
+        format: double
+        example: 0.00
+      idTipoEntrega:
+        type: integer
+        description: Identificador del tipo de entrega que se ofrece para las ventas de Elektra.com
+        format: "int32"
+        example: 1
+      tipoProveedorEnvio:
+        type: string
+        description: Identificador del tipo de envio del proveedor.
+        example: "MarketplaceGenerico"
+      idOmnicanal:
+        type: integer
+        description: Identificador del canal origen de donde se realizó la venta de Elektra.com
+        format: "int32"
+        example: 3
+      totalPedidos:
+        type: integer
+        description: Total de pedidos que contiene la venta
+        format: "int32"
+        example: 2
+      afectaContabilidad:
+        type: boolean
+        description: Bandera para identificar si el registro Afecta a Contabilidad
+        example: false
+      idMercado:
+        type: integer
+        description: Id de mercado
+        format: "int32"
+        example: 1
+      montoMarketPlace:
+        type: number
+        description: Monto en venta MP
+        format: double
+        example: 0.00
+      montoComision:
+        type: number
+        description: Monto de comision
+        format: double
+        example: 0.00
+      idPenalizacion:
+        type: integer
+        description: Id de penalizacion
+        format: "int32"
+        example: 0
+      montoPenalizacion:
+        type: number
+        description: Monto de penalizacion
+        format: double
+        example: 0.00
+      idOrigenEnvio:
+        type: integer
+        format: "int32"
+        example: 22
+      otorgaRegalo:
+        type: boolean
+        description: Pedido que otorga regalo
+        example: false
+      skuOtorgaRegalo:
+        type: integer
+        description: Producto que otorga regalo
+        format: "int32"
+        example: 1002510
+      evitaSuministro:
+        type: boolean
+        description: Evitar suministro a tienda 9797
+        example: false
+      idNegocio:
+        type: integer
+        description: Id de negocio
+        example: 12
+      idPaqueteria:
+        type: integer
+        description: Id de paqueteria
+        example: 22
+      idTiendaSurtimiento:
+        type: integer
+        description: Tienda de surtimiento
+        format: "int32"
+        example: 4624
+      idProveedor:
+        type: integer
+        description: Identificador del proveedor
+        format: "int32"
+        example: 999999
+      proveedorEnvioDirecto:
+        type: boolean
+        description: Bandera que valida si es un DSV
+        example: false
+      numeroOrdenDistribucion:
+        type: integer
+        description: Número de orden de distribucion
+        example: 292907
+      numeroNotaCargo:
+        type: integer
+        description: Nota de cargo
+        example: 4860246
+      numeroFactura:
+        type: string
+        description: Número de factura generada
+        example: "DS154554"
+      fechaHoraSuministro:
+        type: string
+        description: Fecha de suministro de producto
+        example: "01-07-2021 10:34:11"
+      urlRastreo:
+        type: string
+        description: Direccion url de rastreo
+        example: "https://www.dhl.com/mx-es/home/rastreo.html"
+      idCodigoSurtimiento:
+        type: integer
+        description: Código de surtimiento
+        example: 139
+      gastosAdicionales:
+        type: array
+        description: Gastos adicionales
+        items:
+          type: object
+          properties:
+            id:
+              type: integer
+              description: Identificador de gasto
+              example: 1
+            monto:
+              type: number
+              format: double
+              description: Monto de gasto
+              example: 0.00
+      tipoGuia:
+        type: string
+        description: identificador de guia
+        example: "EKT000000000041502"
+      nombrePaqueteria:
+        type: string
+        description: Nombre de paquetería
+        example: "ektnvia"
+      idPedidoAdn:
+        type: integer
+        description: id de pedido ADN en tienda origen
+        example: 0
+      notaDebito:
+        type: array
+        items:
+          $ref: "#/definitions/informacionNotaDebito"
+
+  #informacion de elektra com
+  informacionNotaDebito:
+    type: object
+    properties:
+      id:
+        type: integer
+        description: Id de nota de debito
+        example: 775049
+      idAlmacen:
+        type: integer
+        description: Id de almacen
+        example: 139
+      destinatario:
+        type: string
+        description: Nombre de la persona que recibe el pedido
+        example: "Miguel Ruiz"
+      numeroRastreo:
+        type: string
+        description: Número de rastreo de pedido
+        example: "000000000588270"
+
+  informacionVenta:
+    type: "object"
+    description: Informacion de la venta
+    properties:
+      subPartidas:
+        type: string
+        description: Sub partida del producto
+        example: "0"
+      tipoProveedor:
+        type: string
+        description: Id del proveedor del producto
+        example: "v-25"
+      cantidad:
+        type: integer
+        description: Cantidad del producto
+        format: "int32"
+        example: 1
+      costoProducto:
+        type: number
+        description: Costo del producto
+        format: double
+        example: 100.00
+      descuento:
+        type: number
+        description: Descuento en producto
+        format: double
+        example: 0.00
+      milenias:
+        type: "array"
+        description: Lista de milenias
+        items:
+          $ref: "#/definitions/milenias"
+      promociones:
+        type: "array"
+        description: Lista de promociones
+        items:
+          $ref: "#/definitions/promociones"
+      numeroMecanica:
+        type: integer
+        description: Numero de mecanica
+        format: "int32"
+        example: 0
+      precio:
+        type: number
+        description: Precio del producto
+        format: double
+        example: 112.00
+      sku:
+        type: integer
+        description: Numero identificador del producto
+        format: "int32"
+        example: 1002520
+      sobrePrecio:
+        type: number
+        description: Sobre precio del producto
+        format: double
+        example: 0.00
+      descuentoEspecial:
+        type: number
+        description: Descuento especial del producto
+        format: double
+        example: 0.00
+
+  domicilioFactura:
+    type: object
+    description: iformación para facturar
+    properties:
+      codigoPostal:
+        type: integer
+        description: Codigo Postal
+        example: 14000
+      calle:
+        type: string
+        description: Numero o nombre de calle
+        example: "77100"
+      numeroExterior:
+        type: string
+        description: Numero exterior
+        example: "230"
+      numeroInterior:
+        type: string
+        description: Numero interior
+        example: "A-236"
+      colonia:
+        type: string
+        description: Colonia
+        example: "BOSQUES DE TONALA"
+      estado:
+        type: string
+        description: Estado
+        example: "CDMX"
+      ciudad:
+        type: string
+        description: Ciudad
+        example: "CDMX"
+
+  beneficiarios:
+    type: object
+    description: lista de beneficiarios
+    properties:
+      nombre:
+        type: string
+        description: nombre del beneficiario
+        example: "Elvia"
+
+  terminosCondiciones:
+    type: object
+    description: lista de términos y condiciones
+    properties:
+      descripcion:
+        type: string
+        example: "Recibí por parte de Tienda Elektra la mercancía relacionada al número de pedido"
+
+  tarjetaTransaccion:
+    type: object
+    properties:
+      idTipo:
+        type: integer
+        description: Tipo de tarjeta de transacción
+        example: 1
+      bancoEmisor:
+        type: string
+        description: Banco emisor de la tarjeta de transaccion
+        example: "BBVA"
+      marca:
+        type: integer
+        description: Marca de tarjeta de transacción
+        example: 2
+      numero:
+        type: string
+        description: Número de tarjeta de transacción
+        example: "A7348553359B4ABE9ABC327BBF608D99"
+      numeroEnmascarada:
+        type: string
+        description: Número de tarjeta de transacción enmascarada
+        example: "xxxxxxxxxxxxxxxxxxxxxxxxxxxx8D99"
+      fechaHoraVencimiento:
+        type: string
+        description: Fecha de vencimiento de la tarjeta de transacción
+        example: "05-11-2020 11:52:03"
+      monto:
+        type: number
+        format: double
+        description: Cantidad de transacción
+        example: 829.00
+      fechaHora:
+        type: string
+        description: Fecha de Transacción
+        example: "05-11-2020 11:52:03"
+      tiempo:
+        type: string
+        description: Tiempo de transacción
+        example: "00:00:30"
+
+  milenias:
+    type: "object"
+    description: Lista de informacion de producto con milenia
+    properties:
+      sku:
+        type: integer
+        description: Numero identificador del producto
+        format: "int32"
+        example: 1002522
+      sobrePrecio:
+        type: number
+        description: Sobre precio del producto
+        format: double
+        example: 5.00
+
+  promociones:
+    type: "object"
+    description: Lista de informacion sobre promociones
+    properties:
+      id:
+        type: integer
+        description: Id de la promocion
+        format: "int32"
+        example: 5555
+      idTipo:
+        type: integer
+        description: Numero de tipo de promocion
+        format: "int32"
+        example: 10
+      idSubTipo:
+        type: integer
+        description: Numero de sub tipo de promocion
+        format: "int32"
+        example: 20
+      idRegalo:
+        type: integer
+        description: Id del regalo
+        format: "int32"
+        example: 12
+      cantidad:
+        type: integer
+        description: cantidad de promociones
+        example: 1
+      monto:
+        type: number
+        description: Monto de la promocion
+        format: double
+        example: 5.00
+
+  informacionPago:
+    type: "object"
+    description: Informacion de pago
+    properties:
+      idTipo:
+        type: integer
+        description: Tipo de pago realizado
+        format: "int32"
+        example: 2
+      idBanco:
+        type: integer
+        description: Identificador del banco que se utliza para hacer los pagos
+        example: 14
+      tarjeta:
+        type: string
+        description: Numero de tarjeta bancaria
+        example: "C4772143013277427"
+      numeroReferencia:
+        type: integer
+        description: Numero de referencia de pago
+        example: 124520
+      mesesSinIntereses:
+        type: integer
+        description: Numero de pagos asociados a la tarjeta
+        format: "int32"
+        example: 12
+      monto:
+        type: number
+        description: Monto de pago
+        format: double
+        example: 110.00
+      idCanal:
+        type: integer
+        description: Canal de pago
+        example: 1
+      numeroPagos:
+        type: integer
+        description: Numero de pagos
+        example: 12
+
+  respuestaActualizacionOrden:
+    type: object
+    properties:
+      codigo:
+        type: string
+        example: "200.Elektra-Comercio-Pedidos-Productos.107201"
+      mensaje:
+        type: string
+        example: "Operación exitosa."
+      folio:
+        type: string
+        example: "107-202105041545559500"
+      resultado:
+        $ref: "#/definitions/detalleOrdenValido"
+
+  detalleOrdenValido:
+    type: object
+    properties:
+      pedidoValido:
+        type: boolean
+        description: Indicador si el pedido es valido
+        example: true
+      ordenValido:
+        type: boolean
+        description: Descripción si la orden es valida
+        example: "true"
+
+  ordenElektraCom:
+    type: object
+    properties:
+      idOrden:
+        type: string
+        description: identificador del pedido idOrden
+        example: "v31485575ekt-01"
+      idUnico:
+        type: string
+        description: Identificador único
+        example: "1b213b4e-c25b-40cd-8d82-ebbc9c9a7148"
+      idEstatus:
+        type: integer
+        description: Estatus en el que se encuentra el pedido
+        example: 0
+      descripcionEstatus:
+        type: string
+        description: descripción del estatus del pedido
+        example: "creada"
+      descripcionEstatusPlataformaEnLinea:
+        type: string
+        description: estatus de la orden en vtex
+        example: "order-created"
+      ordenReemplazo:
+        type: boolean
+        description: valida si es una orden de reemplazo
+        example: false
+      tieneContraCargo:
+        type: boolean
+        description: valida si es un contracargo
+        example: false
+      idOrigenSolicitud:
+        type: integer
+        description: Identificador de origen de solicitud
+        format: "int32"
+        example: 1
+      idTipoPago:
+        type: integer
+        description: Identificador del tipo de pago
+        format: "int32"
+        example: 4
+      descripcionTipoPago:
+        type: string
+        description: descripcion de tipo de Pago
+        example: "mastercard"
+      idPaisVenta:
+        type: integer
+        description: Identificador del país donde se origina la venta
+        format: "int32"
+        example: 1
+      idTipoEnvio:
+        type: integer
+        description: Identificador del tipo de envio
+        format: "int32"
+        example: 1
+      idTipoEntrega:
+        type: integer
+        description: Identificador del tipo de entrega
+        format: "int32"
+        example: 1
+      descripcionTipoEntrega:
+        type: string
+        description: descripcion de tipo de entrega
+        example: "Envío domicilio"
+      numeroSecuencia:
+        type: integer
+        description: Número de secuencia
+        format: "int32"
+        example: 30915737
+      numeroSecuenciaOriginal:
+        type: integer
+        description: Número de secuencia original
+        format: "int32"
+        example: 30915737
+      totalPedidos:
+        type: integer
+        description: Cantidad total de pedidos
+        format: "int32"
+        example: 1
+      totalCostoEnvio:
+        type: number
+        description: Total del costo de envío
+        format: double
+        example: 200.00
+      totalDescuento:
+        type: number
+        description: Total del descuento
+        format: double
+        example: 0.00
+      totalImpuestos:
+        type: number
+        description: Total de impuestos
+        format: double
+        example: 1499.07
+      totalPago:
+        type: number
+        description: Total del pago
+        format: double
+        example: 9369.20
+      fechaHoraRegistro:
+        type: string
+        description: Fecha de registro del pedido
+        example: "2020-06-24 14:22:12"
+      fechaHoraUltimoCambio:
+        type: string
+        description: Fecha del último cambio del pedido
+        example: "2020-11-12 17:22:11"
+      descripcionTransaccionOrden:
+        type: string
+        description: descripcion de la transacción
+        example: "Venta de Vtex"
+      ventaMercado:
+        type: boolean
+        description: Es venta mercado
+        example: false
+      vendedor:
+        $ref: "#/definitions/vendedor"
+      comprador:
+        $ref: "#/definitions/comprador"
+      pedidosAdn:
+        type: array
+        items:
+          $ref: "#/definitions/pedidosAdn"
+      transaccionesPago:
+        $ref: "#/definitions/transaccionesPago"
+      paypalMercadoPago:
+        $ref: "#/definitions/paypalMercadoPago"
+      detallesAcertiffy:
+        type: array
+        items:
+          $ref: "#/definitions/detallesAcertificar"
+
+  vendedor:
+    type: object
+    properties:
+      id:
+        type: integer
+        description: Identificador del vendedor
+        format: "int32"
+        example: 2
+      nombre:
+        type: string
+        description: nombre del vendedor
+        example: "DISTRIBUIDOR KARCHER"
+      descriptionTipo:
+        type: string
+        description: tipo de vendedor
+        example: "MARKETPLACE"
+
+  comprador:
+    type: object
+    properties:
+      idUnico:
+        type: string
+        description: Identificador unico del comprador
+        example: "1b213b4e-c25b-40cd-8d82-ebbc9c9a7148"
+      correoElectronico:
+        type: string
+        description: email del comprador
+        example: "cmontesinos@mail.com"
+      nombre:
+        type: string
+        description: nombre del comprador
+        example: "Paola"
+      apellidos:
+        type: string
+        description: apellidos del comprador
+        example: "Montesinos Velazquez"
+      numeroTelefono:
+        type: string
+        description: número de telefono del comprador
+        example: "3311087206"
+      socioCorporativo:
+        type: boolean
+        description: permite saber si pertenece a la empresa
+        example: true
+      correoElectronicoSocio:
+        type: string
+        description: email del socio
+        example: "100300@elektra.com.mx"
+      domicilioEnvio:
+        $ref: "#/definitions/domicilioEnvio"
+      domicilioFacturacion:
+        $ref: "#/definitions/domicilioFacturacion"
+
+  domicilioEnvio:
+    type: object
+    description: Informacion Factura
+    properties:
+      idUnicoEnvio:
+        type: string
+        description: identificador único de envio
+        example: "f974f250242547fcb640757798f128dc"
+      idTipoDomicilio:
+        type: integer
+        description: identificador del domicilio
+        example: 1
+      pais:
+        type: string
+        description: pais del domicilio
+        example: "MEX"
+      codigoPostal:
+        type: integer
+        description: Codigo Postal del domiclio de envio
+        example: 45430
+      estado:
+        type: string
+        description: Estado del domicilio de envio
+        example: "JALISCO"
+      ciudad:
+        type: string
+        description: Ciudad del domicilio de envio
+        example: "Zapotlanejo"
+      colonia:
+        type: string
+        description: Colonia del domiclio de envio
+        example: "Zapotlanejo"
+      calle:
+        type: string
+        description: Direccion del Cliente Calle
+        example: "francisco medina"
+      numeroExterior:
+        type: string
+        description: Numero Exterior del domiclio de envio
+        example: "57"
+      numeroInterior:
+        type: string
+        description: Numero Interior del domiclio de envio
+        example: "21A"
+      referenciaDomicilio:
+        type: string
+        description: Referencia del domiclio de envio
+        example: "A dos cuadras de la unidad deportiva"
+      personaRecibeEnvio:
+        type: string
+        description: Persona que recibe el paquete
+        example: "David Aguirre Velazquez"
+      idEstadoAlmacen:
+        type: integer
+        description: Identificador del estado de la republica donde se ubica el almacen de envio
+        example: 14
+      estadoAlmacen:
+        type: string
+        description: Descripcion del estado de la ubicacion del almacen
+        example: "JALISCO"
+      idEstadoProveedorEnvioDirectoItalika:
+        type: string
+        description: Identificador de caracteres del estado para italika
+        example: "JAL"
+
+  domicilioFacturacion:
+    type: object
+    description: Informacion Factura
+    properties:
+      pais:
+        type: string
+        description: pais del domicilio de factura
+        example: "MEX"
+      codigoPostal:
+        type: integer
+        description: Codigo Postal del domiclio de factura
+        example: 45430
+      estado:
+        type: string
+        description: Estado del domicilio de factura
+        example: "JALISCO"
+      ciudad:
+        type: string
+        description: Ciudad del domicilio de factura
+        example: "Zapotlanejo"
+      colonia:
+        type: string
+        description: Colonia del domiclio de factura
+        example: "Zapotlanejo"
+      calle:
+        type: string
+        description: Direccion del Cliente Calle
+        example: "francisco medina"
+      numeroExterior:
+        type: string
+        description: Numero Exterior del domiclio de factura
+        example: "57"
+      numeroInterior:
+        type: string
+        description: Numero Interior del domiclio de factura
+        example: "21A"
+      personaRecibeEnvio:
+        type: string
+        description: Persona que recibe el paquete
+        example: "David Aguirre Velazquez"
+
+  pedidosAdn:
+    type: object
+    properties:
+      id:
+        type: integer
+        description: id del pedido o solicitud en adn
+        example: 1
+      numeroPedido:
+        type: integer
+        description: Numero del pedido
+        format: "int32"
+        example: 3091573
+      idTipoOperacion:
+        type: integer
+        description: Tipo de operacion adn
+        format: "int32"
+        example: 2
+      idEstatusAlmacen:
+        type: integer
+        description: Identificador del estatus del pedido en almacen
+        format: "int32"
+        example: 0
+      descripcionEstatusAlmacen:
+        type: string
+        description: descripción de estatus almacen
+        example: "sin estado"
+      fechaHoraSurtimiento:
+        type: string
+        description: fecha y hora del surtido del pedido
+        example: "2017-12-27 09:00:41"
+      idTienda:
+        type: integer
+        description: Numero de la tienda
+        format: "int32"
+        example: 9797
+      numeroCliente:
+        type: integer
+        description: Numero de cliente
+        example: 6481248
+      digitoVerificador:
+        type: integer
+        description: Digito verificador
+        format: "int32"
+        example: 9
+      solicitaHuella:
+        type: boolean
+        description: solicita huella para confirmar
+        example: false
+      detallePedido:
+        $ref: "#/definitions/detallePedidoAdn"
+      detalleVenta:
+        $ref: "#/definitions/detalleVentaAdn"
+      totales:
+        $ref: "#/definitions/totalesPedidosAdn"
+      dimensiones:
+        $ref: "#/definitions/dimensiones"
+      cancelacion:
+        $ref: "#/definitions/cancelacion"
+      excepcionEntrega:
+        $ref: "#/definitions/excepcionEntrega"
+      factura:
+        type: object
+        description: datos de factura
+        properties:
+          idUnico:
+            type: string
+            description: identificador unico de factura
+            example: "636438641989553580678175"
+          numeroFolio:
+            type: integer
+            description: numero de folio de la factura
+            example: 158225
+
+  detallePedidoAdn:
+    type: object
+    properties:
+      producto:
+        $ref: "#/definitions/producto"
+      idCentroDistribucion:
+        type: integer
+        description: identficador de centro de distribución del producto
+        example: 139
+      idServicioPaqueteriaEnvio:
+        type: integer
+        description: Identificador del servicio de paqueteria que envia
+        format: "int32"
+        example: 4
+      servicioPaqueteriaEnvio:
+        type: string
+        description: Nombre del servicio de paqueteria que envia
+        example: "DHL"
+      idtipoVendedorMercado:
+        type: integer
+        description: Identificador de vendedores de mercado
+        format: "int32"
+        example: 1
+      numeroConsecutivo:
+        type: integer
+        description: dNúmero Consecutivo de pedido
+        format: "int32"
+        example: 1
+      cantidad:
+        type: integer
+        description: Cantidad de elementos del pedido.
+        format: "int32"
+        example: 1
+      cupon:
+        type: string
+        description: cupón de pedido
+        example: "italika123"
+      fechaHoraEstimadoEntrega:
+        type: string
+        description: Fecha de la promesa de entrega al cliente
+        example: "2020-12-30 12:23:12"
+      fechaCalle:
+        type: string
+        description: Fecha de la promesa de calle.
+        example: "2020-12-30"
+      productoDevuelto:
+        type: boolean
+        description: Bandera que especifica si es un producto regresado.
+        example: false
+      proveedorEnvioDirectoItalika:
+        type: boolean
+        description: Bandera que especifica si el pedido es un DSV de italika.
+        example: false
+      tieneGuiaRastreo:
+        type: boolean
+        description: Bandera que especifica si el pedido tiene una guia asignada.
+        example: false
+      costo:
+        type: number
+        description: Costo del pedido
+        format: double
+        example: 930.34
+      porcentajeComisionMercado:
+        type: number
+        description: Porcentaje para calcular la comision de terceros.
+        format: float
+        example: 0.9
+      montoComisionMercado:
+        type: number
+        description: Comision de vendedores terceros.
+        format: double
+        example: 0.02131
+      descuentoEspecial:
+        type: number
+        description: descuento especial del pedido
+        format: double
+        example: 200.77
+      relacionEnvio:
+        $ref: "#/definitions/relacionEnvio"
+      productoServicio:
+        $ref: "#/definitions/productoServicio"
+      promociones:
+        $ref: "#/definitions/promocionesAdn"
+
+  producto:
+    type: object
+    properties:
+      id:
+        type: integer
+        description: identficador del producto o Sku
+        example: 823434
+      idPlataformaEnLinea:
+        type: integer
+        description: identficador del producto en vtex
+        example: 1500392155
+      idPlataformaEnLineaOriginal:
+        type: integer
+        description: identficador original del producto en vtex
+        example: 1500392155
+      idVendedor:
+        type: integer
+        description: identficador del vendedor de producto
+        example: 1600184036932
+      descripcion:
+        type: integer
+        description: descripcion de producto
+        example: "K 5 MX HIDROLAVADORA ALTA PRESION 2000 PSI, KARCHER"
+
+  relacionEnvio:
+    type: object
+    properties:
+      idSolicitudAdnEnvio:
+        type: integer
+        description: identficador de la solicitud adn
+        example: 1
+      idPedidoAdnEnvio:
+        type: integer
+        description: identficador del pedido en adn
+        example: 112322
+      idProductoEnvio:
+        type: integer
+        description: identficador del producto con relación al envio
+        example: 823434
+
+  productoServicio:
+    type: object
+    properties:
+      pedidoProductoServicio:
+        type: boolean
+        description: pedido de tipo producto servicio
+        example: true
+      idProveedor:
+        type: integer
+        description: identficador del proveedor para producto servicio
+        example: 626434
+      idSubcategoria:
+        type: integer
+        description: identficador de subcategoria de producto servicio
+        example: 12
+      subCategoria:
+        type: string
+        description: descripcion de la subcategoria
+        example: "11342342/"
+
+  promocionesAdn:
+    type: object
+    properties:
+      clave:
+        type: object
+        properties:
+          id:
+            type: integer
+            description: id de la clave promoción
+            example: 977
+          idTipo:
+            type: integer
+            description: id de tipo de la clave promoción
+            example: 2
+          idSubTipo:
+            type: integer
+            description: id de subtipo de la clave promoción
+            example: 30915737
+      administracionSap:
+        type: object
+        properties:
+          idTipo:
+            type: integer
+            description: id de tipo de promoción de administración SAP
+            example: 4
+          numeroConjunto:
+            type: integer
+            description: numeroConjunto de promoción SAP
+            example: 131212
+          idPedidoAdnInclusivo:
+            type: integer
+            description: id de pedido de promoción SAP inclusivo
+            example: 5352523
+          regalo:
+            type: boolean
+            description: la promoción SAP incluye regalo
+            example: false
+
+  detalleVentaAdn:
+    type: object
+    properties:
+      precio:
+        type: number
+        description: precio de la venta por item
+        format: double
+        example: 499.00
+      precioEspecial:
+        type: number
+        description: precio especial de la venta
+        format: double
+        example: 399.00
+      precioListaPlataformaEnLinea:
+        type: number
+        description: precio de lista de plataforma vtex de la venta
+        format: double
+        example: 599.00
+      descuento:
+        type: number
+        description: descuento de la venta
+        format: double
+        example: 100.00
+      descuentoEspecial:
+        type: number
+        description: descuento especial de la venta
+        format: double
+        example: 100.00
+      costo:
+        type: number
+        description: costo de la venta
+        format: double
+        example: 499.00
+      comision:
+        type: number
+        description: comisión por venta
+        format: double
+        example: 0.00
+      montoImpuestos:
+        type: number
+        description: impuestos
+        format: double
+        example: 100.00
+      cantidad:
+        type: number
+        description: cantidad de items o productos
+        format: double
+        example: 1
+      tipoCategoria:
+        type: string
+        description: tipo categoria de la venta
+        example: "1371652/127631/127639"
+
+  totalesPedidosAdn:
+    type: object
+    properties:
+      contado:
+        type: object
+        properties:
+          montoParcial:
+            type: number
+            description: Es el monto parcial del pedido en pago de contado.
+            format: double
+            example: 5599.00
+          montoDescuento:
+            type: number
+            description: Es el monto descuento del pedido en pago de contado.
+            format: double
+            example: 1119.00
+          montoEnvio:
+            type: number
+            description: Es el monto de envio del pedido en pago de contado.
+            format: double
+            example: 42.00
+          montoTotal:
+            type: number
+            description: Es el monto total del pedido en pago de contado.
+            format: double
+            example: 4522.00
+      credito:
+        type: object
+        properties:
+          montoParcial:
+            type: number
+            description: Es el monto parcial del pedido en pago a credito.
+            format: double
+            example: 5599.20
+          montoDescuento:
+            type: number
+            description: Es el monto descuento del pedido en pago a credito.
+            format: double
+            example: 100.00
+          montoEnvio:
+            type: number
+            description: Es el monto de envio del pedido en pago a credito.
+            format: double
+            example: 42.50
+          montoTotal:
+            type: number
+            description: Es el monto total del pedido en pago a credito.
+            format: double
+            example: 5541.70
+
+  dimensiones:
+    type: object
+    properties:
+      pesoCubico:
+        type: number
+        description: El es peso cubico del pedido.
+        format: float
+        example: 1234.00
+      altitud:
+        type: number
+        description: Es la altitud o altura del pedido.
+        format: float
+        example: 10.00
+      longitud:
+        type: number
+        description: Longitud o largo del pedido.
+        format: float
+        example: 23.00
+      amplitud:
+        type: number
+        description: Amplitud o ancho del pedido.
+        format: float
+        example: 34.00
+
+  cancelacion:
+    type: object
+    properties:
+      id:
+        type: integer
+        description: identificador de la cancelación
+        format: "int32"
+        example: 4
+      idCausa:
+        type: integer
+        description: identificador de la causa de cancelación
+        format: "int32"
+        example: 2
+      descripcionCausa:
+        type: string
+        description: descripción de la causa de la cancelación
+        example: "Rechaza entrega por producto dañado/Recibe artículo dañado"
+      idAccion:
+        type: integer
+        description: identificador de la acción realizada en la cancelación
+        format: "int32"
+        example: 2
+      idAreaRaiz:
+        type: integer
+        description: identificador de area
+        format: "int32"
+        example: 4
+      idImputabilidad:
+        type: integer
+        description: identificador de imputabilidad
+        format: "int32"
+        example: 1
+      descripcionImputabilidad:
+        type: string
+        description: descripción de imputabilidad
+        example: "Devolucion"
+      idEstatusGuardado:
+        type: integer
+        description: identificador de estatus guarado en cancelación
+        format: "int32"
+        example: 0
+      idEstatusAutorizacion:
+        type: integer
+        description: identificador de estatus de autorización de cancelación
+        format: "int32"
+        example: 0
+      tipCambiofisico:
+        type: string
+        description: descripción de cambio fisico de la cancelación
+        example: "label-warning"
+      idDevolucion:
+        type: integer
+        description: identificador de la devolución en la cancelación
+        format: "int32"
+        example: 1
+
+  excepcionEntrega:
+    type: object
+    properties:
+      id:
+        type: integer
+        description: Identificador del la excepcion al entregar
+        format: "int32"
+        example: 2
+      descripcion:
+        type: string
+        description: Descripcion del la excepcion al entregar
+        example: "No atendio el receptor del paquete"
+      fechaHoraRegistro:
+        type: string
+        description: Fecha de la excepcion
+        example: "2020-05-09 21:18:12"
+
+  transaccionesPago:
+    type: object
+    properties:
+      id:
+        type: string
+        description: Es el identificador de la transaccion.
+        example: "77F94DDFB5484682BA6EFCCCE90271AF"
+      idTipoTransaccion:
+        type: integer
+        description: Identificador del tipo de transaccion
+        format: "int32"
+        example: 1
+      total:
+        type: number
+        description: El monto total de la transaccion.
+        format: double
+        example: 30915737.00
+      idOrdenElektra:
+        type: string
+        description: Identificador de la orden de elektra de la transaccion.
+        example: "0726b85c-e1f8-43c7-b4f9-d9770ce0ed65"
+      referenciaPlataformaEnLinea:
+        type: string
+        description: Es la referencia de vtex.
+        example: "30915737"
+      idPago:
+        type: string
+        description: Identificador unico del pago.
+        example: "B19C3B03D62348F9864BDD05BB2929D6"
+      idTipoPago:
+        type: integer
+        description: Identificador del tipo de pago hecho en la transaccion.
+        format: "int32"
+        example: 4
+      costosEnvio:
+        type: number
+        description: El monto de las cargas totales de envio de la transaccion.
+        format: double
+        example: 1312.00
+      impuestos:
+        type: number
+        description: El monto de las cargas totales de impuestos de la transaccion.
+        format: double
+        example: 234.00
+      direccionIP:
+        type: string
+        description: Direccion ip desde donde se realizo la transaccion.
+        format: "ipv4"
+        example: "201.164.61.26"
+      aprobado:
+        type: boolean
+        description: Bandera de la transaccion que especifica si el pago ya ha sido aprobado.
+        example: true
+      codigoAutenticacion:
+        type: integer
+        description: Codigo de autenticacion de la transaccion.
+        format: "int32"
+        example: 253852
+      numeroFolioBanco:
+        type: integer
+        description: Folio del banco asociado a la transaccion.
+        format: "int32"
+        example: 408409
+      marcaTarjetaCredito:
+        type: string
+        description: Es la marca de la de tarjeta usada en la transaccion.
+        example: "BANAMEX"
+      digitosTarjetaCredito:
+        type: string
+        description: Digitos de la tarjeta de usada en la transaccion.
+        example: "549949-4164"
+      tarjetaCredito:
+        type: string
+        description: Numero completo de la tarjeta de credito usada en la transaccion.
+        example: "5499490538054164"
+      mesesSinIntereses:
+        type: integer
+        description: Son los meses sin intereses de la compra.
+        format: "int32"
+        example: 1
+      codigoRechazo:
+        type: integer
+        description: Codigo de rechazo de la transaccion.
+        format: "int32"
+        example: 855436
+      descripcionRechazo:
+        type: string
+        description: Descripcion del motivo por el cual fue rechazada la transaccion
+        example: "Sobregiro"
+      fechaHoraPago:
+        type: string
+        description: Fecha de pago de la transaccion.
+        example: "2020-11-12 14:34:23"
+      fechaHoraDevolucion:
+        type: string
+        description: Fecha de devolucion del la transaccion.
+        example: "2021-01-11 21:23:12"
+      fechaHoraRegistro:
+        type: string
+        description: Fecha de registro en la que se realizo el pago.
+        example: "2020-11-12 14:04:12"
+      urlLlamadaDevuelta:
+        type: string
+        description: Es la direcion url de la llamada de vuelta de la transaccion.
+        example: "https://elektra.vtexpayments.com.br/api/pvt/payment-provider/transactions/77F94DDFB5484682BA6EFCCCE90271AF/payments/B19C3B03D62348F9864BDD05BB2929D6/callback?accountName=elektra"
+      nombreSistemaPago:
+        type: string
+        description: Nombre del sistema de pago de la transaccion.
+        example: "Mastercard"
+      promocionMesesSinIntereses:
+        $ref: "#/definitions/promocionesMSI"
+
+  promocionesMSI:
+    type: object
+    properties:
+      liquidaciones:
+        type: integer
+        description: Meses sin intereses para la liquidacion del pago.
+        format: "int32"
+        example: 1
+      idBanco:
+        type: integer
+        description: Identificador del banco asociado a la promocion.
+        format: "int32"
+        example: 3
+      concecionesBancarias:
+        type: integer
+        description: Son las conceciones bancarias de la promocion.
+        format: "int32"
+        example: 30915737
+
+  paypalMercadoPago:
+    type: object
+    properties:
+      idSolicitud:
+        type: integer
+        description: Identificador de la solicitud en caso de aplicar mercago pago.
+        format: "int32"
+        example: 0
+      idEstado:
+        type: integer
+        description: Es el estado del mercado pago en caso de aplicar.
+        format: "int32"
+        example: 0
+      monto:
+        type: number
+        description: Monto de la transaccion de mercado pago en caso de aplicar.
+        format: double
+        example: 0.00
+      correoElectronico:
+        type: string
+        description: Correo electronico del pago hecho con mercado pago en caso de aplicar.
+        example: "ejemplo@correo.com"
+
+  detallesAcertificar:
+    type: object
+    properties:
+      tipoImporte:
+        type: string
+        description: Es el tipo de importe de la validación de accertify.
+        example: "post"
+      codigoRecomendacion:
+        type: string
+        description: Es el codigo de recomendacion de la validación de accertify.
+        example: "Accept"
+      codigoResolucion:
+        type: string
+        description: Es el codigo de resolucion de la validación de accertify.
+        example: "Sin código"
+      fechaHoraRegistro:
+        type: string
+        description: Fecha de registro de la validación de accertify.
+        example: "2020-12-21 14:23:12"

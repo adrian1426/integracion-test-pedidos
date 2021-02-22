@@ -1,0 +1,13 @@
+{
+  "name": "api-test-v1",
+  "version": "1.0.0",
+  "description": "inicializar herramientas de trabajo de apidevelopers",
+  "scripts": {
+    "start-api": "npm run gulp && npm run node && npm run tests",
+    "gulp": "npm install -g gulp",
+    "node": "cd node/ && npm install",
+    "tests": "cd tests/ && npm install"    
+  },
+  "author": "Eduardo Aguilar Estrada / Francisco Gerardo Ocampo",
+  "license": "Gobierno de APIs"
+}
