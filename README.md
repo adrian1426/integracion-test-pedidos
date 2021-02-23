@@ -1,4 +1,4 @@
-======================================================================================================
+
 
  _____         _      _                                 _          ___  ______  _____      
 |  __ \       | |    (_)                               | |        / _ \ | ___ \|_   _|     
@@ -16,7 +16,9 @@
 
 Nota: Omite este paso si tu salida a internet no esta limitada mediante un proxy
 	
-	Ruta: E:\Users\usuario\miUsuarioG\.npmrc
+
+	Ruta: E:\Users\usuario\miUsuario\.npmrc
+
 	Si no existe el archivo se debe crear
 
 	npm config set strict-ssl=false
@@ -54,4 +56,3 @@ Nota: Si "No" es la primera vez que usas este template continua con el paso 2
 
 4. Para repetir las pruebas regresa al paso 2
 
-======================================================================================================

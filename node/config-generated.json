@@ -75,6 +75,7 @@
         "$.idEstadoPedido",
         "$.idTipoFolio",
         "$.numeroEmpleado",
+        "estadoPedido",
         "$.folioPresupuesto",
         "$.idTipoPedido",
         "$.folioOrden",
@@ -112,6 +113,7 @@
           "httpStatus": 500,
           "mockFile": "pedidos-POST/internal_server_error.json"
         },
+
         "x-idPais1x-idCanal1x-idTienda100x-estacionTrabajoWS_CAJA$.numeroEmpleado146363$.folio863167$.folioOrdennull$.idTipoFolio1$.idEstadoPedido0$.idTipoOperacion6$.referenciaVentaServicioWeb": {
           "httpStatus": 201,
           "mockFile": "pedidos-PUT/created.json"
@@ -127,6 +129,47 @@
         "x-idPais1x-idCanal1x-idTienda100x-estacionTrabajoWS_CAJA$.numeroEmpleado146363$.folio13424$.folioOrdennull$.idTipoFolio1$.idEstadoPedido0$.idTipoOperacion6$.referenciaVentaServicioWeb": {
           "httpStatus": 500,
           "mockFile": "pedidos-PUT/internal_server_error.json"
+        }
+      }
+    },
+    "elektra/comercio/pedidos-productos/v1/pedidos/:idPedido": {
+      "latency": 25,
+      "headers": {
+        "x-idPais": 1,
+        "x-idCanal": 1,
+        "x-idTienda": 100
+      },
+      "verbs": [
+        "get"
+      ],
+      "switch": [
+        "x-idPais",
+        "x-idCanal",
+        "x-idTienda",
+        "idPedido"
+      ],
+      "responses": {
+        "get": {
+          "httpStatus": 400,
+          "mockFile": "pedidos-GET/bad_request_400.json"
+        }
+      },
+      "switchResponses": {
+        "x-idPais1x-idCanal1x-idTienda100idPedido146625": {
+          "httpStatus": 200,
+          "mockFile": "pedidos-GET/pedidos_200.json"
+        },
+        "x-idPais1x-idCanal1x-idTienda100idPedidonull": {
+          "httpStatus": 400,
+          "mockFile": "pedidos-GET/bad_request_400.json"
+        },
+        "x-idPais1x-idCanal1x-idTienda100idPedido111111": {
+          "httpStatus": 404,
+          "mockFile": "pedidos-GET/not_found_404.json"
+        },
+        "x-idPais1x-idCanal1x-idTienda100idPedidomipedido": {
+          "httpStatus": 500,
+          "mockFile": "pedidos-GET/internal_server_error_500.json"
         }
       }
     }

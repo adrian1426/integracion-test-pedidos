@@ -1,0 +1,9 @@
+{
+  "codigo": "500.Elektra-Comercio-Pedidos-Productos.107500",
+  "mensaje": "Error en el servidor al procesar la petición.",
+  "folio": "107-202105041545559500",
+  "info": "https://baz-developer.bancoazteca.com.mx/info#500.Elektra-Comercio-Pedidos-Productos.107500",
+  "detalles": [
+    "El recurso solicitado no se encuentra disponible"
+  ]
+}
