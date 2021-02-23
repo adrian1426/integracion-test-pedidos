@@ -1,10 +1,12 @@
 {
-  "codigo": "201.Elektra-comercio-Pedidos.107201",
+  "codigo": "201.Elektra-comercio-pedidos-productos.107201",
   "mensaje": "Operación exitosa.",
   "folio": "107-202105041545559500",
   "resultado": {
-    "numeroTransaccion": 44902903,
-    "permitirSurtimiento": true,
-    "detalleOperacion": ""
+    "idPedidoAdn": 121245,
+    "numeroPresupuesto": 863167,
+    "numeroTransaccion": 153654648,
+    "permiteSurtimiento": true,
+    "detalleOperacion": "Se genero el pedido 121245"
   }
 }
