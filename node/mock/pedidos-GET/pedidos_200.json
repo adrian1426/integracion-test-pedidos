@@ -1,0 +1,58 @@
+{
+  "codigo": "200.Elektra-Comercio-Pedidos-Productos.107201",
+  "mensaje": "Operación exitosa.",
+  "folio": "107-202105041545559500",
+  "resultado": {
+    "pedido": {
+      "idPedido": 146625,
+      "idOrden": "v31485575ekt-01",
+      "idTipoPedido": 1,
+      "idTipoVenta": 1,
+      "idTipoMilenia": 1,
+      "idEstatus": 0,
+      "descripcionEstatus": "creada",
+      "numeroVentaEmpleado": 100300,
+      "idNegocioEmpleado": 1,
+      "clienteUnico": {
+        "idFolio": 15621,
+        "idPais": 1,
+        "idCanal": 1,
+        "idTienda": 100
+      },
+      "clienteElektra": {
+        "id": 46546,
+        "idNegocio": 1,
+        "idTienda": 100,
+        "digitoVerificador": 1
+      },
+      "seguros": false,
+      "detalles": [
+        {
+          "sku": 1234567787,
+          "idClase": 1,
+          "idDepartamento": 1,
+          "idSubDepartamento": 2,
+          "cantidad": 1,
+          "milenias": [
+            {
+              "sku": 1002522,
+              "sobrePrecio": 5.00
+            }
+          ],
+          "promociones": [
+            {
+              "id": 5555,
+              "idtipo": 10,
+              "idSubTipo": 20,
+              "idRegalo": 12,
+              "cantidad": 1,
+              "monto": 5.00
+            }
+          ],
+          "inventariable": false,
+          "serie": "SDKS12123123"
+        }
+      ]
+    }
+  }
+}
