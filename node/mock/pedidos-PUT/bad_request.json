@@ -1,11 +1,11 @@
 {
   "respuesta": {
-    "codigo": "400.Elektra-comercio-Pedidos.1000",
+    "codigo" : "400.Elektra-Comercio-Pedidos-Productos.1000",
     "mensaje": "Datos de entrada incorrectos, favor de validar su información",
     "folio": "cf3e4d0f-f0f7-460a-9ea7-359cec37e863",
-    "info": "https://baz-developer.bancoazteca.com.mx/info#400.Elektra-comercio-Pedidos.2000",
+    "info": "https://baz-developer.bancoazteca.com.mx/info#400.Elektra-Comercio-Pedidos-Productos.2000",
     "detalles": [
-      "XXX"
+      "Los datos proporcionados no coinciden con los registros]"
     ]
   }
 }
