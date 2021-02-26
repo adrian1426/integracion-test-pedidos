@@ -58,8 +58,9 @@
       "headers": {
         "x-idPais": 1,
         "x-idCanal": 1,
-        "x-idTienda": 100,
-        "x-estacionTrabajo": "WS_CAJA"
+        "x-idSucursal": 100,
+        "x-estacionTrabajo": "WS_CAJA",
+        "x-idUsuario": 117235
       },
       "verbs": [
         "post",
@@ -68,23 +69,17 @@
       "switch": [
         "x-idPais",
         "x-idCanal",
-        "x-idTienda",
+        "x-idSucursal",
         "x-estacionTrabajo",
+        "x-idUsuario",
+        "$.folioPreparametrico",
         "$.folio",
-        "$.idTipoOperacion",
-        "$.idEstadoPedido",
-        "$.idTipoFolio",
-        "$.numeroEmpleado",
-        "estadoPedido",
-        "$.folioPresupuesto",
-        "$.idTipoPedido",
-        "$.folioOrden",
-        "$.ventaEmpleado",
-        "$.idNegocioEmpleado",
         "$.referencia",
-        "$.cajas[*].importe",
-        "$.cajas[*].idTipoPago",
-        "$.cajas[*].idReferencia"
+        "$.pagos[*].importe",
+        "$.pagos[*].idTipoPago",
+        "$.pagos[*].referencia",
+        "$.idEstadoFolio",
+        "$.idTipoOperacion"
       ],
       "responses": {
         "post": {
@@ -97,36 +92,39 @@
         }
       },
       "switchResponses": {
-        "x-idPais1x-idCanal1x-idTienda100x-estacionTrabajoWS_CAJA$.numeroEmpleado146363$.folioPresupuesto863167$.idTipoPedido1$.folioOrdennull$.ventaEmpleadonull$.idNegocioEmpleadonull$.referenciaVentaServicioWeb$.cajas[*].importe8771$.cajas[*].idTipoPago1$.cajas[*].idReferencia1": {
+        "x-idPais1x-idCanal1x-idSucursal100x-estacionTrabajoWS_CAJAx-idUsuario117235$.folioPreparametrico863167$.folionull$.referenciaVentaServicioWeb$.pagos[*].importe8771.01$.pagos[*].idTipoPago1$.pagos[*].referenciaCargo%20tarjeta": {
           "httpStatus": 201,
           "mockFile": "pedidos-POST/created.json"
         },
-        "x-idPais1x-idCanal1x-idTienda100x-estacionTrabajoWS_CAJA$.numeroEmpleado146363$.folioPresupuestonull$.idTipoPedido1$.folioOrdenv31482547ekt-01$.ventaEmpleadonull$.idNegocioEmpleadonull$.referenciaVentaServicioWeb$.cajas[*].importe8771$.cajas[*].idTipoPago1$.cajas[*].idReferencia1": {
+        "x-idPais1x-idCanal1x-idSucursal100x-estacionTrabajoWS_CAJAx-idUsuario117235$.folioPreparametrico863167$.folioV-2312303$.referenciaVentaServicioWeb$.pagos[*].importe8771.01$.pagos[*].idTipoPago1$.pagos[*].referenciaCargo%20tarjeta": {
           "httpStatus": 201,
           "mockFile": "pedidos-POST/created.json"
         },
-        "x-idPais1x-idCanal1x-idTienda100x-estacionTrabajoWS_CAJA$.numeroEmpleado146363$.folioPresupuestonull$.idTipoPedido1$.folioOrdennull$.ventaEmpleadonull$.idNegocioEmpleadonull$.referenciaVentaServicioWeb$.cajas[*].importe8771$.cajas[*].idTipoPago1$.cajas[*].idReferencia1": {
+        "x-idPais1x-idCanal1x-idSucursal100x-estacionTrabajoWS_CAJAx-idUsuario117235$.folioPreparametriconull$.folionull$.referenciaVentaServicioWeb$.pagos[*].importe8771.01$.pagos[*].idTipoPago1$.pagos[*].referenciaCargo%20tarjeta": {
           "httpStatus": 400,
           "mockFile": "pedidos-POST/bad_request.json"
         },
-        "x-idPais1x-idCanal1x-idTienda100x-estacionTrabajoWS_CAJA$.numeroEmpleado146363$.folioPresupuesto123548$.idTipoPedido1$.folioOrdennull$.ventaEmpleadonull$.idNegocioEmpleadonull$.referenciaVentaServicioWeb$.cajas[*].importe8771$.cajas[*].idTipoPago1$.cajas[*].idReferencia1": {
+        "x-idPais1x-idCanal1x-idSucursal100x-estacionTrabajoWS_CAJAx-idUsuario117235$.folioPreparametrico20155$.folionull$.referenciaVentaServicioWeb$.pagos[*].importe8771.01$.pagos[*].idTipoPago1$.pagos[*].referenciaCargo%20tarjeta": {
           "httpStatus": 500,
           "mockFile": "pedidos-POST/internal_server_error.json"
         },
-
-        "x-idPais1x-idCanal1x-idTienda100x-estacionTrabajoWS_CAJA$.numeroEmpleado146363$.folio863167$.folioOrdennull$.idTipoFolio1$.idEstadoPedido0$.idTipoOperacion6$.referenciaVentaServicioWeb": {
+        "x-idPais1x-idCanal1x-idSucursal100x-estacionTrabajoWS_CAJAx-idUsuario117235$.folio863167$.idEstadoFolio0$.idTipoOperacion6": {
           "httpStatus": 201,
           "mockFile": "pedidos-PUT/created.json"
         },
-        "x-idPais1x-idCanal1x-idTienda100x-estacionTrabajoWS_CAJA$.numeroEmpleado146363$.folionull$.folioOrdenv31482547ekt-01$.idTipoFolio1$.idEstadoPedido0$.idTipoOperacion6$.referenciaVentaServicioWeb": {
+        "x-idPais1x-idCanal1x-idSucursal100x-estacionTrabajoWS_CAJAx-idUsuario117235$.folioV-2312303$.idEstadoFolio0$.idTipoOperacion6": {
           "httpStatus": 201,
           "mockFile": "pedidos-PUT/created.json"
         },
-        "x-idPais1x-idCanal1x-idTienda100x-estacionTrabajoWS_CAJA$.numeroEmpleado146363$.folionull$.folioOrdennull$.idTipoFolio1$.idEstadoPedido0$.idTipoOperacion6$.referenciaVentaServicioWeb": {
+        "x-idPais1x-idCanal1x-idSucursal100x-estacionTrabajoWS_CAJAx-idUsuario117235$.folionull$.idEstadoFolio0$.idTipoOperacion6": {
           "httpStatus": 400,
           "mockFile": "pedidos-PUT/bad_request.json"
         },
-        "x-idPais1x-idCanal1x-idTienda100x-estacionTrabajoWS_CAJA$.numeroEmpleado146363$.folio13424$.folioOrdennull$.idTipoFolio1$.idEstadoPedido0$.idTipoOperacion6$.referenciaVentaServicioWeb": {
+        "x-idPais1x-idCanal1x-idSucursal100x-estacionTrabajoWS_CAJAx-idUsuario117235$.folio863167$.idEstadoFolionull$.idTipoOperacion6": {
+          "httpStatus": 400,
+          "mockFile": "pedidos-PUT/bad_request.json"
+        },
+        "x-idPais1x-idCanal1x-idSucursal100x-estacionTrabajoWS_CAJAx-idUsuario117235$.folio12245$.idEstadoFolio0$.idTipoOperacion6": {
           "httpStatus": 500,
           "mockFile": "pedidos-PUT/internal_server_error.json"
         }
