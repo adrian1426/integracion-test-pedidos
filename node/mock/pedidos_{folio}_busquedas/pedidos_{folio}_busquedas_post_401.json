@@ -1,0 +1,9 @@
+{
+  "codigo": "401.Elektra-Comercio-Pedidos-Productos.114401",
+  "mensaje": "Parámetros no validos, por favor valide su información.",
+  "folio": "114-202105041545559500",
+  "info": "https://baz-developer.bancoazteca.com.mx/info#401.Elektra-Comercio-Pedidos-Productos.114401",
+  "detalles": [
+    "Las llaves de cifrado han expirado."
+  ]
+}

@@ -1,12 +1,12 @@
 {
-  "codigo": "201.Elektra-Comercio-Pedidos-Productos.107201",
+  "codigo": "201.Elektra-Comercio-Pedidos-Productos.114201",
   "mensaje": "Operación exitosa.",
-  "folio": "107-202105041545559500",
+  "folio": "114-202105041545559500",
   "resultado": {
     "folioPedido": "121245",
-    "folioPreparametrico": "863167",
+    "folioPreparametrico": "1002536",
     "numeroTransaccion": 153654648,
     "detalleOperacion": "Se genero el pedido 121245",
-    "movimientoOperacion": 108
+    "numeroMovimientoOperacion": 108
   }
-}
+} 

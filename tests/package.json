@@ -6,11 +6,11 @@
   "license": "ISC",
   "dependencies": {
     "apickli": "latest",
-    "cucumber": "^3.0.0"
+    "cucumber": "^5.0.3"
   },
   "devDependencies": {
     "cucumber-html-reporter": "^4.0.4",
-    "gulp": "latest",
+    "gulp": "^4.0.2",
     "gulp-apimocker": "^0.1.0",
     "gulp-cucumber": "^0.0.23",
     "gulp-nodeunit-runner": "^0.2.2",

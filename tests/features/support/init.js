@@ -13,10 +13,11 @@ Before(function() {
     this.apickli.setGlobalVariable('apigeeUsername', 'user');
     this.apickli.setGlobalVariable('apigeePassword', 'pwd');
     this.apickli.setGlobalVariable('deploymentSuffix', 'v1');
-    this.apickli.setGlobalVariable('apigeeHost', 'localhost:9002');
-    this.apickli.setGlobalVariable('apigeeDomain', 'localhost:9002');
+    this.apickli.setGlobalVariable('apigeeHost', 'localhost:9000');
+    this.apickli.setGlobalVariable('apigeeDomain', 'localhost:9000');
     this.apickli.setGlobalVariable('apigeeOauthEndpoint', 'oauth2/v1/token');
-
+    this.apickli.setGlobalVariable('localTest', true);
+    
     this.apickli.clientTLSConfig = {
         valid: {            
             key: './cert/client-key.pem',

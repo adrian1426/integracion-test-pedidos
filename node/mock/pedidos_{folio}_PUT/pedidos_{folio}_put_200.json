@@ -1,0 +1,9 @@
+{
+  "codigo": "200.Elektra-Comercio-Pedidos-Productos.114200",
+  "mensaje": "Operación exitosa.",
+  "folio": "114-202105041545559500",
+  "resultado": {  
+     "folioValido": true,
+     "numeroMovimientoOperacion": 108                    
+   }
+ }

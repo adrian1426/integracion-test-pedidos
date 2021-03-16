@@ -1,0 +1,9 @@
+{
+    "mensaje": "Operación Exitosa",
+    "folio": "17920190617173411592",
+    "resultado": {
+        "idAcceso": "265",
+        "accesoPublico": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCXdmNZuPxnMs31M7nsnmfyKihcqU4WMg/SFQq5IAQ7aA+GI06IG/5268jWDZVoO2INM/X8/rVhHi+22XzG28k1EqLXlsg588Ln2O1OylxugSO7fQpJz32huKqlN4FgRMTGIHqMPgpsKmdvNUwtE3j5qrv5PTK5J/pvOEmEMmTM9QIDAQAB",
+        "accesoPrivado": "MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAI9/o9Ct9TpgBeiGr7xh00LgGrTeAWmcQOPZY9vrbXIq+Pkex9mQpf7zphLRI3HZbIwvwpGPKQAD54Q+rISse8KOtMmA2qDweIj8Qh+ZtY9QOtvFAJYN15LxMVF6t3/SKcE/tk6mcMzakYY01wZp/JbcR4N8idM5Bo3yNQzyNMa5AgMBAAECgYAsytHurK5Uh26ws4IdkoeoY13SwU29kpmqxcvm9OkX7xQCZzpIzl8SYymezAt9WToJ1Equtvo8V/uniwy86T5D9bzMmFXmsn0ktLea2N9x0mVSrGVH+I+qba92hagWiOZiW/zsnovZLdazdYPIg43CsI1DHrE7q7fvGV4/WXgLgQJBAOqjIAQg2MODlHjbVEmJ9n/3BmR14 =="
+    }
+}

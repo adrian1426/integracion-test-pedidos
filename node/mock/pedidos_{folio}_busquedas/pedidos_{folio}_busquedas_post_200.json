@@ -1,0 +1,189 @@
+{
+  "codigo": "200.Elektra-Comercio-Pedidos-Productos.114200",
+  "mensaje": "Operación exitosa.",
+  "folio": "114-202105041545559500",
+  "resultado": {
+    "pedidos": [
+      {
+        "folio": "146625",
+        "idPais": 1,
+        "idCanal": 1,
+        "idSucursal": 100,
+        "idTipoVenta": 1,
+        "totalVenta": "1200.22",
+        "totalDescuento": 600.25,
+        "idEstatusFolio": 0,
+        "descripcionEstatusFolio": "creada",
+        "inventariable": false,
+        "foliosReferencia": [
+          {
+            "id": "v31485575ekt-01",
+            "idTipo": 1
+          }
+        ],
+        "productos": [
+          {
+            "sku": 11520,
+            "idPartida": 1,
+            "tipo": "LB",
+            "descripcion": "TV SONY 32",
+            "cantidad": 2,
+            "precioLista": 1500.56,
+            "descuentoUnitario": 100.78,
+            "precioVenta": 1399.78,
+            "precioTotal": 2799.56,
+            "series": [
+              "SDKS12123123"
+            ],
+            "prepago" : {
+              "identificadorInternacional" : "012354654894654654",
+              "identificadorCarga" : "224689487621821",
+              "proveedorRed" :"Telcel"
+            },
+            "precioCredito": {
+              "enganche": 12.12,
+              "sobrePrecio": 500.45,
+              "precio": 1900.23,
+              "total": 3800.46,
+              "abono": {
+                "puntual": 58.12,
+                "normal": 65.87,
+                "ultimo": 60.23,
+                "digital": 56.12
+              }
+            },
+            "milenia": {
+              "sku": 750999,
+              "tipo": "ME",
+              "descripcion": "GTIA. EXT. MILENIA 1 AÑO MX",
+              "tiempoCobertura": "1 AÑO MX",
+              "precioLista": 800.34,
+              "cantidad": 2,
+              "descuento": 12.32,
+              "precioVenta": 800.11,
+              "series": [
+                "SDKS12123123"
+              ],
+              "precioCredito": {
+                "enganche": 12.12,
+                "sobrePrecio": 500.45,
+                "precio": 1900.23,
+                "total": 3800.46,
+                "abono": {
+                  "puntual": 58.12,
+                  "normal": 65.87,
+                  "ultimo": 60.23,
+                  "digital": 56.12
+                }
+              }
+            },
+            "regalo": {
+              "idPromocion": 23456,
+              "cantidad": 1,
+              "productos": [
+                {
+                  "sku": 560012,
+                  "descripcion": "Licuadora Oster",
+                  "cantidad": 1
+                }
+              ]
+            },
+            "promociones": [
+              {
+                "id": 456689,
+                "idTipo": 4,
+                "idSubTipo": 1,
+                "idRegalo": 11521,
+                "cantidad": 1,
+                "montoOtorgado": 1500.12
+              }
+            ]
+          }
+        ],
+        "seguros": [
+          {
+            "sku": 50095,
+            "descripcion": "Producto 1",
+            "precioLista": 800.56,
+            "precioCredito": {
+              "enganche": 12.12,
+              "sobrePrecio": 500.45,
+              "precio": 1900.23,
+              "total": 3800.46,
+              "abono": {
+                "puntual": 58.12,
+                "normal": 65.87,
+                "ultimo": 60.23,
+                "digital": 56.12
+              }
+            }
+          }
+        ],
+        "promociones": [
+          {
+            "id": 456689,
+            "idTipo": 4,
+            "idSubTipo": 1,
+            "idRegalo": 11521,
+            "cantidad": 1,
+            "montoOtorgado": 1500.12
+          }
+        ],
+        "cliente": {
+          "unico": "1-1-4624-9705-1",
+          "elektra": "1-100-46546-1"
+        },
+        "ventaEmpleado": { 
+          "numeroEmpleado": "T146363", 
+          "idNegocio": 1 
+          },
+        "credito": {
+          "idPeriodo": 1,
+          "idPlazo": 102,
+          "enganche": 500.12,
+          "abono": {
+            "puntual": 58.12,
+            "normal": 65.87,
+            "ultimo": 60.23,
+            "digital": 56.12
+          }
+        },
+        "datosEntrega": {
+          "tipo": "Mismo día",
+          "costo": 150.23,
+          "domicilio": {
+            "codigoPostal": "09720",
+            "estado": "Ciudad de México",
+            "municipio": "Iztapalapa",
+            "colonia": "Angeles",
+            "calle": "Morelos",
+            "numeroExterior": "Manzana 22 - lote 7",
+            "numeroInterior": "1",
+            "latitud": "19.3435446",
+            "longitud": "-99.0471655",
+            "comentarios": "Puerta negra",
+            "referencias": [ 
+              {
+                "referencia": "Entre Av Insurgentes Sur"
+              }
+            ]
+          },
+          "notaEntrega": {
+            "titulo": "Cumpleaños",
+            "nota": "feliz cumpleaños, excelente dia para ti"
+          },
+          "personaRecibe": {
+            "nombre": "Claudia Baños Loppez",
+            "correo": "Claubl@gmail.com",
+            "telefono": "5520358741"
+          },
+          "personaNotifica": {
+            "nombre": "Claudia Baños Loppez",
+            "correo": "Claubl@gmail.com",
+            "telefono": "5520358741"
+          }
+        }
+      }
+    ]
+  }
+}
