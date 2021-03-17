@@ -14,7 +14,7 @@
         "responses": {
           "get": {
             "httpStatus": 200,
-            "mockFile": "llaves_ok.json"
+            "mockFile": "seguridad/llaves_ok.json"
           }
         }
     },
@@ -31,13 +31,13 @@
           "responses": {
               "get": {
                 "httpStatus": 400,
-                "mockFile": "credenciales_badRequest.json"
+                "mockFile": "seguridad/credenciales_badRequest.json"
               }
           },
           "switchResponses": {
               "apigeeOrgorgeTestapigeeDeveloperejemploDeveloperapigeeAppejemploApp": {
                 "httpStatus": 200,
-                "mockFile": "credenciales_ok.json"
+                "mockFile": "seguridad/credenciales_ok.json"
               }
           }
     },
@@ -56,13 +56,13 @@
           "responses": {
               "get": {
                 "httpStatus": 400,
-                "mockFile": "autorizacion_badRequest.json"
+                "mockFile": "seguridad/autorizacion_badRequest.json"
               }
           },
           "switchResponses": {
               "grant_typeclient_credentials": {
                 "httpStatus": 200,
-                "mockFile": "autorizacion_ok.json"
+                "mockFile": "seguridad/autorizacion_ok.json"
               }
           }
     },   
@@ -74,7 +74,7 @@
       "responses":{
         "post":{
           "httpStatus":500,
-          "mockFile":"pedidos_{folio}_busquedas/pedidos_{folio}_busquedas_post_500.json"
+          "mockFile":"pedidos_folio_busquedas/pedidos_folio_busquedas_post_500.json"
         }
       },
       "switch":[
@@ -90,43 +90,47 @@
       "switchResponses":{        
          "x-idPais1x-idCanal1x-idSucursal100folio146625$.idUsuarioT146363$.clienteUnico1-1-4624-9705-1$.fechaHoraInicio2021-01-30%2008%3A00$.fechaHoraFin2021-01-31%2023%3A00":{
             "httpStatus":200,
-            "mockFile":"pedidos_{folio}_busquedas/pedidos_{folio}_busquedas_post_200.json"
-         },
-         "x-idPais1x-idCanal1x-idSucursal100folionull$.idUsuarioT146363$.clienteUnico1-1-4624-9705-1$.fechaHoraInicio2021-01-30%2008%3A00$.fechaHoraFin2021-01-31%2023%3A00":{
-            "httpStatus":400,
-            "mockFile":"pedidos_{folio}_busquedas/pedidos_{folio}_busquedas_post_400.json"
-        },
-         "x-idPais1x-idCanal1x-idSucursal100folio146625$.idUsuarionull$.clienteUnico1-1-4624-9705-1$.fechaHoraInicio2021-01-30%2008%3A00$.fechaHoraFin2021-01-31%2023%3A00":{
-            "httpStatus":400,
-            "mockFile":"pedidos_{folio}_busquedas/pedidos_{folio}_busquedas_post_400.json"
+            "mockFile":"pedidos_folio_busquedas/pedidos_folio_busquedas_post_200.json"
          },
          "x-idPais1x-idCanal1x-idSucursal100folio146625$.idUsuarioT146363$.clienteUniconull$.fechaHoraInicio2021-01-30%2008%3A00$.fechaHoraFin2021-01-31%2023%3A00":{
             "httpStatus":200,
-            "mockFile":"pedidos_{folio}_busquedas/pedidos_{folio}_busquedas_post_200.json"
+            "mockFile":"pedidos_folio_busquedas/pedidos_folio_busquedas_post_200.json"
          },
          "x-idPais1x-idCanal1x-idSucursal100folio146625$.idUsuarioT146363$.clienteUnico1-1-4624-9705-1$.fechaHoraInicionull$.fechaHoraFin2021-01-31%2023%3A00":{
             "httpStatus":200,
-            "mockFile":"pedidos_{folio}_busquedas/pedidos_{folio}_busquedas_post_200.json"
+            "mockFile":"pedidos_folio_busquedas/pedidos_folio_busquedas_post_200.json"
          },
          "x-idPais1x-idCanal1x-idSucursal100folio146625$.idUsuarioT146363$.clienteUnico1-1-4624-9705-1$.fechaHoraInicio2021-01-30%2008%3A00$.fechaHoraFinnull":{
             "httpStatus":200,
-            "mockFile":"pedidos_{folio}_busquedas/pedidos_{folio}_busquedas_post_200.json"
+            "mockFile":"pedidos_folio_busquedas/pedidos_folio_busquedas_post_200.json"
          },
          "x-idPaisnullx-idCanal1x-idSucursal100folio146625$.idUsuarioT146363$.clienteUnico1-1-4624-9705-1$.fechaHoraInicio2021-01-30%2008%3A00$.fechaHoraFin2021-01-31%2023%3A00":{
-            "httpStatus":401,
-            "mockFile":"pedidos_{folio}_busquedas/pedidos_{folio}_busquedas_post_401.json"
+            "httpStatus":400,
+            "mockFile":"pedidos_folio_busquedas/pedidos_folio_busquedas_post_400.json"
          },
          "x-idPais1x-idCanalnullx-idSucursal100folio146625$.idUsuarioT146363$.clienteUnico1-1-4624-9705-1$.fechaHoraInicio2021-01-30%2008%3A00$.fechaHoraFin2021-01-31%2023%3A00":{
-            "httpStatus":401,
-            "mockFile":"pedidos_{folio}_busquedas/pedidos_{folio}_busquedas_post_401.json"
+            "httpStatus":400,
+            "mockFile":"pedidos_folio_busquedas/pedidos_folio_busquedas_post_400.json"
          },
          "x-idPais1x-idCanal1x-idSucursalnullfolio146625$.idUsuarioT146363$.clienteUnico1-1-4624-9705-1$.fechaHoraInicio2021-01-30%2008%3A00$.fechaHoraFin2021-01-31%2023%3A00":{
-            "httpStatus":401,
-            "mockFile":"pedidos_{folio}_busquedas/pedidos_{folio}_busquedas_post_401.json"
+            "httpStatus":400,
+            "mockFile":"pedidos_folio_busquedas/pedidos_folio_busquedas_post_400.json"
          },
-         "x-idPais1x-idCanal1x-idSucursal100folio500146625$.idUsuarioT146363$.clienteUnico1-1-4624-9705-1$.fechaHoraInicio2021-01-30%2008%3A00$.fechaHoraFin2021-01-31%2023%3A00":{
+         "x-idPais1x-idCanal1x-idSucursal100folionull$.idUsuarioT146363$.clienteUnico1-1-4624-9705-1$.fechaHoraInicio2021-01-30%2008%3A00$.fechaHoraFin2021-01-31%2023%3A00":{
+            "httpStatus":400,
+            "mockFile":"pedidos_folio_busquedas/pedidos_folio_busquedas_post_400.json"
+        },
+         "x-idPais1x-idCanal1x-idSucursal100folio146625$.idUsuarionull$.clienteUnico1-1-4624-9705-1$.fechaHoraInicio2021-01-30%2008%3A00$.fechaHoraFin2021-01-31%2023%3A00":{
+            "httpStatus":400,
+            "mockFile":"pedidos_folio_busquedas/pedidos_folio_busquedas_post_400.json"
+         },
+         "x-idPais1x-idCanal1x-idSucursal100folio401146625$.idUsuarioT146363$.clienteUnico1-1-4624-9705-1$.fechaHoraInicio2021-01-30%2008%3A00$.fechaHoraFin2021-01-31%2023%3A00":{
+            "httpStatus":401,
+            "mockFile":"pedidos_folio_busquedas/pedidos_folio_busquedas_post_401.json"
+         },
+         "x-idPaissax-idCanal1x-idSucursal100folio500146625$.idUsuarioT146363$.clienteUnico1-1-4624-9705-1$.fechaHoraInicio2021-01-30%2008%3A00$.fechaHoraFin2021-01-31%2023%3A00":{
           "httpStatus":500,
-            "mockFile":"pedidos_{folio}_busquedas/pedidos_{folio}_busquedas_post_500.json"
+            "mockFile":"pedidos_folio_busquedas/pedidos_folio_busquedas_post_500.json"
          }
       }
     },
@@ -138,7 +142,7 @@
       "responses":{
          "put":{
             "httpStatus": 500,
-            "mockFile":"pedidos_{folio}_PUT/pedidos_{folio}_put_500.json"
+            "mockFile":"pedidos_folio_PUT/pedidos_folio_put_500.json"
          }
       },
       "switch":[
@@ -154,43 +158,47 @@
       "switchResponses":{
          "x-idPais1x-idCanal1x-idSucursal100x-idEstacionTrabajoWS_CAJA$.idUsuarioT146363$.idEstatusFolio0$.idTipoOperacion6folio146625":{
             "httpStatus":200,
-            "mockFile":"pedidos_{folio}_PUT/pedidos_{folio}_put_200.json"
-         },
-         "x-idPais1x-idCanal1x-idSucursal100x-idEstacionTrabajoWS_CAJA$.idUsuarioT146363$.idEstatusFolio0$.idTipoOperacion6folionull":{
-          "httpStatus":400,
-          "mockFile":"pedidos_{folio}_PUT/pedidos_{folio}_put_400.json"
-         },
-         "x-idPais1x-idCanal1x-idSucursal100x-idEstacionTrabajoWS_CAJA$.idUsuarionull$.idEstatusFolio0$.idTipoOperacion6folio146625":{
-            "httpStatus":400,
-            "mockFile":"pedidos_{folio}_PUT/pedidos_{folio}_put_400.json"
-         },
-         "x-idPais1x-idCanal1x-idSucursal100x-idEstacionTrabajoWS_CAJA$.idUsuarioT146363$.idEstatusFolionull$.idTipoOperacion6folio146625":{
-            "httpStatus":400,
-            "mockFile":"pedidos_{folio}_PUT/pedidos_{folio}_put_400.json"
-         },
-         "x-idPais1x-idCanal1x-idSucursal100x-idEstacionTrabajoWS_CAJA$.idUsuarioT146363$.idEstatusFolio0$.idTipoOperacionnullfolio146625":{
-            "httpStatus":400,
-            "mockFile":"pedidos_{folio}_PUT/pedidos_{folio}_put_400.json"
+            "mockFile":"pedidos_folio_PUT/pedidos_folio_put_200.json"
          },
          "x-idPaisnullx-idCanal1x-idSucursal100x-idEstacionTrabajoWS_CAJA$.idUsuarioT146363$.idEstatusFolio0$.idTipoOperacion6folio146625":{
-            "httpStatus":401,
-            "mockFile":"pedidos_{folio}_PUT/pedidos_{folio}_put_401.json"
+            "httpStatus":400,
+            "mockFile":"pedidos_folio_PUT/pedidos_folio_put_400.json"
          },
          "x-idPais1x-idCanalnullx-idSucursal100x-idEstacionTrabajoWS_CAJA$.idUsuarioT146363$.idEstatusFolio0$.idTipoOperacion6folio146625":{
-            "httpStatus":401,
-            "mockFile":"pedidos_{folio}_PUT/pedidos_{folio}_put_401.json"
+            "httpStatus":400,
+            "mockFile":"pedidos_folio_PUT/pedidos_folio_put_400.json"
          },
          "x-idPais1x-idCanal1x-idSucursalnullx-idEstacionTrabajoWS_CAJA$.idUsuarioT146363$.idEstatusFolio0$.idTipoOperacion6folio146625":{
-            "httpStatus":401,
-            "mockFile":"pedidos_{folio}_PUT/pedidos_{folio}_put_401.json"
+            "httpStatus":400,
+            "mockFile":"pedidos_folio_PUT/pedidos_folio_put_400.json"
          },
          "x-idPais1x-idCanal1x-idSucursal100x-idEstacionTrabajonull$.idUsuarioT146363$.idEstatusFolio0$.idTipoOperacion6folio146625":{
+            "httpStatus":400,
+            "mockFile":"pedidos_folio_PUT/pedidos_folio_put_400.json"
+         },
+         "x-idPais1x-idCanal1x-idSucursal100x-idEstacionTrabajoWS_CAJA$.idUsuarioT146363$.idEstatusFolio0$.idTipoOperacion6folionull":{
+            "httpStatus":400,
+            "mockFile":"pedidos_folio_PUT/pedidos_folio_put_400.json"
+           },
+           "x-idPais1x-idCanal1x-idSucursal100x-idEstacionTrabajoWS_CAJA$.idUsuarionull$.idEstatusFolio0$.idTipoOperacion6folio146625":{
+              "httpStatus":400,
+              "mockFile":"pedidos_folio_PUT/pedidos_folio_put_400.json"
+           },
+           "x-idPais1x-idCanal1x-idSucursal100x-idEstacionTrabajoWS_CAJA$.idUsuarioT146363$.idEstatusFolionull$.idTipoOperacion6folio146625":{
+              "httpStatus":400,
+              "mockFile":"pedidos_folio_PUT/pedidos_folio_put_400.json"
+           },
+           "x-idPais1x-idCanal1x-idSucursal100x-idEstacionTrabajoWS_CAJA$.idUsuarioT146363$.idEstatusFolio0$.idTipoOperacionnullfolio146625":{
+              "httpStatus":400,
+              "mockFile":"pedidos_folio_PUT/pedidos_folio_put_400.json"
+           },
+           "x-idPais1x-idCanal1x-idSucursal100x-idEstacionTrabajoWS_CAJA$.idUsuarioT146363$.idEstatusFolio0$.idTipoOperacion6folio401146625":{
             "httpStatus":401,
-            "mockFile":"pedidos_{folio}_PUT/pedidos_{folio}_put_401.json"
+            "mockFile":"pedidos_folio_PUT/pedidos_folio_put_401.json"
          },
          "x-idPaissdax-idCanal1x-idSucursal100x-idEstacionTrabajoWS_CAJA$.idUsuarioT146363$.idEstatusFolio0$.idTipoOperacion6folio500146625":{
           "httpStatus":500,
-            "mockFile":"pedidos_{folio}_PUT/pedidos_{folio}_put_500.json"
+            "mockFile":"pedidos_folio_PUT/pedidos_folio_put_500.json"
          }
       }
    },    
@@ -225,14 +233,6 @@
           "httpStatus":201,
           "mockFile":"pedidos_POST/pedidos_post_201.json"
        },
-       "x-idPais1x-idCanal1x-idSucursal100x-idEstacionTrabajoWS_CAJA$.idUsuarionull$.folioPresupuesto863167$.folioV2312303$.referenciaVentaServicioWeb$.pagos[*].idTipo1$.pagos[*].importe8771.01$.pagos[*].referenciaCargo%20tarjeta$.foliosReferencia[*].idv31485575ekt-01$.foliosReferencia[*].idTipo1":{
-          "httpStatus":400,
-          "mockFile":"pedidos_POST/pedidos_post_400.json"
-       },
-       "x-idPais1x-idCanal1x-idSucursal100x-idEstacionTrabajoWS_CAJA$.idUsuarioT146363$.folioPresupuestonull$.folioV2312303$.referenciaVentaServicioWeb$.pagos[*].idTipo1$.pagos[*].importe8771.01$.pagos[*].referenciaCargo%20tarjeta$.foliosReferencia[*].idv31485575ekt-01$.foliosReferencia[*].idTipo1":{
-          "httpStatus":400,
-          "mockFile":"pedidos_POST/pedidos_post_400.json"
-       },
        "x-idPais1x-idCanal1x-idSucursal100x-idEstacionTrabajoWS_CAJA$.idUsuarioT146363$.folioPresupuesto863167$.folionull$.referenciaVentaServicioWeb$.pagos[*].idTipo1$.pagos[*].importe8771.01$.pagos[*].referenciaCargo%20tarjeta$.foliosReferencia[*].idv31485575ekt-01$.foliosReferencia[*].idTipo1":{
          "httpStatus":201,
          "mockFile":"pedidos_POST/pedidos_post_201.json"
@@ -253,6 +253,26 @@
          "httpStatus":201,
          "mockFile":"pedidos_POST/pedidos_post_201.json"
        },
+       "x-idPaisnullx-idCanal1x-idSucursal100x-idEstacionTrabajoWS_CAJA$.idUsuarioT146363$.folioPresupuesto863167$.folioV2312303$.referenciaVentaServicioWeb$.pagos[*].idTipo1$.pagos[*].importe8771.01$.pagos[*].referenciaCargo%20tarjeta$.foliosReferencia[*].idv31485575ekt-01$.foliosReferencia[*].idTipo1":{
+         "httpStatus":400,
+         "mockFile":"pedidos_POST/pedidos_post_400.json"
+      },
+      "x-idPais1x-idCanalnullx-idSucursal100x-idEstacionTrabajoWS_CAJA$.idUsuarioT146363$.folioPresupuesto863167$.folioV2312303$.referenciaVentaServicioWeb$.pagos[*].idTipo1$.pagos[*].importe8771.01$.pagos[*].referenciaCargo%20tarjeta$.foliosReferencia[*].idv31485575ekt-01$.foliosReferencia[*].idTipo1":{
+         "httpStatus":400,
+         "mockFile":"pedidos_POST/pedidos_post_400.json"
+      },
+      "x-idPais1x-idCanal1x-idSucursalnullx-idEstacionTrabajoWS_CAJA$.idUsuarioT146363$.folioPresupuesto863167$.folioV2312303$.referenciaVentaServicioWeb$.pagos[*].idTipo1$.pagos[*].importe8771.01$.pagos[*].referenciaCargo%20tarjeta$.foliosReferencia[*].idv31485575ekt-01$.foliosReferencia[*].idTipo1":{
+         "httpStatus":400,
+         "mockFile":"pedidos_POST/pedidos_post_400.json"
+      },
+      "x-idPais1x-idCanal1x-idSucursal100x-idEstacionTrabajonull$.idUsuarioT146363$.folioPresupuesto863167$.folioV2312303$.referenciaVentaServicioWeb$.pagos[*].idTipo1$.pagos[*].importe8771.01$.pagos[*].referenciaCargo%20tarjeta$.foliosReferencia[*].idv31485575ekt-01$.foliosReferencia[*].idTipo1":{
+         "httpStatus":400,
+         "mockFile":"pedidos_POST/pedidos_post_400.json"
+      },
+      "x-idPais1x-idCanal1x-idSucursal100x-idEstacionTrabajoWS_CAJA$.idUsuarionull$.folioPresupuesto863167$.folioV2312303$.referenciaVentaServicioWeb$.pagos[*].idTipo1$.pagos[*].importe8771.01$.pagos[*].referenciaCargo%20tarjeta$.foliosReferencia[*].idv31485575ekt-01$.foliosReferencia[*].idTipo1":{
+        "httpStatus":400,
+        "mockFile":"pedidos_POST/pedidos_post_400.json"
+     },
        "x-idPais1x-idCanal1x-idSucursal100x-idEstacionTrabajoWS_CAJA$.idUsuarioT146363$.folioPresupuesto863167$.folioV2312303$.referenciaVentaServicioWeb$.pagos[*].idTipo1$.pagos[*].importe8771.01$.pagos[*].referenciaCargo%20tarjeta$.foliosReferencia[*].idnull$.foliosReferencia[*].idTipo1":{
           "httpStatus":400,
           "mockFile":"pedidos_POST/pedidos_post_400.json"
@@ -261,22 +281,14 @@
           "httpStatus":400,
           "mockFile":"pedidos_POST/pedidos_post_400.json"
        },
-       "x-idPaisnullx-idCanal1x-idSucursal100x-idEstacionTrabajoWS_CAJA$.idUsuarioT146363$.folioPresupuesto863167$.folioV2312303$.referenciaVentaServicioWeb$.pagos[*].idTipo1$.pagos[*].importe8771.01$.pagos[*].referenciaCargo%20tarjeta$.foliosReferencia[*].idv31485575ekt-01$.foliosReferencia[*].idTipo1":{
-          "httpStatus":401,
-          "mockFile":"pedidos_POST/pedidos_post_401.json"
-       },
-       "x-idPais1x-idCanalnullx-idSucursal100x-idEstacionTrabajoWS_CAJA$.idUsuarioT146363$.folioPresupuesto863167$.folioV2312303$.referenciaVentaServicioWeb$.pagos[*].idTipo1$.pagos[*].importe8771.01$.pagos[*].referenciaCargo%20tarjeta$.foliosReferencia[*].idv31485575ekt-01$.foliosReferencia[*].idTipo1":{
-          "httpStatus":401,
-          "mockFile":"pedidos_POST/pedidos_post_401.json"
-       },
-       "x-idPais1x-idCanal1x-idSucursalnullx-idEstacionTrabajoWS_CAJA$.idUsuarioT146363$.folioPresupuesto863167$.folioV2312303$.referenciaVentaServicioWeb$.pagos[*].idTipo1$.pagos[*].importe8771.01$.pagos[*].referenciaCargo%20tarjeta$.foliosReferencia[*].idv31485575ekt-01$.foliosReferencia[*].idTipo1":{
-          "httpStatus":401,
-          "mockFile":"pedidos_POST/pedidos_post_401.json"
-       },
-       "x-idPais1x-idCanal1x-idSucursal100x-idEstacionTrabajonull$.idUsuarioT146363$.folioPresupuesto863167$.folioV2312303$.referenciaVentaServicioWeb$.pagos[*].idTipo1$.pagos[*].importe8771.01$.pagos[*].referenciaCargo%20tarjeta$.foliosReferencia[*].idv31485575ekt-01$.foliosReferencia[*].idTipo1":{
-          "httpStatus":401,
-          "mockFile":"pedidos_POST/pedidos_post_401.json"
-       },
+      "x-idPais1x-idCanal1x-idSucursal100x-idEstacionTrabajoWS_CAJA$.idUsuarioT146363$.folioPresupuestonull$.folioV2312303$.referenciaVentaServicioWeb$.pagos[*].idTipo1$.pagos[*].importe8771.01$.pagos[*].referenciaCargo%20tarjeta$.foliosReferencia[*].idv31485575ekt-01$.foliosReferencia[*].idTipo1":{
+         "httpStatus":400,
+         "mockFile":"pedidos_POST/pedidos_post_400.json"
+      },
+      "x-idPais1x-idCanal1x-idSucursal100x-idEstacionTrabajoWS_CAJA$.idUsuarioT146363$.folioPresupuesto401863167$.folioV2312303$.referenciaVentaServicioWeb$.pagos[*].idTipo1$.pagos[*].importe8771.01$.pagos[*].referenciaCargo%20tarjeta$.foliosReferencia[*].idv31485575ekt-01$.foliosReferencia[*].idTipo1":{
+         "httpStatus":401,
+         "mockFile":"pedidos_POST/pedidos_post_401.json"
+      },
        "x-idPaisSCDOx-idCanal1x-idSucursal100x-idEstacionTrabajoWS_CAJA$.idUsuarioT146363$.folioPresupuesto500863167$.folioV2312303$.referenciaVentaServicioWeb$.pagos[*].idTipo1$.pagos[*].importe8771.01$.pagos[*].referenciaCargo%20tarjeta$.foliosReferencia[*].idv31485575ekt-01$.foliosReferencia[*].idTipo1":{
         "httpStatus":500,
           "mockFile":"pedidos_POST/pedidos_post_500.json"

@@ -1,5 +1,7 @@
-Feature: post_pedidos
+Feature: /pedidos POST
  
+  Realiza el Marcado de la Venta
+
         Scenario: Genera token y llaves asimétricas
             Given I set bearer token
               And I have valid client TLS configuration
@@ -35,6 +37,7 @@ Feature: post_pedidos
 
 
         Scenario Outline: /pedidos 201 Creado
+              Verificar que se realice la creación correcta del recurso relacionado a una transacción POST en /pedidos
             Given I set bearer token
               And I have valid client TLS configuration
               And I set x-idPais header to <x-idPais>
@@ -67,6 +70,7 @@ Feature: post_pedidos
 
 
         Scenario Outline: /pedidos 400 Entrada Incorrecta
+              Verificar que se obtenga una salida incorrecta al enviar una petición malformada desde una transacción POST en /pedidos
             Given I set bearer token
               And I have valid client TLS configuration
               And I set x-idPais header to <x-idPais>
@@ -87,6 +91,10 @@ Feature: post_pedidos
 
         Examples:
                   | x-idPais | x-idCanal | x-idSucursal | x-idEstacionTrabajo | idUsuario | folioPresupuesto | folio    | referencia       | idTipo | importe | pagos0Referencia | id              | foliosReferencia0IdTipo |
+                  | null     | 1         | 100          | WS_CAJA             | T146363   | 863167           | V2312303 | VentaServicioWeb | 1      | 8771.01 | Cargo tarjeta    | v31485575ekt-01 | 1                       |
+                  | 1        | null      | 100          | WS_CAJA             | T146363   | 863167           | V2312303 | VentaServicioWeb | 1      | 8771.01 | Cargo tarjeta    | v31485575ekt-01 | 1                       |
+                  | 1        | 1         | null         | WS_CAJA             | T146363   | 863167           | V2312303 | VentaServicioWeb | 1      | 8771.01 | Cargo tarjeta    | v31485575ekt-01 | 1                       |
+                  | 1        | 1         | 100          | null                | T146363   | 863167           | V2312303 | VentaServicioWeb | 1      | 8771.01 | Cargo tarjeta    | v31485575ekt-01 | 1                       |
                   | 1        | 1         | 100          | WS_CAJA             | null      | 863167           | V2312303 | VentaServicioWeb | 1      | 8771.01 | Cargo tarjeta    | v31485575ekt-01 | 1                       |
                   | 1        | 1         | 100          | WS_CAJA             | T146363   | null             | V2312303 | VentaServicioWeb | 1      | 8771.01 | Cargo tarjeta    | v31485575ekt-01 | 1                       |
                   | 1        | 1         | 100          | WS_CAJA             | T146363   | 863167           | V2312303 | null             | 1      | 8771.01 | Cargo tarjeta    | v31485575ekt-01 | 1                       |
@@ -95,6 +103,7 @@ Feature: post_pedidos
 
 
         Scenario Outline: /pedidos 401 No autorizado
+              Verificar que se obtenga una salida de acceso no autorizado desde una transacción POST en /pedidos
             Given I set bearer token
               And I have valid client TLS configuration
               And I set x-idPais header to <x-idPais>
@@ -115,13 +124,11 @@ Feature: post_pedidos
 
         Examples:
                   | x-idPais | x-idCanal | x-idSucursal | x-idEstacionTrabajo | idUsuario | folioPresupuesto | folio    | referencia       | idTipo | importe | pagos0Referencia | id              | foliosReferencia0IdTipo |
-                  | null     | 1         | 100          | WS_CAJA             | T146363   | 863167           | V2312303 | VentaServicioWeb | 1      | 8771.01 | Cargo tarjeta    | v31485575ekt-01 | 1                       |
-                  | 1        | null      | 100          | WS_CAJA             | T146363   | 863167           | V2312303 | VentaServicioWeb | 1      | 8771.01 | Cargo tarjeta    | v31485575ekt-01 | 1                       |
-                  | 1        | 1         | null         | WS_CAJA             | T146363   | 863167           | V2312303 | VentaServicioWeb | 1      | 8771.01 | Cargo tarjeta    | v31485575ekt-01 | 1                       |
-                  | 1        | 1         | 100          | null                | T146363   | 863167           | V2312303 | VentaServicioWeb | 1      | 8771.01 | Cargo tarjeta    | v31485575ekt-01 | 1                       |
-			
+                  | 1        | 1         | 100          | WS_CAJA             | T146363   | 401863167        | V2312303 | VentaServicioWeb | 1      | 8771.01 | Cargo tarjeta    | v31485575ekt-01 | 1                       |
+
  
         Scenario Outline: /pedidos 500 Operacion Inesperada
+              Verificar que se obtenga un error inesperado desde una transacción POST en /pedidos
             Given I set bearer token
               And I have valid client TLS configuration
               And I set x-ismock header to true

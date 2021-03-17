@@ -1,4 +1,6 @@
-Feature: post_pedidos_{folio}_busquedas
+Feature: /pedidos/folio/busquedas POST
+
+        Consulta detalles del pedido
 
         Scenario: Genera token y llaves asimétricas
             Given I set bearer token
@@ -34,7 +36,8 @@ Feature: post_pedidos_{folio}_busquedas
               And I store the value of body path $.access_token as access token
 
 
-        Scenario Outline: /pedidos/{folio}/busquedas 200 ok.
+        Scenario Outline: /pedidos/folio/busquedas 200 ok.
+              Verificar que se obtenga la información relacionada desde una transacción POST en /pedidos/folio/busquedas
             Given I set bearer token
               And I have valid client TLS configuration
               And I set x-idPais header to <x-idPais>
@@ -169,7 +172,8 @@ Feature: post_pedidos_{folio}_busquedas
                   | 1        | 1         | 100          | 146625 | T146363   | 1-1-4624-9705-1 | 2021-01-30 08:00 | null             |
 
 
-        Scenario Outline: /pedidos/{folio}/busquedas 400 Entrada Incorrecta
+        Scenario Outline: /pedidos/folio/busquedas 400 Entrada Incorrecta
+              Verificar que se obtenga una salida incorrecta al enviar una petición malformada desde una transacción POST en /pedidos/folio/busquedas
             Given I set bearer token
               And I have valid client TLS configuration
               And I set x-idPais header to <x-idPais>
@@ -189,11 +193,15 @@ Feature: post_pedidos_{folio}_busquedas
 
         Examples:
                   | x-idPais | x-idCanal | x-idSucursal | folio  | idUsuario | clienteUnico    | fechaHoraInicio  | fechaHoraFin     |
+                  | null     | 1         | 100          | 146625 | T146363   | 1-1-4624-9705-1 | 2021-01-30 08:00 | 2021-01-31 23:00 |
+                  | 1        | null      | 100          | 146625 | T146363   | 1-1-4624-9705-1 | 2021-01-30 08:00 | 2021-01-31 23:00 |
+                  | 1        | 1         | null         | 146625 | T146363   | 1-1-4624-9705-1 | 2021-01-30 08:00 | 2021-01-31 23:00 |
                   | 1        | 1         | 100          | null   | T146363   | 1-1-4624-9705-1 | 2021-01-30 08:00 | 2021-01-31 23:00 |
                   | 1        | 1         | 100          | 146625 | null      | 1-1-4624-9705-1 | 2021-01-30 08:00 | 2021-01-31 23:00 |
 
 
-        Scenario Outline:  /pedidos/{folio}/busquedas 401 No autorizado
+        Scenario Outline:  /pedidos/folio/busquedas 401 No autorizado
+              Verificar que se obtenga una salida de acceso no autorizado desde una transacción POST en /pedidos/folio/busquedas
             Given I set bearer token
               And I have valid client TLS configuration
               And I set x-idPais header to <x-idPais>
@@ -212,13 +220,13 @@ Feature: post_pedidos_{folio}_busquedas
               And response body path $.info should be ^https:\/\/baz-developer\.bancoazteca\.com\.mx/info#401\.Elektra-Comercio-Pedidos-Productos\.\d{3,6}$
 
         Examples:
-                  | x-idPais | x-idCanal | x-idSucursal | folio  | idUsuario | clienteUnico    | fechaHoraInicio  | fechaHoraFin     |
-                  | null     | 1         | 100          | 146625 | T146363   | 1-1-4624-9705-1 | 2021-01-30 08:00 | 2021-01-31 23:00 |
-                  | 1        | null      | 100          | 146625 | T146363   | 1-1-4624-9705-1 | 2021-01-30 08:00 | 2021-01-31 23:00 |
-                  | 1        | 1         | null         | 146625 | T146363   | 1-1-4624-9705-1 | 2021-01-30 08:00 | 2021-01-31 23:00 |
+                  | x-idPais | x-idCanal | x-idSucursal | folio     | idUsuario | clienteUnico    | fechaHoraInicio  | fechaHoraFin     |
+                  | 1        | 1         | 100          | 401146625 | T146363   | 1-1-4624-9705-1 | 2021-01-30 08:00 | 2021-01-31 23:00 |
 
 
-        Scenario Outline:  /pedidos/{folio}/busquedas 500 Operacion Inesperada
+
+        Scenario Outline:  /pedidos/folio/busquedas 500 Operacion Inesperada
+              Verificar que se obtenga un error inesperado desde una transacción POST en /pedidos/folio/busquedas
             Given I set bearer token
               And I have valid client TLS configuration
               And I set x-ismock header to true
@@ -239,5 +247,5 @@ Feature: post_pedidos_{folio}_busquedas
 
         Examples:
                   | x-idPais | x-idCanal | x-idSucursal | folio     | idUsuario | clienteUnico    | fechaHoraInicio  | fechaHoraFin     |
-                  | 1        | 1         | 100          | 500146625 | T146363   | 1-1-4624-9705-1 | 2021-01-30 08:00 | 2021-01-31 23:00 |
+                  | sa       | 1         | 100          | 500146625 | T146363   | 1-1-4624-9705-1 | 2021-01-30 08:00 | 2021-01-31 23:00 |
  

@@ -1,5 +1,7 @@
-Feature: put_pedidos_{folio}
+Feature: /pedidos/folio PUT
 
+              Actualización del pedido o de la orden Elektra com.
+        
         Scenario: Genera token y llaves asimétricas
             Given I set bearer token
               And I have valid client TLS configuration
@@ -34,7 +36,8 @@ Feature: put_pedidos_{folio}
               And I store the value of body path $.access_token as access token
 
 
-        Scenario Outline: /pedidos/{folio} 200 ok.
+        Scenario Outline: /pedidos/folio 200 ok.
+              Verificar que se obtenga la información relacionada desde una transacción PUT en /pedidos/folio
             Given I set bearer token
               And I have valid client TLS configuration
               And I set x-idPais header to <x-idPais>
@@ -59,7 +62,8 @@ Feature: put_pedidos_{folio}
                   | 1        | 1         | 100          | WS_CAJA             | 146625 | T146363   | 0              | 6               |
 
 
-        Scenario Outline: /pedidos/{folio} 400 Entrada Incorrecta
+        Scenario Outline: /pedidos/folio 400 Entrada Incorrecta
+              Verificar que se obtenga una salida incorrecta al enviar una petición malformada desde una transacción PUT en /pedidos/folio
             Given I set bearer token
               And I have valid client TLS configuration
               And I set x-idPais header to <x-idPais>
@@ -80,13 +84,18 @@ Feature: put_pedidos_{folio}
 
         Examples:
                   | x-idPais | x-idCanal | x-idSucursal | x-idEstacionTrabajo | folio  | idUsuario | idEstatusFolio | idTipoOperacion |
+                  | null     | 1         | 100          | WS_CAJA             | 146625 | T146363   | 0              | 6               |
+                  | 1        | null      | 100          | WS_CAJA             | 146625 | T146363   | 0              | 6               |
+                  | 1        | 1         | null         | WS_CAJA             | 146625 | T146363   | 0              | 6               |
+                  | 1        | 1         | 100          | null                | 146625 | T146363   | 0              | 6               |
                   | 1        | 1         | 100          | WS_CAJA             | null   | T146363   | 0              | 6               |
                   | 1        | 1         | 100          | WS_CAJA             | 146625 | null      | 0              | 6               |
                   | 1        | 1         | 100          | WS_CAJA             | 146625 | T146363   | null           | 6               |
                   | 1        | 1         | 100          | WS_CAJA             | 146625 | T146363   | 0              | null            |
 
 
-        Scenario Outline: /pedidos/{folio} 401 No autorizado
+        Scenario Outline: /pedidos/folio 401 No autorizado
+              Verificar que se obtenga una salida de acceso no autorizado desde una transacción PUT en /pedidos/folio
             Given I set bearer token
               And I have valid client TLS configuration
               And I set x-idPais header to <x-idPais>
@@ -106,14 +115,12 @@ Feature: put_pedidos_{folio}
               And response body path $.info should be ^https:\/\/baz-developer\.bancoazteca\.com\.mx/info#401\.Elektra-Comercio-Pedidos-Productos\.\d{3,6}$
 
         Examples:
-                  | x-idPais | x-idCanal | x-idSucursal | x-idEstacionTrabajo | folio  | idUsuario | idEstatusFolio | idTipoOperacion |
-                  | null     | 1         | 100          | WS_CAJA             | 146625 | T146363   | 0              | 6               |
-                  | 1        | null      | 100          | WS_CAJA             | 146625 | T146363   | 0              | 6               |
-                  | 1        | 1         | null         | WS_CAJA             | 146625 | T146363   | 0              | 6               |
-                  | 1        | 1         | 100          | null                | 146625 | T146363   | 0              | 6               |
+                  | x-idPais | x-idCanal | x-idSucursal | x-idEstacionTrabajo | folio     | idUsuario | idEstatusFolio | idTipoOperacion |
+                  | 1        | 1         | 100          | WS_CAJA             | 401146625 | T146363   | 0              | 6               |
 
 
-        Scenario Outline:  /pedidos/{folio} 500 Operacion Inesperada
+        Scenario Outline:  /pedidos/folio 500 Operacion Inesperada
+              Verificar que se obtenga un error inesperado desde una transacción PUT en /pedidos/folio
             Given I set bearer token
               And I have valid client TLS configuration
               And I set x-ismock header to true
