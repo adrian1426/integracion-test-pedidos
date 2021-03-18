@@ -143,4 +143,5 @@ Feature: /pedidos/folio PUT
         Examples:
                   | x-idPais | x-idCanal | x-idSucursal | x-idEstacionTrabajo | folio     | idUsuario | idEstatusFolio | idTipoOperacion |
                   | sda      | 1         | 100          | WS_CAJA             | 500146625 | T146363   | 0              | 6               |
+
  

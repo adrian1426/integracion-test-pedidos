@@ -248,4 +248,4 @@ Feature: /pedidos/folio/busquedas POST
         Examples:
                   | x-idPais | x-idCanal | x-idSucursal | folio     | idUsuario | clienteUnico    | fechaHoraInicio  | fechaHoraFin     |
                   | sa       | 1         | 100          | 500146625 | T146363   | 1-1-4624-9705-1 | 2021-01-30 08:00 | 2021-01-31 23:00 |
- 
+

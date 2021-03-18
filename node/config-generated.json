@@ -195,11 +195,11 @@
            "x-idPais1x-idCanal1x-idSucursal100x-idEstacionTrabajoWS_CAJA$.idUsuarioT146363$.idEstatusFolio0$.idTipoOperacion6folio401146625":{
             "httpStatus":401,
             "mockFile":"pedidos_folio_PUT/pedidos_folio_put_401.json"
-         },
-         "x-idPaissdax-idCanal1x-idSucursal100x-idEstacionTrabajoWS_CAJA$.idUsuarioT146363$.idEstatusFolio0$.idTipoOperacion6folio500146625":{
-          "httpStatus":500,
-            "mockFile":"pedidos_folio_PUT/pedidos_folio_put_500.json"
-         }
+            },
+            "x-idPaissdax-idCanal1x-idSucursal100x-idEstacionTrabajoWS_CAJA$.idUsuarioT146363$.idEstatusFolio0$.idTipoOperacion6folio500146625":{
+            "httpStatus":500,
+               "mockFile":"pedidos_folio_PUT/pedidos_folio_put_500.json"
+            }
       }
    },    
    "elektra/comercio/pedidos-productos/v1/pedidos":{

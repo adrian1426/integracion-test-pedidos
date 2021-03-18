@@ -23,7 +23,8 @@
               "location": "features\\support\\init.js:7"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -46,8 +47,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:731"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -85,7 +85,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 72000000
+              "duration": 65000000
             }
           },
           {
@@ -110,7 +110,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:655"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -135,8 +136,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:746"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -168,7 +168,8 @@
               "location": "features\\support\\init.js:7"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -216,7 +217,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 38000000
+              "duration": 69000000
             }
           },
           {
@@ -228,8 +229,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:660"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -253,7 +253,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:746"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -265,8 +266,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:746"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           }
         ]
@@ -296,8 +296,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:43"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -326,7 +325,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:92"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -364,7 +364,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 34000000
+              "duration": 35000000
             }
           },
           {
@@ -376,8 +376,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:660"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -389,7 +388,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:655"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -402,7 +402,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2000000
+              "duration": 1000000
             }
           }
         ]
@@ -423,7 +423,8 @@
               "location": "features\\support\\init.js:7"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -505,8 +506,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -519,7 +519,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3000000
+              "duration": 10000000
             }
           },
           {
@@ -543,8 +543,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -570,7 +569,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 36000000
+              "duration": 33000000
             }
           },
           {
@@ -594,7 +593,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:655"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -618,7 +618,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -630,8 +631,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -643,8 +643,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -693,8 +692,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           }
         ]
@@ -749,8 +747,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:102"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -786,8 +783,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -799,7 +795,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -848,7 +845,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 9000000
             }
           },
           {
@@ -861,7 +858,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 39000000
+              "duration": 37000000
             }
           },
           {
@@ -898,8 +895,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -911,7 +907,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -923,8 +920,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -960,7 +956,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -984,7 +981,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           }
         ]
@@ -1063,8 +1061,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -1100,7 +1097,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 3000000
             }
           },
           {
@@ -1124,8 +1122,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -1137,8 +1134,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:180"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -1151,7 +1147,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 30000000
+              "duration": 37000000
             }
           },
           {
@@ -1199,7 +1195,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -1247,8 +1244,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -1272,8 +1268,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           }
         ]
@@ -1328,8 +1323,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:102"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -1391,7 +1385,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 3000000
             }
           },
           {
@@ -1427,8 +1421,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:180"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -1441,7 +1434,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 34000000
+              "duration": 31000000
             }
           },
           {
@@ -1465,8 +1458,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:655"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -1478,7 +1470,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -1490,8 +1483,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -1539,7 +1531,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -1551,8 +1544,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -1585,7 +1577,8 @@
               "location": "features\\support\\init.js:7"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -1595,8 +1588,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:43"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -1656,8 +1648,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -1669,8 +1660,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -1682,7 +1672,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 6000000
             }
           },
           {
@@ -1694,8 +1685,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:145"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -1733,7 +1723,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 35000000
+              "duration": 33000000
             }
           },
           {
@@ -1745,7 +1735,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:660"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -1758,7 +1749,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2000000
+              "duration": 1000000
             }
           },
           {
@@ -1770,7 +1761,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -1794,7 +1786,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -1818,7 +1811,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -1910,8 +1904,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:102"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -1947,7 +1940,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -1959,8 +1953,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -1973,7 +1966,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2000000
+              "duration": 7000000
             }
           },
           {
@@ -2024,7 +2017,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 29000000
+              "duration": 40000000
             }
           },
           {
@@ -2061,7 +2054,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -2118,7 +2112,8 @@
               "location": "features\\support\\init.js:7"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -2128,8 +2123,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:43"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -2153,7 +2147,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:102"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -2213,8 +2208,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -2226,7 +2220,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:145"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -2250,7 +2245,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:180"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -2263,7 +2259,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 34000000
+              "duration": 40000000
             }
           },
           {
@@ -2275,8 +2271,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:660"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -2300,8 +2295,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -2369,8 +2363,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:43"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -2394,7 +2387,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:102"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -2418,7 +2412,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -2491,7 +2486,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 2000000
             }
           },
           {
@@ -2504,7 +2499,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 39000000
+              "duration": 41000000
             }
           },
           {
@@ -2541,8 +2536,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -2554,8 +2548,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -2672,7 +2665,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -2747,7 +2741,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 36000000
+              "duration": 42000000
             }
           },
           {
@@ -2785,8 +2779,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -2811,8 +2804,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -2824,7 +2816,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           }
         ]
@@ -2879,8 +2872,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:102"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -2892,8 +2884,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -2942,7 +2933,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 7000000
             }
           },
           {
@@ -2966,7 +2958,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -2979,7 +2972,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 4000000
             }
           },
           {
@@ -2992,7 +2985,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 37000000
+              "duration": 40000000
             }
           },
           {
@@ -3108,8 +3101,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:731"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -3133,7 +3125,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -3181,7 +3174,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 6000000
             }
           },
           {
@@ -3193,7 +3187,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:145"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -3217,7 +3212,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:180"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -3230,7 +3226,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 32000000
+              "duration": 33000000
             }
           },
           {
@@ -3242,7 +3238,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:660"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -3278,8 +3275,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -3303,7 +3299,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           }
         ]
@@ -3334,8 +3331,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:43"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -3359,7 +3355,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:102"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -3371,8 +3368,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -3396,8 +3392,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -3421,7 +3416,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 7000000
             }
           },
           {
@@ -3471,7 +3467,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 35000000
+              "duration": 33000000
             }
           },
           {
@@ -3496,8 +3492,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:655"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -3533,8 +3528,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -3546,7 +3540,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           }
         ]
@@ -3663,7 +3658,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 8000000
             }
           },
           {
@@ -3687,7 +3683,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -3713,7 +3710,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 36000000
+              "duration": 32000000
             }
           },
           {
@@ -3762,7 +3759,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -3786,8 +3784,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           }
         ]
@@ -3855,8 +3852,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -3868,8 +3864,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -3881,8 +3876,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -3906,7 +3900,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 9000000
             }
           },
           {
@@ -3918,7 +3913,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:145"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -3930,8 +3926,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -3957,7 +3952,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 32000000
+              "duration": 41000000
             }
           },
           {
@@ -4029,7 +4024,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           }
         ]
@@ -4050,8 +4046,7 @@
               "location": "features\\support\\init.js:7"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -4061,7 +4056,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:43"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -4085,8 +4081,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:102"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -4147,7 +4142,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2000000
+              "duration": 6000000
             }
           },
           {
@@ -4159,7 +4154,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:145"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -4184,7 +4180,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 4000000
             }
           },
           {
@@ -4197,7 +4193,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 35000000
+              "duration": 27000000
             }
           },
           {
@@ -4209,7 +4205,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:660"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -4233,7 +4230,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -4257,8 +4255,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -4291,7 +4288,8 @@
               "location": "features\\support\\init.js:7"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -4361,8 +4359,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -4398,8 +4395,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -4448,7 +4444,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 36000000
+              "duration": 39000000
             }
           },
           {
@@ -4496,7 +4492,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -4623,7 +4620,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2000000
+              "duration": 1000000
             }
           },
           {
@@ -4659,7 +4656,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:746"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -4671,8 +4669,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:746"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           }
         ]
@@ -4702,8 +4699,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:43"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -4740,7 +4736,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 24000000
+              "duration": 28000000
             }
           },
           {
@@ -4752,7 +4748,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:660"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -4776,8 +4773,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:746"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -4789,8 +4785,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:746"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           }
         ]
@@ -4820,8 +4815,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:43"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -4850,8 +4844,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:92"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -4888,7 +4881,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 21000000
+              "duration": 29000000
             }
           },
           {
@@ -4913,8 +4906,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:655"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -4948,7 +4940,8 @@
               "location": "features\\support\\init.js:7"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -4982,7 +4975,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:102"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -5006,8 +5000,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -5019,7 +5012,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -5043,7 +5037,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 10000000
             }
           },
           {
@@ -5093,7 +5088,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 34000000
+              "duration": 39000000
             }
           },
           {
@@ -5105,8 +5100,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:660"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -5130,8 +5124,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -5155,7 +5148,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -5223,7 +5217,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:731"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -5247,7 +5242,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -5283,7 +5279,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -5296,7 +5293,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2000000
+              "duration": 5000000
             }
           },
           {
@@ -5347,7 +5344,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 39000000
+              "duration": 29000000
             }
           },
           {
@@ -5359,8 +5356,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:660"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -5408,7 +5404,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -5420,8 +5417,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           }
         ]
@@ -5500,7 +5496,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -5524,8 +5521,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -5538,7 +5534,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 7000000
             }
           },
           {
@@ -5588,7 +5584,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 28000000
+              "duration": 33000000
             }
           },
           {
@@ -5600,8 +5596,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:660"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -5625,8 +5620,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -5638,7 +5632,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -5717,7 +5712,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:102"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -5753,7 +5749,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -5777,7 +5774,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 9000000
             }
           },
           {
@@ -5827,7 +5825,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 37000000
+              "duration": 35000000
             }
           },
           {
@@ -5875,7 +5873,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -6016,7 +6015,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 7000000
             }
           },
           {
@@ -6028,7 +6027,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:145"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -6052,7 +6052,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:180"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -6065,7 +6066,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 38000000
+              "duration": 39000000
             }
           },
           {
@@ -6089,7 +6090,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:655"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -6125,8 +6127,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -6159,8 +6160,7 @@
               "location": "features\\support\\init.js:7"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -6182,7 +6182,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:731"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -6194,8 +6195,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:102"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -6243,7 +6243,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -6256,7 +6257,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 5000000
             }
           },
           {
@@ -6280,7 +6281,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -6306,7 +6308,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 39000000
+              "duration": 33000000
             }
           },
           {
@@ -6343,8 +6345,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -6380,7 +6381,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           }
         ]
@@ -6447,7 +6449,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -6459,8 +6462,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -6496,8 +6498,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 2000000
+              "status": "passed"
             }
           },
           {
@@ -6521,7 +6522,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -6533,8 +6535,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:180"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -6547,7 +6548,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 40000000
+              "duration": 38000000
             }
           },
           {
@@ -6559,8 +6560,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:660"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -6572,7 +6572,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:655"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -6608,8 +6609,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -6664,8 +6664,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:731"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -6689,7 +6688,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -6737,7 +6737,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 5000000
             }
           },
           {
@@ -6761,8 +6762,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -6774,7 +6774,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:180"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -6787,7 +6788,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 41000000
+              "duration": 36000000
             }
           },
           {
@@ -6799,8 +6800,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:660"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -6825,8 +6825,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -6838,8 +6837,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -6851,7 +6849,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -6863,8 +6862,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           }
         ]
@@ -6907,7 +6905,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:731"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 2000000
             }
           },
           {
@@ -6919,8 +6918,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:102"
             },
             "result": {
-              "status": "passed",
-              "duration": 2000000
+              "status": "passed"
             }
           },
           {
@@ -6932,8 +6930,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -6969,7 +6966,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -6982,7 +6980,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 8000000
             }
           },
           {
@@ -7006,7 +7004,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -7018,7 +7017,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:180"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -7031,7 +7031,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 31000000
+              "duration": 40000000
             }
           },
           {
@@ -7043,8 +7043,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:660"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -7056,7 +7055,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:655"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -7068,8 +7068,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -7148,7 +7147,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:731"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -7160,8 +7160,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:102"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -7185,7 +7184,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -7197,8 +7197,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -7223,7 +7222,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 6000000
             }
           },
           {
@@ -7260,7 +7259,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 2000000
             }
           },
           {
@@ -7273,7 +7272,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 38000000
+              "duration": 40000000
             }
           },
           {
@@ -7334,8 +7333,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -7390,7 +7388,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:731"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -7402,8 +7401,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:102"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -7476,7 +7474,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 11000000
             }
           },
           {
@@ -7488,7 +7486,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:145"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -7527,7 +7526,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 38000000
+              "duration": 35000000
             }
           },
           {
@@ -7539,8 +7538,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:660"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -7564,8 +7562,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -7601,8 +7598,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           }
         ]
@@ -7655,7 +7651,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:731"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -7679,8 +7676,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -7693,7 +7689,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 25000000
+              "duration": 27000000
             }
           },
           {
@@ -7754,8 +7750,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:746"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           }
         ]
@@ -7775,7 +7770,8 @@
               "location": "features\\support\\init.js:7"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -7846,8 +7842,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:655"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -7891,7 +7886,8 @@
               "location": "features\\support\\init.js:7"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -7930,8 +7926,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:92"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -7968,7 +7963,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 27000000
+              "duration": 28000000
             }
           },
           {
@@ -8026,8 +8021,7 @@
               "location": "features\\support\\init.js:7"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -8098,8 +8092,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -8112,7 +8105,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 5000000
             }
           },
           {
@@ -8149,7 +8142,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 6000000
             }
           },
           {
@@ -8162,7 +8155,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 39000000
+              "duration": 35000000
             }
           },
           {
@@ -8174,7 +8167,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:660"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -8186,8 +8180,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:655"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -8199,7 +8192,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -8211,8 +8205,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -8272,8 +8265,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -8285,7 +8277,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -8297,8 +8290,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:778"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -8322,8 +8314,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -8359,7 +8350,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -8371,8 +8363,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -8384,7 +8375,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -8432,8 +8424,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -8506,7 +8497,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:778"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -8530,7 +8522,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -8542,8 +8535,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -8555,7 +8547,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -8579,7 +8572,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -8603,8 +8597,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -8689,7 +8682,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -8713,7 +8707,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -8725,8 +8720,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -8738,7 +8732,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -8762,7 +8757,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -8786,7 +8782,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -8798,8 +8795,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -8823,8 +8819,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -8848,7 +8843,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -8860,8 +8856,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -8873,7 +8868,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -8885,8 +8881,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -8922,8 +8917,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -8935,7 +8929,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -8972,7 +8967,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -8996,8 +8992,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -9021,8 +9016,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -9058,7 +9052,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -9082,8 +9077,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -9119,7 +9113,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -9143,8 +9138,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -9168,8 +9162,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -9181,7 +9174,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -9193,8 +9187,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:778"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -9206,7 +9199,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:778"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -9266,8 +9260,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -9279,7 +9272,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -9291,8 +9285,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -9316,8 +9309,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -9353,7 +9345,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:778"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -9365,8 +9358,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:778"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -9390,8 +9382,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:778"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -9439,7 +9430,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:778"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -9451,8 +9443,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:778"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -9464,7 +9455,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -9476,8 +9468,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:778"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -9525,7 +9516,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:778"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -9549,7 +9541,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:778"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -9561,8 +9554,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:778"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -9665,7 +9657,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -9740,7 +9733,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:660"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -9752,8 +9746,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:655"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -9765,7 +9758,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -9862,8 +9856,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:778"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -9899,7 +9892,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -9923,8 +9917,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -9960,7 +9953,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -9984,8 +9978,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -9997,7 +9990,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -10033,7 +10027,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -10045,8 +10040,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -10070,7 +10064,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:778"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -10106,8 +10101,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -10119,7 +10113,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 2000000
             }
           },
           {
@@ -10143,7 +10138,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -10155,8 +10151,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -10168,7 +10163,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -10180,8 +10176,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -10193,7 +10188,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -10229,7 +10225,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -10241,8 +10238,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -10254,7 +10250,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -10278,8 +10275,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -10303,8 +10299,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -10316,7 +10311,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -10328,8 +10324,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -10354,7 +10349,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -10367,7 +10363,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2000000
+              "duration": 1000000
             }
           },
           {
@@ -10392,7 +10388,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -10428,7 +10425,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -10452,8 +10450,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -10489,8 +10486,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -10502,7 +10498,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -10514,8 +10511,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -10588,8 +10584,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -10601,7 +10596,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -10637,7 +10633,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -10649,8 +10646,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -10686,8 +10682,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -10699,7 +10694,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -10748,7 +10744,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -10821,7 +10818,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -10907,7 +10905,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2000000
+              "duration": 1000000
             }
           },
           {
@@ -10919,7 +10917,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:778"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -11039,8 +11038,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:778"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -11076,8 +11074,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:778"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -11113,8 +11110,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:778"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -11169,7 +11165,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:43"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -11205,8 +11202,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -11243,7 +11239,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 6000000
             }
           },
           {
@@ -11279,8 +11275,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:180"
             },
             "result": {
-              "status": "passed",
-              "duration": 2000000
+              "status": "passed"
             }
           },
           {
@@ -11293,7 +11288,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 28000000
+              "duration": 33000000
             }
           },
           {
@@ -11353,7 +11348,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -11389,8 +11385,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -11426,8 +11421,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:778"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -11463,8 +11457,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -11524,8 +11517,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -11549,7 +11541,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -11561,8 +11554,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -11598,8 +11590,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -11611,7 +11602,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -11635,8 +11627,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:778"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -11709,8 +11700,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -11734,7 +11724,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -11770,7 +11761,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -11794,8 +11786,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -11807,7 +11798,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -11843,7 +11835,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -11855,8 +11848,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -11880,7 +11872,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -11953,7 +11946,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 2000000
             }
           },
           {
@@ -12039,7 +12033,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -12099,7 +12094,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -12123,7 +12119,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -12147,8 +12144,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -12184,8 +12180,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -12197,7 +12192,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -12221,8 +12217,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -12234,7 +12229,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -12258,8 +12254,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -12271,7 +12266,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -12295,8 +12291,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -12308,7 +12303,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -12332,8 +12328,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:778"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -12369,8 +12364,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -12406,8 +12400,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -12431,8 +12424,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -12481,7 +12473,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:778"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -12493,8 +12486,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:778"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -12590,8 +12582,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -12651,8 +12642,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:778"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -12664,7 +12654,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:778"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -12700,7 +12691,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:778"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           }
         ]
@@ -12815,8 +12807,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:145"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -12841,7 +12832,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 12000000
             }
           },
           {
@@ -12854,7 +12845,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 31000000
+              "duration": 32000000
             }
           },
           {
@@ -12903,8 +12894,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -13038,8 +13028,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -13063,7 +13052,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -13075,8 +13065,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -13161,7 +13150,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 2000000
             }
           },
           {
@@ -13258,7 +13247,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -13282,8 +13272,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -13320,7 +13309,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 2000000
             }
           },
           {
@@ -13332,7 +13321,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -13356,8 +13346,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -13369,7 +13358,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -13381,8 +13371,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -13418,8 +13407,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -13455,8 +13443,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -13468,7 +13455,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -13541,8 +13529,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -13615,8 +13602,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -13628,8 +13614,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -13653,7 +13638,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 2000000
             }
           },
           {
@@ -13689,7 +13675,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -13725,7 +13712,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -13749,8 +13737,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -13786,7 +13773,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -13798,7 +13786,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -13834,7 +13823,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -13870,7 +13860,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -13906,7 +13897,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:778"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -13918,8 +13910,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -13943,7 +13934,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -13955,8 +13947,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -13968,7 +13959,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -13992,8 +13984,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -14018,7 +14009,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 2000000
             }
           },
           {
@@ -14078,7 +14069,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:778"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -14102,7 +14094,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:778"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -14138,7 +14131,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:778"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -14198,7 +14192,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:778"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -14234,7 +14229,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:778"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -14246,8 +14242,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:778"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -14290,8 +14285,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:43"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -14339,8 +14333,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -14364,7 +14357,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -14388,7 +14382,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -14400,7 +14395,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:180"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -14413,7 +14409,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 27000000
+              "duration": 31000000
             }
           },
           {
@@ -14425,8 +14421,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:660"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -14541,7 +14536,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:102"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -14577,8 +14573,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -14590,7 +14585,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 11000000
             }
           },
           {
@@ -14602,7 +14598,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:145"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -14626,7 +14623,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:180"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -14639,7 +14637,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 35000000
+              "duration": 40000000
             }
           },
           {
@@ -14651,8 +14649,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:660"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -14664,8 +14661,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:655"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -14701,8 +14697,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -14714,8 +14709,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           }
         ]
@@ -14794,8 +14788,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -14807,7 +14800,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -14819,8 +14813,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -14832,8 +14825,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:145"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -14857,8 +14849,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:180"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -14871,7 +14862,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 30000000
+              "duration": 39000000
             }
           },
           {
@@ -14907,8 +14898,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -15023,7 +15013,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -15048,7 +15039,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 10000000
             }
           },
           {
@@ -15060,7 +15051,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:145"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -15098,7 +15090,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 38000000
+              "duration": 31000000
             }
           },
           {
@@ -15110,8 +15102,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:660"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -15135,8 +15126,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -15148,7 +15138,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -15264,8 +15255,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -15277,7 +15267,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 14000000
             }
           },
           {
@@ -15301,7 +15292,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -15313,8 +15305,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:180"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -15327,7 +15318,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 38000000
+              "duration": 26000000
             }
           },
           {
@@ -15351,8 +15342,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:655"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -15479,8 +15469,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -15505,7 +15494,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2000000
+              "duration": 10000000
             }
           },
           {
@@ -15541,7 +15530,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:180"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -15554,7 +15544,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 41000000
+              "duration": 33000000
             }
           },
           {
@@ -15566,8 +15556,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:660"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -15579,8 +15568,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:655"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -15628,8 +15616,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           }
         ]
@@ -15650,7 +15637,8 @@
               "location": "features\\support\\init.js:7"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -15660,8 +15648,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:43"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -15674,7 +15661,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4000000
+              "duration": 2000000
             }
           },
           {
@@ -15710,8 +15697,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -15735,7 +15721,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -15748,7 +15735,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 7000000
             }
           },
           {
@@ -15798,7 +15785,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 27000000
+              "duration": 35000000
             }
           },
           {
@@ -15822,8 +15809,7 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:655"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -15847,7 +15833,8 @@
               "location": "features\\step_definitions\\apickli-gherkin.js:693"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
