@@ -26,7 +26,7 @@ Feature: /pedidos POST
             Given I set bearer token
             And I have valid client TLS configuration
             And I set x-ismock header to true
-            When I GET `apigeeDomain`/elektra/seguridad/`deploymentSuffix`/aplicaciones/llaves
+            When I GET `apigeeDomain`/elektra/seguridad/v1/aplicaciones/llaves
             Then response code should be 200
             And response body should be valid json
             And I store the value of body path $.resultado.idAcceso as idAccess in global scope
@@ -48,13 +48,13 @@ Feature: /pedidos POST
             Then response code should be 201
             And response body should be valid json
             And response body path $.codigo should be ^201\.Elektra-Comercio-Pedidos-Productos\.\d{6}$
-            And response body path $.mensaje should be ^.*$
-            And response body path $.folio should be ^114-\d{15,22}$
-            And response body path $.resultado.folioPedido should be [a-z0-9]*
-            And response body path $.resultado.folioPreparametrico should be [a-z0-9]*
-            And response body path $.resultado.numeroTransaccion should be \d*
-            And response body path $.resultado.detalleOperacion should be ^.*$
-            And response body path $.resultado.numeroMovimientoOperacion should be \d*
+            And response body path $.mensaje should be ^[A-Za-záéíóúÁÉÍÓÚ0-9@.,\s:]{1,255}$
+            And response body path $.folio should be ^[a-zA-Z0-9-\w]{1,}$
+            And response body path $.resultado.folioPedido should be ^[a-z0-9]*$
+            And response body path $.resultado.folioPreparametrico should be ^[a-z0-9]*$
+            And response body path $.resultado.numeroTransaccion should be ^[0-9]{1,11}$
+            And response body path $.resultado.detalleOperacion should be ^[A-Za-záéíóúÁÉÍÓÚ0-9@.,\s:]{1,255}$
+            And response body path $.resultado.numeroMovimientoOperacion should be ^[0-9]{1,4}$
 
             Examples:
                   | x-idPais | x-idCanal | x-idSucursal | x-idEstacionTrabajo | idUsuario | folioPresupuesto | folio    | referencia       | idTipo | importe | pagos0Referencia | id              | foliosReferencia0IdTipo |
@@ -81,8 +81,8 @@ Feature: /pedidos POST
             Then response code should be 400
             And response body should be valid json
             And response body path $.codigo should be ^400\.Elektra-Comercio-Pedidos-Productos\.\d{6}$
-            And response body path $.mensaje should be ^.*$
-            And response body path $.folio should be ^114-\d{15,22}$
+            And response body path $.mensaje should be ^[A-Za-záéíóúÁÉÍÓÚ0-9@.,\s:]{1,255}$
+            And response body path $.folio should be ^[a-zA-Z0-9-\w]{1,}$
             And response body path $.info should be ^https:\/\/baz-developer\.bancoazteca\.com\.mx/info#400\.Elektra-Comercio-Pedidos-Productos\.\d{3,6}$
 
             Examples:
@@ -107,15 +107,15 @@ Feature: /pedidos POST
             And I set x-idCanal header to <x-idCanal>
             And I set x-idSucursal header to <x-idSucursal>
             And I set x-idEstacionTrabajo header to <x-idEstacionTrabajo>
-            And I set x-idAcceso header to `idAccess`
+            And I set x-idAcceso header to Q123545658548
             And I need to encrypt the parameters {idUsuario, pagos.idTipo, pagos.importe, pagos.referencia}
             And I use the encryption algorithm RSA_PKCS1_PADDING and the key publicKey for prepare a body as {"idUsuario":"<idUsuario>","folioPresupuesto":"<folioPresupuesto>","folio":"<folio>","referencia":"<referencia>","pagos":[{"idTipo":"<idTipo>","importe":"<importe>","referencia":"<pagos0Referencia>"}],"foliosReferencia":[{"id":"<id>","idTipo":<foliosReferencia0IdTipo>}]}
             When I POST to `apigeeDomain`/elektra/comercio/pedidos-productos/`deploymentSuffix`/pedidos
             Then response code should be 401
             And response body should be valid json
             And response body path $.codigo should be ^401\.Elektra-Comercio-Pedidos-Productos\.\d{6}$
-            And response body path $.mensaje should be ^.*$
-            And response body path $.folio should be ^114-\d{15,22}$
+            And response body path $.mensaje should be ^[A-Za-záéíóúÁÉÍÓÚ0-9@.,\s:]{1,255}$
+            And response body path $.folio should be ^[a-zA-Z0-9-\w]{1,}$
             And response body path $.info should be ^https:\/\/baz-developer\.bancoazteca\.com\.mx/info#401\.Elektra-Comercio-Pedidos-Productos\.\d{3,6}$
 
             Examples:
@@ -140,8 +140,8 @@ Feature: /pedidos POST
             Then response code should be 500
             And response body should be valid json
             And response body path $.codigo should be ^500\.Elektra-Comercio-Pedidos-Productos\.\d{6}$
-            And response body path $.mensaje should be ^.*$
-            And response body path $.folio should be ^114-\d{15,22}$
+            And response body path $.mensaje should be ^[A-Za-záéíóúÁÉÍÓÚ0-9@.,\s:]{1,255}$
+            And response body path $.folio should be ^[a-zA-Z0-9-\w]{1,}$
             And response body path $.info should be ^https:\/\/baz-developer\.bancoazteca\.com\.mx/info#500\.Elektra-Comercio-Pedidos-Productos\.\d{3,6}$
 
             Examples:
