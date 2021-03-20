@@ -92,18 +92,6 @@
                    "httpStatus": 200,
                    "mockFile": "pedidos_folio_busquedas/ok.json"
                },
-               "x-idPais1x-idCanal1x-idSucursal100folio146625$.idUsuarioT146363$.clienteUniconull$.fechaHoraInicio2021-01-30%2008%3A00$.fechaHoraFin2021-01-31%2023%3A00": {
-                   "httpStatus": 200,
-                   "mockFile": "pedidos_folio_busquedas/ok.json"
-               },
-               "x-idPais1x-idCanal1x-idSucursal100folio146625$.idUsuarioT146363$.clienteUnico1-1-4624-9705-1$.fechaHoraInicionull$.fechaHoraFin2021-01-31%2023%3A00": {
-                   "httpStatus": 200,
-                   "mockFile": "pedidos_folio_busquedas/ok.json"
-               },
-               "x-idPais1x-idCanal1x-idSucursal100folio146625$.idUsuarioT146363$.clienteUnico1-1-4624-9705-1$.fechaHoraInicio2021-01-30%2008%3A00$.fechaHoraFinnull": {
-                   "httpStatus": 200,
-                   "mockFile": "pedidos_folio_busquedas/ok.json"
-               },
                "x-idPaisnullx-idCanal1x-idSucursal100folio146625$.idUsuarioT146363$.clienteUnico1-1-4624-9705-1$.fechaHoraInicio2021-01-30%2008%3A00$.fechaHoraFin2021-01-31%2023%3A00": {
                    "httpStatus": 400,
                    "mockFile": "pedidos_folio_busquedas/badRequest.json"
@@ -242,22 +230,6 @@
            ],
            "switchResponses": {
                "x-idPais1x-idCanal1x-idSucursal100x-idEstacionTrabajoWS_CAJA$.idUsuarioT146363$.folioPresupuesto863167$.folioV2312303$.referenciaVentaServicioWeb$.pagos[*].idTipo1$.pagos[*].importe8771.01$.pagos[*].referenciaCargo%20tarjeta$.foliosReferencia[*].idv31485575ekt-01$.foliosReferencia[*].idTipo1": {
-                   "httpStatus": 201,
-                   "mockFile": "pedidos_POST/created.json"
-               },
-               "x-idPais1x-idCanal1x-idSucursal100x-idEstacionTrabajoWS_CAJA$.idUsuarioT146363$.folioPresupuesto863167$.folionull$.referenciaVentaServicioWeb$.pagos[*].idTipo1$.pagos[*].importe8771.01$.pagos[*].referenciaCargo%20tarjeta$.foliosReferencia[*].idv31485575ekt-01$.foliosReferencia[*].idTipo1": {
-                   "httpStatus": 201,
-                   "mockFile": "pedidos_POST/created.json"
-               },
-               "x-idPais1x-idCanal1x-idSucursal100x-idEstacionTrabajoWS_CAJA$.idUsuarioT146363$.folioPresupuesto863167$.folioV2312303$.referenciaVentaServicioWeb$.pagos[*].idTiponull$.pagos[*].importe8771.01$.pagos[*].referenciaCargo%20tarjeta$.foliosReferencia[*].idv31485575ekt-01$.foliosReferencia[*].idTipo1": {
-                   "httpStatus": 201,
-                   "mockFile": "pedidos_POST/created.json"
-               },
-               "x-idPais1x-idCanal1x-idSucursal100x-idEstacionTrabajoWS_CAJA$.idUsuarioT146363$.folioPresupuesto863167$.folioV2312303$.referenciaVentaServicioWeb$.pagos[*].idTipo1$.pagos[*].importenull$.pagos[*].referenciaCargo%20tarjeta$.foliosReferencia[*].idv31485575ekt-01$.foliosReferencia[*].idTipo1": {
-                   "httpStatus": 201,
-                   "mockFile": "pedidos_POST/created.json"
-               },
-               "x-idPais1x-idCanal1x-idSucursal100x-idEstacionTrabajoWS_CAJA$.idUsuarioT146363$.folioPresupuesto863167$.folioV2312303$.referenciaVentaServicioWeb$.pagos[*].idTipo1$.pagos[*].importe8771.01$.pagos[*].referencianull$.foliosReferencia[*].idv31485575ekt-01$.foliosReferencia[*].idTipo1": {
                    "httpStatus": 201,
                    "mockFile": "pedidos_POST/created.json"
                },

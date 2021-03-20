@@ -59,10 +59,6 @@ Feature: /pedidos POST
             Examples:
                   | x-idPais | x-idCanal | x-idSucursal | x-idEstacionTrabajo | idUsuario | folioPresupuesto | folio    | referencia       | idTipo | importe | pagos0Referencia | id              | foliosReferencia0IdTipo |
                   | 1        | 1         | 100          | WS_CAJA             | T146363   | 863167           | V2312303 | VentaServicioWeb | 1      | 8771.01 | Cargo tarjeta    | v31485575ekt-01 | 1                       |
-                  | 1        | 1         | 100          | WS_CAJA             | T146363   | 863167           | null     | VentaServicioWeb | 1      | 8771.01 | Cargo tarjeta    | v31485575ekt-01 | 1                       |
-                  | 1        | 1         | 100          | WS_CAJA             | T146363   | 863167           | V2312303 | VentaServicioWeb | null   | 8771.01 | Cargo tarjeta    | v31485575ekt-01 | 1                       |
-                  | 1        | 1         | 100          | WS_CAJA             | T146363   | 863167           | V2312303 | VentaServicioWeb | 1      | null    | Cargo tarjeta    | v31485575ekt-01 | 1                       |
-                  | 1        | 1         | 100          | WS_CAJA             | T146363   | 863167           | V2312303 | VentaServicioWeb | 1      | 8771.01 | null             | v31485575ekt-01 | 1                       |
 
 
       Scenario Outline: 400 Entrada Incorrecta

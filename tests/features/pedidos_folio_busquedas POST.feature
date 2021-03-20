@@ -72,8 +72,8 @@ Feature: /pedidos/folio/busquedas POST
             And response body path $.resultado.pedidos[*].productos[*].precioVenta should be ^[0-9.]*$
             And response body path $.resultado.pedidos[*].productos[*].precioTotal should be ^[0-9.]*$
             And response body path $.resultado.pedidos[*].productos[*].series[*] should be ^[A-Za-z0-9]*$
-            And deciphering with the key privateKey the response field $.resultado.pedidos[*].productos[*].prepago.identificadorInternacional and RSA_PKCS1_PADDING as encryption algorithm should be ^.*$
-            And deciphering with the key privateKey the response field $.resultado.pedidos[*].productos[*].prepago.identificadorCarga and RSA_PKCS1_PADDING as encryption algorithm should be ^.*$
+            And deciphering with the key privateKey the response field $.resultado.pedidos[*].productos[*].prepago.identificadorInternacional and RSA_PKCS1_PADDING as encryption algorithm should be ^[A-Za-z0-9]*$
+            And deciphering with the key privateKey the response field $.resultado.pedidos[*].productos[*].prepago.identificadorCarga and RSA_PKCS1_PADDING as encryption algorithm should be ^[A-Za-z0-9]*$
             And response body path $.resultado.pedidos[*].productos[*].prepago.proveedorRed should be ^[A-Za-záéíóúÁÉÍÓÚ0-9@.,&-_\s:]{1,50}$
             And response body path $.resultado.pedidos[*].productos[*].precioCredito.enganche should be ^[0-9.]*$
             And response body path $.resultado.pedidos[*].productos[*].precioCredito.sobrePrecio should be ^[0-9.]*$
@@ -164,9 +164,6 @@ Feature: /pedidos/folio/busquedas POST
             Examples:
                   | x-idPais | x-idCanal | x-idSucursal | folio  | idUsuario | clienteUnico    | fechaHoraInicio  | fechaHoraFin     |
                   | 1        | 1         | 100          | 146625 | T146363   | 1-1-4624-9705-1 | 2021-01-30 08:00 | 2021-01-31 23:00 |
-                  | 1        | 1         | 100          | 146625 | T146363   | null            | 2021-01-30 08:00 | 2021-01-31 23:00 |
-                  | 1        | 1         | 100          | 146625 | T146363   | 1-1-4624-9705-1 | null             | 2021-01-31 23:00 |
-                  | 1        | 1         | 100          | 146625 | T146363   | 1-1-4624-9705-1 | 2021-01-30 08:00 | null             |
 
 
       Scenario Outline: 400 Entrada Incorrecta
@@ -205,7 +202,7 @@ Feature: /pedidos/folio/busquedas POST
             And I set x-idPais header to <x-idPais>
             And I set x-idCanal header to <x-idCanal>
             And I set x-idSucursal header to <x-idSucursal>
-            And I set x-idAcceso header to `idAccess`
+            And I set x-idAcceso header to Q123545658548
             And I need to encrypt the parameters {idUsuario, clienteUnico}
             And I use the encryption algorithm RSA_PKCS1_PADDING and the key publicKey for prepare a body as {"idUsuario":"<idUsuario>","clienteUnico":"<clienteUnico>","fechaHoraInicio":"<fechaHoraInicio>","fechaHoraFin":"<fechaHoraFin>"}
             When I POST to `apigeeDomain`/elektra/comercio/pedidos-productos/`deploymentSuffix`/pedidos/<folio>/busquedas
