@@ -16,7 +16,7 @@ Before(function() {
     this.apickli.setGlobalVariable('apigeeHost', 'localhost:9000');
     this.apickli.setGlobalVariable('apigeeDomain', 'localhost:9000');
     this.apickli.setGlobalVariable('apigeeOauthEndpoint', 'oauth2/v1/token');
-    this.apickli.setGlobalVariable('localTest', true);
+    this.apickli.setGlobalVariable('localTest', false);
     
     this.apickli.clientTLSConfig = {
         valid: {            

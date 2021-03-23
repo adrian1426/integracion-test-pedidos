@@ -100,7 +100,7 @@ Feature: /pedidos/folio PUT
             And I set x-idCanal header to <x-idCanal>
             And I set x-idSucursal header to <x-idSucursal>
             And I set x-idEstacionTrabajo header to <x-idEstacionTrabajo>
-            And I set x-idAcceso header to Q123545658548
+            And I set x-idAcceso header to `idAccess`
             And I need to encrypt the parameters {idUsuario}
             And I use the encryption algorithm RSA_PKCS1_PADDING and the key publicKey for prepare a body as {"idUsuario":"<idUsuario>","idEstatusFolio":<idEstatusFolio>,"idTipoOperacion":<idTipoOperacion>}
             When I PUT `apigeeDomain`/elektra/comercio/pedidos-productos/`deploymentSuffix`/pedidos/<folio>

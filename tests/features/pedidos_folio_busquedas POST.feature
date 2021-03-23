@@ -55,7 +55,7 @@ Feature: /pedidos/folio/busquedas POST
             And response body path $.resultado.pedidos[*].idCanal should be ^[0-9]{1,2}$
             And response body path $.resultado.pedidos[*].idSucursal should be ^[0-9]{1,4}$
             And response body path $.resultado.pedidos[*].idTipoVenta should be ^[0-9]{1}$
-            And deciphering with the key privateKey the response field $.resultado.pedidos[*].totalVenta and RSA_PKCS1_PADDING as encryption algorithm should be ^[0-9.]*$
+            And deciphering with the key privateKey the response field $.resultado.pedidos[*].totalVenta and RSA_PKCS1_PADDING as encryption algorithm should be ^[A-Za-záéíóúÁÉÍÓÚ0-9@.,&-_\s:]{1,}$
             And response body path $.resultado.pedidos[*].totalDescuento should be ^[0-9.]*$
             And response body path $.resultado.pedidos[*].idEstatusFolio should be ^[0-9]{1}$
             And response body path $.resultado.pedidos[*].descripcionEstatusFolio should be ^[A-Za-záéíóúÁÉÍÓÚ0-9@.,\s:]{1,255}$
@@ -128,9 +128,9 @@ Feature: /pedidos/folio/busquedas POST
             And response body path $.resultado.pedidos[*].promociones[*].idRegalo should be ^[0-9]{1,}$
             And response body path $.resultado.pedidos[*].promociones[*].cantidad should be ^[0-9]{1}$
             And response body path $.resultado.pedidos[*].promociones[*].montoOtorgado should be ^[0-9.]*$
-            And deciphering with the key privateKey the response field $.resultado.pedidos[*].cliente.unico and RSA_PKCS1_PADDING as encryption algorithm should be ^[0-9-]{1,20}$
-            And deciphering with the key privateKey the response field $.resultado.pedidos[*].cliente.elektra and RSA_PKCS1_PADDING as encryption algorithm should be ^[0-9-]{1,20}$
-            And deciphering with the key privateKey the response field $.resultado.pedidos[*].ventaEmpleado.numeroEmpleado and RSA_PKCS1_PADDING as encryption algorithm should be ^T[0-9-]{1,10}$
+            And deciphering with the key privateKey the response field $.resultado.pedidos[*].cliente.unico and RSA_PKCS1_PADDING as encryption algorithm should be ^[A-Za-záéíóúÁÉÍÓÚ0-9@.,&-_\s:]{1,}$
+            And deciphering with the key privateKey the response field $.resultado.pedidos[*].cliente.elektra and RSA_PKCS1_PADDING as encryption algorithm should be ^[A-Za-záéíóúÁÉÍÓÚ0-9@.,&-_\s:]{1,}$
+            And deciphering with the key privateKey the response field $.resultado.pedidos[*].ventaEmpleado.numeroEmpleado and RSA_PKCS1_PADDING as encryption algorithm should be ^[A-Za-záéíóúÁÉÍÓÚ0-9@.,&-_\s:]{1,}$
             And response body path $.resultado.pedidos[*].ventaEmpleado.idNegocio should be ^[0-9]{1,2}$
             And response body path $.resultado.pedidos[*].credito.idPeriodo should be ^[0-9]{1,2}$
             And response body path $.resultado.pedidos[*].credito.idPlazo should be ^[0-9]{1,3}$
@@ -141,7 +141,7 @@ Feature: /pedidos/folio/busquedas POST
             And response body path $.resultado.pedidos[*].credito.abono.digital should be ^[0-9.]*$
             And response body path $.resultado.pedidos[*].datosEntrega.tipo should be ^[A-Za-záéíóúÁÉÍÓÚ0-9@.,Ññ\t\s:]{1,255}$
             And response body path $.resultado.pedidos[*].datosEntrega.costo should be ^[0-9.]*$
-            And deciphering with the key privateKey the response field $.resultado.pedidos[*].datosEntrega.domicilio.codigoPostal and RSA_PKCS1_PADDING as encryption algorithm should be ^[0-9-]{5}$
+            And deciphering with the key privateKey the response field $.resultado.pedidos[*].datosEntrega.domicilio.codigoPostal and RSA_PKCS1_PADDING as encryption algorithm should be ^[A-Za-záéíóúÁÉÍÓÚ0-9@.,&-_\s:]{1,}$
             And deciphering with the key privateKey the response field $.resultado.pedidos[*].datosEntrega.domicilio.estado and RSA_PKCS1_PADDING as encryption algorithm should be ^[A-Za-záéíóúÁÉÍÓÚ0-9@.,Ññ\t\s:]{1,50}$
             And deciphering with the key privateKey the response field $.resultado.pedidos[*].datosEntrega.domicilio.municipio and RSA_PKCS1_PADDING as encryption algorithm should be ^[A-Za-záéíóúÁÉÍÓÚ0-9@.,Ññ\t\s:]{1,50}$
             And deciphering with the key privateKey the response field $.resultado.pedidos[*].datosEntrega.domicilio.colonia and RSA_PKCS1_PADDING as encryption algorithm should be ^[A-Za-záéíóúÁÉÍÓÚ0-9@.,Ññ\t\s:]{1,50}$
@@ -156,10 +156,10 @@ Feature: /pedidos/folio/busquedas POST
             And response body path $.resultado.pedidos[*].datosEntrega.notaEntrega.nota should be ^[A-Za-záéíóúÁÉÍÓÚ0-9@.,Ññ\t\s:]{1,255}$
             And deciphering with the key privateKey the response field $.resultado.pedidos[*].datosEntrega.personaRecibe.nombre and RSA_PKCS1_PADDING as encryption algorithm should be ^[A-Za-záéíóúÁÉÍÓÚ0-9@.,Ññ\t\s:]{1,50}$
             And deciphering with the key privateKey the response field $.resultado.pedidos[*].datosEntrega.personaRecibe.correo and RSA_PKCS1_PADDING as encryption algorithm should be ^[A-Za-záéíóúÁÉÍÓÚ0-9@.,Ññ\t\s:]{1,50}$
-            And deciphering with the key privateKey the response field $.resultado.pedidos[*].datosEntrega.personaRecibe.telefono and RSA_PKCS1_PADDING as encryption algorithm should be ^[0-9-]{1,}$
+            And deciphering with the key privateKey the response field $.resultado.pedidos[*].datosEntrega.personaRecibe.telefono and RSA_PKCS1_PADDING as encryption algorithm should be ^[A-Za-záéíóúÁÉÍÓÚ0-9@.,&-_\s:]{1,}$
             And deciphering with the key privateKey the response field $.resultado.pedidos[*].datosEntrega.personaNotifica.nombre and RSA_PKCS1_PADDING as encryption algorithm should be ^[A-Za-záéíóúÁÉÍÓÚ0-9@.,Ññ\t\s:]{1,50}$
             And deciphering with the key privateKey the response field $.resultado.pedidos[*].datosEntrega.personaNotifica.correo and RSA_PKCS1_PADDING as encryption algorithm should be ^[A-Za-záéíóúÁÉÍÓÚ0-9@.,Ññ\t\s:]{1,50}$
-            And deciphering with the key privateKey the response field $.resultado.pedidos[*].datosEntrega.personaNotifica.telefono and RSA_PKCS1_PADDING as encryption algorithm should be ^[0-9-]{1,}$
+            And deciphering with the key privateKey the response field $.resultado.pedidos[*].datosEntrega.personaNotifica.telefono and RSA_PKCS1_PADDING as encryption algorithm should be ^[A-Za-záéíóúÁÉÍÓÚ0-9@.,&-_\s:]{1,}$
 
             Examples:
                   | x-idPais | x-idCanal | x-idSucursal | folio  | idUsuario | clienteUnico    | fechaHoraInicio  | fechaHoraFin     |
@@ -202,7 +202,7 @@ Feature: /pedidos/folio/busquedas POST
             And I set x-idPais header to <x-idPais>
             And I set x-idCanal header to <x-idCanal>
             And I set x-idSucursal header to <x-idSucursal>
-            And I set x-idAcceso header to Q123545658548
+            And I set x-idAcceso header to `idAccess`
             And I need to encrypt the parameters {idUsuario, clienteUnico}
             And I use the encryption algorithm RSA_PKCS1_PADDING and the key publicKey for prepare a body as {"idUsuario":"<idUsuario>","clienteUnico":"<clienteUnico>","fechaHoraInicio":"<fechaHoraInicio>","fechaHoraFin":"<fechaHoraFin>"}
             When I POST to `apigeeDomain`/elektra/comercio/pedidos-productos/`deploymentSuffix`/pedidos/<folio>/busquedas

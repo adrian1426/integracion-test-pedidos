@@ -42,7 +42,7 @@ Feature: /pedidos POST
             And I set x-idSucursal header to <x-idSucursal>
             And I set x-idEstacionTrabajo header to <x-idEstacionTrabajo>
             And I set x-idAcceso header to `idAccess`
-            And I need to encrypt the parameters {idUsuario, pagos.idTipo, pagos.importe, pagos.referencia}
+            And I need to encrypt the parameters {idUsuario, pagos[*].idTipo, pagos[*].importe, pagos[*].referencia}
             And I use the encryption algorithm RSA_PKCS1_PADDING and the key publicKey for prepare a body as {"idUsuario":"<idUsuario>","folioPresupuesto":"<folioPresupuesto>","folio":"<folio>","referencia":"<referencia>","pagos":[{"idTipo":"<idTipo>","importe":"<importe>","referencia":"<pagos0Referencia>"}],"foliosReferencia":[{"id":"<id>","idTipo":<foliosReferencia0IdTipo>}]}
             When I POST to `apigeeDomain`/elektra/comercio/pedidos-productos/`deploymentSuffix`/pedidos
             Then response code should be 201
@@ -71,7 +71,7 @@ Feature: /pedidos POST
             And I set x-idSucursal header to <x-idSucursal>
             And I set x-idEstacionTrabajo header to <x-idEstacionTrabajo>
             And I set x-idAcceso header to `idAccess`
-            And I need to encrypt the parameters {idUsuario, pagos.idTipo, pagos.importe, pagos.referencia}
+            And I need to encrypt the parameters {idUsuario, pagos[*].idTipo, pagos[*].importe, pagos[*].referencia}
             And I use the encryption algorithm RSA_PKCS1_PADDING and the key publicKey for prepare a body as {"idUsuario":"<idUsuario>","folioPresupuesto":"<folioPresupuesto>","folio":"<folio>","referencia":"<referencia>","pagos":[{"idTipo":"<idTipo>","importe":"<importe>","referencia":"<pagos0Referencia>"}],"foliosReferencia":[{"id":"<id>","idTipo":<foliosReferencia0IdTipo>}]}
             When I POST to `apigeeDomain`/elektra/comercio/pedidos-productos/`deploymentSuffix`/pedidos
             Then response code should be 400
@@ -103,8 +103,8 @@ Feature: /pedidos POST
             And I set x-idCanal header to <x-idCanal>
             And I set x-idSucursal header to <x-idSucursal>
             And I set x-idEstacionTrabajo header to <x-idEstacionTrabajo>
-            And I set x-idAcceso header to Q123545658548
-            And I need to encrypt the parameters {idUsuario, pagos.idTipo, pagos.importe, pagos.referencia}
+            And I set x-idAcceso header to `idAccess`
+            And I need to encrypt the parameters {idUsuario, pagos[*].idTipo, pagos[*].importe, pagos[*].referencia}
             And I use the encryption algorithm RSA_PKCS1_PADDING and the key publicKey for prepare a body as {"idUsuario":"<idUsuario>","folioPresupuesto":"<folioPresupuesto>","folio":"<folio>","referencia":"<referencia>","pagos":[{"idTipo":"<idTipo>","importe":"<importe>","referencia":"<pagos0Referencia>"}],"foliosReferencia":[{"id":"<id>","idTipo":<foliosReferencia0IdTipo>}]}
             When I POST to `apigeeDomain`/elektra/comercio/pedidos-productos/`deploymentSuffix`/pedidos
             Then response code should be 401
@@ -130,7 +130,7 @@ Feature: /pedidos POST
             And I set x-idSucursal header to <x-idSucursal>
             And I set x-idEstacionTrabajo header to <x-idEstacionTrabajo>
             And I set x-idAcceso header to `idAccess`
-            And I need to encrypt the parameters {idUsuario, pagos.idTipo, pagos.importe, pagos.referencia}
+            And I need to encrypt the parameters {idUsuario, pagos[*].idTipo, pagos[*].importe, pagos[*].referencia}
             And I use the encryption algorithm RSA_PKCS1_PADDING and the key publicKey for prepare a body as {"idUsuario":"<idUsuario>","folioPresupuesto":"<folioPresupuesto>","folio":"<folio>","referencia":"<referencia>","pagos":[{"idTipo":"<idTipo>","importe":"<importe>","referencia":"<pagos0Referencia>"}],"foliosReferencia":[{"id":"<id>","idTipo":<foliosReferencia0IdTipo>}]}
             When I POST to `apigeeDomain`/elektra/comercio/pedidos-productos/`deploymentSuffix`/pedidos
             Then response code should be 500
